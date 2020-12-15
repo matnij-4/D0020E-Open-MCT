@@ -25,6 +25,27 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "Battery Temperature",
+            "key": "pwr.b",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "units": "℃",
+                    "format": "float"
+                    
+
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc"
+                   
+                }
+            ]
         }
     ]
 }

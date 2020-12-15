@@ -19,6 +19,9 @@ var objectProvider = {
                 var measurement = dictionary.measurements.filter( (m) => {
                     return m.key === identifier.key;
                 })[0];
+                
+
+                
                 return {
                     identifier: identifier,
                     name: measurement.name,
@@ -28,6 +31,7 @@ var objectProvider = {
                     },
                     location: 'example.taxonomy:spacecraft'
                 };
+                
             }
         });
     }

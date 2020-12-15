@@ -5,7 +5,8 @@
 function Spacecraft() {
     this.state = {
         "comms.sent": 0,
-        "pwr.v": 30
+        "pwr.v": 30,
+        "pwr.b": 5
     };
     this.history = {};
     this.listeners = [];
@@ -27,6 +28,8 @@ function Spacecraft() {
 
 Spacecraft.prototype.updateState = function () {
     this.state["pwr.v"] = 30 + Math.floor(Math.random() * 3);
+    this.state["pwr.b"] = 5 + Math.floor(Math.random() * 2);
+    
 };
 
 /**
