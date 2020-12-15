@@ -25,7 +25,7 @@ var objectProvider = {
                 return {
                     identifier: identifier,
                     name: measurement.name,
-                    type: 'example.telemetry',
+                    type: 'telemetry',
                     telemetry: {
                         values: measurement.values
                     },
@@ -67,9 +67,9 @@ function DictionaryPlugin() {
 
         openmct.composition.addProvider(compositionProvider);
 
-        openmct.types.addType('example.telemetry', {
-            name: 'Example Telemetry Point',
-            description: 'Example telemetry point from our happy tutorial.',
+        openmct.types.addType('telemetry', {
+            name: 'Telemetry',
+            description: 'Generic telemetry point',
             cssClass: 'icon-telemetry'
         });
 
