@@ -6,7 +6,6 @@ var Spacecraft = require('./spacecraft');
 var RealtimeServer = require('./realtime-server');
 var HistoryServer = require('./history-server');
 var StaticServer = require('./static-server');
-var TelecommandServer = require('./telecommand-server');
 
 var expressWs = require('express-ws');
 var app = require('express')();
