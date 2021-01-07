@@ -16,11 +16,9 @@ var spacecraft = new Spacecraft();
 var realtimeServer = new RealtimeServer(spacecraft);
 var historyServer = new HistoryServer(spacecraft);
 var staticServer = new StaticServer();
-var telecommandServer = new TelecommandServer();
 
 app.use('/realtime', realtimeServer);
 app.use('/history', historyServer);
-app.use('/telecommand', telecommandServer);
 app.use('/', staticServer);
 
 var port = process.env.PORT || 8080
