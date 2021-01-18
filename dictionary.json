@@ -1,6 +1,7 @@
 {
     "name": "D0020E Spacecraft",
     "key": "sc",
+    "type": "folder",
     "measurements": [
         {
             "name": "Time until reboot",
