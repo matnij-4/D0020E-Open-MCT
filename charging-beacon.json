@@ -156,43 +156,6 @@
             ]
         },
         {
-            "name": "Total bytes tansmitted",
-            "key": "tot_tx_bytes",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "n",
-                    "format": "int"
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                }
-            ]
-        },
-        {
-            "name": "Total bytes received",
-            "key": "tot_rx_bytes",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "n",
-                    "format": "int"
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
             "name": "Cause of last reboot",
             "key": "boot_cause",
             "values": [
@@ -269,7 +232,7 @@
             ]
         },
         {
-            "name": "Masx TX time before stop-and-listen",
+            "name": "Max TX time before stop-and-listen",
             "key": "max_tx_time",
             "values": [
                 {
@@ -677,159 +640,7 @@
                 }
             ]
         },
-        {
-            "name": "Magnetometer 1 temperature",
-            "key": "temp_mag_1",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "°C",
-                    "format": "float",
-                    "hint":{
-                        "range":"1",
-                        "min": "-200",
-                        "max": "200"
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
-            "name": "Magnetometer 2 temperature",
-            "key": "temp_mag_2",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "°C",
-                    "format": "float",
-                    "hint":{
-                        "range":"1",
-                        "min": "-200",
-                        "max": "200"
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
-            "name": "Calculated attitude q1",
-            "key": "attitude_q1",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "n",
-                    "format": "float",
-                    "hint":{
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
-            "name": "Calculated attitude q2",
-            "key": "attitude_q2",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "n",
-                    "format": "float",
-                    "hint":{
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
-            "name": "Calculated attitude q3",
-            "key": "attitude_q3",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "n",
-                    "format": "float",
-                    "hint":{
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
-            "name": "Calculated attitude q4",
-            "key": "attitude_q4",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "n",
-                    "format": "float",
-                    "hint":{
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
-            "name": "Estimated error",
-            "key": "error_est",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "n",
-                    "format": "float",
-                    "hint":{
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
+        
         {
             "name": "TLE Epoch year",
             "key": "tle_epochy",
@@ -896,72 +707,6 @@
             ]
         },
         {
-            "name": "ECAT board temp",
-            "key": "ecat_temp",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "°C",
-                    "format": "float",
-                    "hint":{
-                        "hint": "1",
-                        "min": "-200",
-                        "max": "200"
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
-            "name": "ECAT forward power",
-            "key": "ecat_fwd",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "n",
-                    "format": "int",
-                    "hint":{
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
-            "name": "ECAT reverse power",
-            "key": "ecat_rev",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "n",
-                    "format": "float",
-                    "hint":{
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
             "name": "Number of sytem boots",
             "key": "boot_count",
             "values": [
@@ -973,27 +718,6 @@
                     "hint":{
                         "min": "0",
                         "max": "4294967295"
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
-            "name": "Number of captured images",
-            "key": "image_count",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "n",
-                    "format": "int",
-                    "hint":{
                     }
                 },
                 {
@@ -1107,29 +831,6 @@
                     "key": "value",
                     "name": "Value",
                     "units": "mA",
-                    "format": "int",
-                    "hint":{
-                        "min": 0,
-                        "max": 2000
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
-            "name": "Gain target",
-            "key": "gain_target",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "n",
                     "format": "int",
                     "hint":{
                         "min": 0,
