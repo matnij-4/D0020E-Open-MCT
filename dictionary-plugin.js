@@ -21,7 +21,6 @@ var objectProviderNom = {
                     return m.key === identifier.key;
                 })[0];
                 
-
                 
                 return {
                     identifier: identifier,
@@ -70,7 +69,6 @@ var objectProviderCharg = {
         });
     }
 };
-
 
 
 var compositionProviderNom= {
@@ -141,6 +139,14 @@ function DictionaryPlugin() {
             namespace: 'charging.beacon',
             key: 'beaconCharg'
         });
+
+        //Folder
+        openmct.objects.addRoot({
+            namespace: 'demo',
+            key: 'demo-objects'
+        });
+
+
 
 
         openmct.objects.addProvider('nominal.beacon', objectProviderNom);
