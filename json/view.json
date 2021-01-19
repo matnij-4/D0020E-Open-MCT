@@ -1,0 +1,35 @@
+{
+        "demo:1":{
+            "composition": [
+                "charging.beacon:reboot_in",
+                "charging.beacon:baud",
+                "charging.beacon:temp_brd"
+            ],
+            "name": "Test folder",
+            "modified": "1",
+            "type": "folder",
+            "location": "demo:demo-objects"
+        },
+        "demo:2":{
+            "composition": [
+                "charging.beacon:bgnd_rssi",
+                "charging.beacon:boot_cause"
+                
+            ],
+            "name": "Sub Test folder",
+            "modified": "1",
+            "type": "folder",
+            "location": "demo:demo-objects"
+        },
+        "demo:3":{
+            "composition": [
+                "charging.beacon:tx_guard"
+            
+            ],
+            "name": "Sub Test folder 2",
+            "modified": "1",
+            "type": "folder",
+            "location": "demo:demo-objects"
+        }
+}
+

@@ -4,7 +4,8 @@
   "description": "Tutorials for Open MCT",
   "main": "example-server/server.js",
   "scripts": {
-    "start": "concurrently \"node example-server/server.js\" \"node tele-server/teleServer.js\""
+    "start": "concurrently \"node example-server/server.js\" \"node tele-server/teleServer.js\"",
+    "test": "node example-server/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
     "express": "^4.16.4",
     "express-ws": "^4.0.0",
     "openmct": "https://github.com/nasa/openmct.git",
-    "ws": "^6.1.2"
+    "requirejs": "^2.3.6",
+    "ws": "^6.1.2",
+    "text": "github:requirejs/text"
   }
 }
