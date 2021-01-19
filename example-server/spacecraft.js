@@ -69,6 +69,9 @@ function Spacecraft() {
         "bootcause": 1,
         "obc_imgcnt": 1,
 
+        //Test value
+        "pwr.v": 300
+
 
     };
     this.history = {};

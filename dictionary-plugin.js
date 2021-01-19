@@ -1,21 +1,15 @@
-function getDictionary() {
-    return http.get('/dictionary.json')
+//The get dictionar funcion for getting the Json files data.
+function getDictionary(jasonName) {
+    return http.get(jasonName)
         .then(function (result) {
             return result.data;
         });
 }
 
-function getDictionaryBeacon() {
-    return http.get('/beacon.json')
-        .then(function (result) {
-            return result.data;
-        });
-}
-
-var objectProvider = {
+var objectProviderNom = {
     get: function (identifier) {
-        return getDictionary().then( (dictionary) => {
-            if (identifier.key === 'spacecraft') {
+        return getDictionary('/nominal-beacon.json').then( (dictionary) => {
+            if (identifier.key === 'beaconNom') {
                 return {
                     identifier: identifier,
                     name: dictionary.name,
@@ -36,7 +30,7 @@ var objectProvider = {
                     telemetry: {
                         values: measurement.values
                     },
-                    location: 'example.taxonomy:spacecraft'
+                    location: 'nominal.beacon:beaconNom'
                 };
                 
             }
@@ -45,16 +39,33 @@ var objectProvider = {
 };
 
 
-var objectProviderBeacon = {
+var objectProviderCharg = {
     get: function (identifier) {
-        return getDictionaryBeacon().then( (dictionary) => {
-            if (identifier.key === 'beacon') {
+        return getDictionary('/charging-beacon.json').then( (dictionary) => {
+            if (identifier.key === 'beaconCharg') {
                 return {
                     identifier: identifier,
                     name: dictionary.name,
                     type: 'folder',
                     location: 'ROOT'
                 };
+            } else {
+                var measurement = dictionary.measurements.filter( (m) => {
+                    return m.key === identifier.key;
+                })[0];
+                
+
+                
+                return {
+                    identifier: identifier,
+                    name: measurement.name,
+                    type: 'telemetry',
+                    telemetry: {
+                        values: measurement.values
+                    },
+                    location: 'charging.beacon:beaconCharg'
+                };
+                
             }
         });
     }
@@ -62,32 +73,13 @@ var objectProviderBeacon = {
 
 
 
-var compositionProvider = {
-    appliesTo: function (domainObject) {
-        return domainObject.identifier.namespace === 'example.taxonomy' &&
-               domainObject.type === 'folder';
-    },
-    load: function (domainObject) {
-        return getDictionary()
-            .then(function (dictionary) {
-                return dictionary.measurements.map(function (m) {
-                    return {
-                        namespace: 'example.taxonomy',
-                        key: m.key
-                    };
-                });
-            });
-    }
-};
-
-
-var compositionProviderBeacon = {
+var compositionProviderNom= {
     appliesTo: function (domainObject) {
         return domainObject.identifier.namespace === 'nominal.beacon' &&
                domainObject.type === 'folder';
     },
     load: function (domainObject) {
-        return getDictionaryBeacon()
+        return getDictionary('/nominal-beacon.json')
             .then(function (dictionary) {
                 return dictionary.measurements.map(function (m) {
                     return {
@@ -99,33 +91,73 @@ var compositionProviderBeacon = {
     }
 };
 
+
+var compositionProviderCharg = {
+    appliesTo: function (domainObject) {
+        return domainObject.identifier.namespace === 'charging.beacon' &&
+               domainObject.type === 'folder';
+    },
+    load: function (domainObject) {
+        return getDictionary('/charging-beacon.json')
+            .then(function (dictionary) {
+                return dictionary.measurements.map(function (m) {
+                    return {
+                        namespace: 'charging.beacon',
+                        key: m.key
+                    };
+                });
+            });
+    }
+};
+
+
+var compositionProviderSub = {
+    appliesTo: function (domainObject) {
+        return domainObject.identifier.namespace === 'sub.systems' &&
+               domainObject.type === 'folder';
+    },
+    load: function (domainObject) {
+        return getDictionarySubsystems()
+            .then(function (dictionary) {
+                return dictionary.folders.map(function (m) {
+                    return {
+                        namespace: 'sub.systems',
+                        key: m.key
+                    };
+                });
+            });
+    }
+};
+
+
 function DictionaryPlugin() {
     return function install(openmct) {
         openmct.objects.addRoot({
-            namespace: 'example.taxonomy',
-            key: 'spacecraft'
-        });
-        
-        openmct.objects.addRoot({
             namespace: 'nominal.beacon',
-            key: 'beacon'
+            key: 'beaconNom'
         });
 
-        openmct.objects.addProvider('example.taxonomy', objectProvider);
-
-        openmct.objects.addProvider('nominal.beacon', objectProviderBeacon);
-
-
-        openmct.composition.addProvider(compositionProvider);
-
-        openmct.composition.addProvider(compositionProviderBeacon);
+        openmct.objects.addRoot({
+            namespace: 'charging.beacon',
+            key: 'beaconCharg'
+        });
 
 
+        openmct.objects.addProvider('nominal.beacon', objectProviderNom);
+        openmct.objects.addProvider('charging.beacon', objectProviderCharg);
+
+
+        openmct.composition.addProvider(compositionProviderNom);
+        openmct.composition.addProvider(compositionProviderCharg);
+
+    
         openmct.types.addType('telemetry', {
             name: 'Telemetry',
-            description: 'Generic telemetry point',
+            description: 'Telemetry point',
             cssClass: 'icon-telemetry'
         });
+
+
 
     }
 };

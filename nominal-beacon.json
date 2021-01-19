@@ -1,7 +1,12 @@
 {
+<<<<<<< HEAD:dictionary.json
     "name": "D0020E Spacecraft",
     "key": "sc",
     "type": "folder",
+=======
+    "name": "Nominal Beacon",
+    "key": "nb",
+>>>>>>> aeb80110c9aa0ca181473f5b1b71a5e290e2e945:nominal-beacon.json
     "measurements": [
         {
             "name": "Time until reboot",
@@ -270,7 +275,7 @@
             ]
         },
         {
-            "name": "Masx TX time before stop-and-listen",
+            "name": "Max TX time before stop-and-listen",
             "key": "max_tx_time",
             "values": [
                 {
@@ -288,47 +293,6 @@
                 }
             ]
         },
-        {
-            "name": "TX framing mode",
-            "key": "tx_mode",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "n",
-                    "format": "int"
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
-            "name": "RX framing mode",
-            "key": "rx_mode",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "n",
-                    "format": "int"
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-       
-
-
         {
             "name": "Voltage level of battery [V]",
             "key": "batt_volt",
@@ -1057,52 +1021,6 @@
         {
             "name": "VCC Current",
             "key": "ivcc",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "mA",
-                    "format": "int",
-                    "hint":{
-                        "min": 0,
-                        "max": 2000
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
-            "name": "Core Current",
-            "key": "icore",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "mA",
-                    "format": "int",
-                    "hint":{
-                        "min": 0,
-                        "max": 2000
-                    }
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
-        },
-        {
-            "name": "DDR Current",
-            "key": "iddr",
             "values": [
                 {
                     "key": "value",
