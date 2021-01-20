@@ -1,28 +1,6 @@
 const constNameSpace = "demo";
 const constKey = "demo-objects";
 
-//
-function serializeId(id) {
-    return id.namespace + ':' + id.key;
-}
-
-//
-function deserializeId(serializedId) {
-    var tokens = serializedId.split(':');
-    return {
-        namespace: tokens[0],
-        key: tokens[1]
-    }; 
-}
-
-//
-function addIdentifier(object, identifier) {
-    object.identifier = identifier;
-    return object;
-}
-
-
-
 
 //The get dictionar funcion for getting the Json files data.
 function getDictionary(jasonName) {
@@ -34,8 +12,8 @@ function getDictionary(jasonName) {
 
 var objectFolder = {
     get: function (identifier) {
-        return getDictionary('/nominal-beacon.json').then( (dictionary) => {
-            if (identifier.key === constKey) {
+        return getDictionary('/layout.json').then( (dictionary) => {
+            if (identifier.key === constNameSpace) {
                 return {
                     identifier: identifier,
                     name: dictionary.name,
@@ -43,7 +21,20 @@ var objectFolder = {
                     location: 'ROOT'
                 };
             } else {
-                return Promise.resolve();
+                var measurement = dictionary.measurements.filter( (m) => {
+                    return m.key === identifier.key;
+                })[0];
+                
+                
+                return {
+                    identifier: identifier,
+                    name: measurement.name,
+                    type: 'telemetry',
+                    telemetry: {
+                        values: measurement.values
+                    },
+                    location: constNameSpace+ ":" + constKey
+                };
                 
             }
         });
@@ -55,15 +46,14 @@ var objectFolder = {
 var compositionProviderFolder= {
     appliesTo: function (domainObject) {
         return domainObject.identifier.namespace === constNameSpace &&
-               domainObject.composition !== undefined &&
-               (domainObject.identifier.key === constKey);
+               domainObject.type === 'folder';
     },
     load: function (domainObject) {
-        return getDictionary('/nominal-beacon.json')
+        return getDictionary('/layout.json')
             .then(function (dictionary) {
                 return dictionary.measurements.map(function (m) {
                     return {
-                        namespace: 'nominal.beacon',
+                        namespace: constNameSpace,
                         key: m.key
                     };
                 });
@@ -72,7 +62,7 @@ var compositionProviderFolder= {
 };
 
 
-function DictionaryPlugin() {
+function LayoutPlugin() {
     return function install(openmct) {
         openmct.objects.addRoot({
             namespace: constNameSpace,

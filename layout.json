@@ -1,0 +1,50 @@
+{
+    "name": "Folders",
+    "key": "fs",
+    "measurements": [
+        {
+            "name": "Time until reboot",
+            "key": "reboot_in",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "units": "Seconds",
+                    "format": "int"
+                    
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc",
+                    "hints": {
+                        "domain": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Baud rate",
+            "key": "baud",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "units": "Bds",
+                    "format": "int"
+                    
+
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc"
+                   
+                }
+            ]
+        }
+        
+    ]
+}

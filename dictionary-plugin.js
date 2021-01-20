@@ -109,25 +109,6 @@ var compositionProviderCharg = {
 };
 
 
-var compositionProviderSub = {
-    appliesTo: function (domainObject) {
-        return domainObject.identifier.namespace === 'sub.systems' &&
-               domainObject.type === 'folder';
-    },
-    load: function (domainObject) {
-        return getDictionarySubsystems()
-            .then(function (dictionary) {
-                return dictionary.folders.map(function (m) {
-                    return {
-                        namespace: 'sub.systems',
-                        key: m.key
-                    };
-                });
-            });
-    }
-};
-
-
 function DictionaryPlugin() {
     return function install(openmct) {
         openmct.objects.addRoot({
@@ -139,13 +120,6 @@ function DictionaryPlugin() {
             namespace: 'charging.beacon',
             key: 'beaconCharg'
         });
-
-        //Folder
-        openmct.objects.addRoot({
-            namespace: 'demo',
-            key: 'demo-objects'
-        });
-
 
 
 
