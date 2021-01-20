@@ -13,7 +13,7 @@ function getDictionary(jasonName) {
 var objectFolder = {
     get: function (identifier) {
         return getDictionary('/layout.json').then( (dictionary) => {
-            if (identifier.key === constNameSpace) {
+            if (identifier.key === constKey) {
                 return {
                     identifier: identifier,
                     name: dictionary.name,

@@ -71,6 +71,7 @@ var objectProviderCharg = {
 };
 
 
+
 var compositionProviderNom= {
     appliesTo: function (domainObject) {
         return domainObject.identifier.namespace === 'nominal.beacon' &&
@@ -109,6 +110,8 @@ var compositionProviderCharg = {
 };
 
 
+
+
 function DictionaryPlugin() {
     return function install(openmct) {
         openmct.objects.addRoot({
@@ -123,8 +126,12 @@ function DictionaryPlugin() {
 
 
 
+
+
+
         openmct.objects.addProvider('nominal.beacon', objectProviderNom);
         openmct.objects.addProvider('charging.beacon', objectProviderCharg);
+
 
 
         openmct.composition.addProvider(compositionProviderNom);
