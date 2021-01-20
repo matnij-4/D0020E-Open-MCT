@@ -1,49 +1,26 @@
 {
     "name": "Folders",
     "key": "fs",
-    "measurements": [
+    "folders": [
         {
-            "name": "Time until reboot",
-            "key": "reboot_in",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "Seconds",
-                    "format": "int"
-                    
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc",
-                    "hints": {
-                        "domain": 1
-                    }
-                }
-            ]
+            "name": "Battery",
+            "key": "batt",
+            "composition": [
+                    "charging.beacon:reboot_in"
+            ],
+
+            "type": "folder",
+            "locations": "demo:demo-objects"
         },
         {
-            "name": "Baud rate",
-            "key": "baud",
-            "values": [
-                {
-                    "key": "value",
-                    "name": "Value",
-                    "units": "Bds",
-                    "format": "int"
-                    
+            "name": "Sensor",
+            "key": "sens",
+            "composition": [
+                "charging.beacon:bgnd_rssi"
+            ],
 
-                },
-                {
-                    "key": "utc",
-                    "source": "timestamp",
-                    "name": "Timestamp",
-                    "format": "utc"
-                   
-                }
-            ]
+            "type": "folder",
+            "locations": "demo:demo-objects"
         }
         
     ]
