@@ -1,6 +1,6 @@
 {
-    "name": "Nominal Beacon",
-    "key": "nb",
+    "name": "Beacon Telemetry",
+    "key": "bc",
     "measurements": [
         {
             "name": "Time until reboot",
@@ -269,7 +269,7 @@
             ]
         },
         {
-            "name": "Max TX time before stop-and-listen",
+            "name": "Masx TX time before stop-and-listen",
             "key": "max_tx_time",
             "values": [
                 {
@@ -287,6 +287,47 @@
                 }
             ]
         },
+        {
+            "name": "TX framing mode",
+            "key": "tx_mode",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "units": "n",
+                    "format": "int"
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc"
+                   
+                }
+            ]
+        },
+        {
+            "name": "RX framing mode",
+            "key": "rx_mode",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "units": "n",
+                    "format": "int"
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc"
+                   
+                }
+            ]
+        },
+       
+
+
         {
             "name": "Voltage level of battery [V]",
             "key": "batt_volt",
@@ -1015,6 +1056,52 @@
         {
             "name": "VCC Current",
             "key": "ivcc",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "units": "mA",
+                    "format": "int",
+                    "hint":{
+                        "min": 0,
+                        "max": 2000
+                    }
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc"
+                   
+                }
+            ]
+        },
+        {
+            "name": "Core Current",
+            "key": "icore",
+            "values": [
+                {
+                    "key": "value",
+                    "name": "Value",
+                    "units": "mA",
+                    "format": "int",
+                    "hint":{
+                        "min": 0,
+                        "max": 2000
+                    }
+                },
+                {
+                    "key": "utc",
+                    "source": "timestamp",
+                    "name": "Timestamp",
+                    "format": "utc"
+                   
+                }
+            ]
+        },
+        {
+            "name": "DDR Current",
+            "key": "iddr",
             "values": [
                 {
                     "key": "value",
