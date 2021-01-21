@@ -1,108 +1,231 @@
 {
-    "folder:13":{
-        "composition": [
-            "folder:1",
-            "folder:2"
-        ],
-        "name": "Folder 13",
-        "type": "folder",
-        "location": "folder:demo-objects"
-    },
     "folder:1":{
         "composition": [
-            "beacon.telemetry:tx_guard"
-            
+            "folder:3",
+            "folder:4",
+            "folder:5",
+            "folder:6",
+            "folder:7",
+            "folder:8"
         ],
-        "name": "Charging Beacon TMTC",
+        "name": "Nominal Beacon",
         "type": "folder",
-        "location": "folder:13"
+        "location": "folder:demo-objects"
     },
     "folder:2":{
         "composition": [
-            "beacon.telemetry:rx_guard"
+            "folder:9",
+            "folder:10",
+            "folder:11",
+            "folder:12",
+            "folder:13",
+            "folder:14"
         ],
-        "name": "Nominal Beacon TMTC",
+        "name": "Charging Beacon",
         "type": "folder",
-        "location": "folder:13"
+        "location": "folder:demo-objects"
     },
+
     "folder:3":{
         "composition": [
-            
+            "beacon.telemetry:reboot_in",
+            "beacon.telemetry:baud",
+            "beacon.telemetry:temp_brd",
+            "beacon.telemetry:temp_pa",
+            "beacon.telemetry:boot_count",
+            "beacon.telemetry:active_conf",
+            "beacon.telemetry:bgnd_rssi",
+            "beacon.telemetry:tot_tx_bytes",
+            "beacon.telemetry:tot_rx_bytes",
+            "beacon.telemetry:boot_cause",
+            "beacon.telemetry:last_contact",
+            "beacon.telemetry:tx_guard",
+            "beacon.telemetry:rx_guard",
+            "beacon.telemetry:max_tx_time"
         ],
-        "name": "Charging Beacon POWER",
+        "name": "TMTC",
         "type": "folder",
-        "location": "folder:demo-objects"
+        "location": "folder:1"
     },
+
     "folder:4":{
         "composition": [
-            
+            "beacon.telemetry:batt_volt",
+            "beacon.telemetry:batt_temp",
+            "beacon.telemetry:volt_solar_1",
+            "beacon.telemetry:volt_solar_2",
+            "beacon.telemetry:volt_solar_3",
+            "beacon.telemetry:volt_solar_4",
+            "beacon.telemetry:volt_solar_5",
+            "beacon.telemetry:volt_3v3",
+            "beacon.telemetry:cur_ecat_t1",
+            "beacon.telemetry:cur_ecat_t2",
+            "beacon.telemetry:cur_ecat_m"
+
+
         ],
-        "name": "Nominal Beacon POWER",
+        "name": "Power",
         "type": "folder",
-        "location": "folder:demo-objects"
+        "location": "folder:1"
     },
     "folder:5":{
         "composition": [
-            
+            "beacon.telemetry:mode_adcs",
+            "beacon.telemetry:angular_vector_x",
+            "beacon.telemetry:angular_vector_y",
+            "beacon.telemetry:angular_vector_z",
+            "beacon.telemetry:temp_mag_1",
+            "beacon.telemetry:temp_mag_2",
+            "beacon.telemetry:attitude_q1",
+            "beacon.telemetry:attitude_q2",
+            "beacon.telemetry:attitude_q3",
+            "beacon.telemetry:attitude_q4",
+            "beacon.telemetry:error_est",
+            "beacon.telemetry:tle_epochy",
+            "beacon.telemetry:tle_epochd",
+            "beacon.telemetry:tle_epochf"
+
         ],
-        "name": "Charging Beacon ADCS",
+        "name": "ADCS",
         "type": "folder",
-        "location": "folder:demo-objects"
+        "location": "folder:1"
     },
     "folder:6":{
         "composition": [
-            
+            "beacon.telemetry:ecat_temp",
+            "beacon.telemetry:ecat_fwd",
+            "beacon.telemetry:ecat_rev"
         ],
-        "name": "Nominal Beacon ADCS",
+        "name": "ECAT",
         "type": "folder",
-        "location": "folder:demo-objects"
+        "location": "folder:1"
     },
     "folder:7":{
         "composition": [
-            
+            "beacon.telemetry:boot_count",
+            "beacon.telemetry:image_count",
+            "beacon.telemetry:temp1",
+            "beacon.telemetry:temp2",
+            "beacon.telemetry:ivcc",
+            "beacon.telemetry:gain_target"
         ],
-        "name": "Charging Beacon ECAT",
+        "name": "CAM",
         "type": "folder",
-        "location": "folder:demo-objects"
+        "location": "folder:1"
     },
     "folder:8":{
         "composition": [
-            
+            "beacon.telemetry:mode",
+            "beacon.telemetry:boot_count",
+            "beacon.telemetry:uptime",
+            "beacon.telemetry:clock",
+            "beacon.telemetry:tele_size_flash",
+            "beacon.telemetry:temp_ram",
+            "beacon.telemetry:temp_mcu",
+            "beacon.telemetry:i_PWM",
+            "beacon.telemetry:resetcause",
+            "beacon.telemetry:bootcause",
+            "beacon.telemetry:obc_imgcnt"
         ],
-        "name": "Nominal Beacon ECAT",
+        "name": "OBDH",
         "type": "folder",
-        "location": "folder:demo-objects"
-    },
+        "location": "folder:1"
+    }
+    ,
+
     "folder:9":{
         "composition": [
+            "beacon.telemetry:reboot_in",
+            "beacon.telemetry:baud",
+            "beacon.telemetry:temp_brd",
+            "beacon.telemetry:temp_pa",
+            "beacon.telemetry:boot_count",
+            "beacon.telemetry:active_conf",
+            "beacon.telemetry:bgnd_rssi",
+            "beacon.telemetry:boot_cause",
+            "beacon.telemetry:last_contact",
+            "beacon.telemetry:tx_guard",
+            "beacon.telemetry:rx_guard",
+            "beacon.telemetry:max_tx_time",
+            "beacon.telemetry:tx_mode",
+            "beacon.telemetry:rx_mode"
             
         ],
-        "name": "Charging Beacon CAM",
+        "name": "TMTC",
         "type": "folder",
-        "location": "folder:demo-objects"
+        "location": "folder:2"
     },
+
     "folder:10":{
         "composition": [
-            
+            "beacon.telemetry:batt_volt",
+            "beacon.telemetry:batt_temp",
+            "beacon.telemetry:volt_solar_1",
+            "beacon.telemetry:volt_solar_2",
+            "beacon.telemetry:volt_solar_3",
+            "beacon.telemetry:volt_solar_4",
+            "beacon.telemetry:volt_solar_5",
+            "beacon.telemetry:volt_3v3",
+            "beacon.telemetry:cur_ecat_t1",
+            "beacon.telemetry:cur_ecat_t2",
+            "beacon.telemetry:cur_ecat_m"
         ],
-        "name": "Nominal Beacon CAM",
+        "name": "Power",
         "type": "folder",
-        "location": "folder:demo-objects"
+        "location": "folder:2"
     },
     "folder:11":{
         "composition": [
-            
+            "beacon.telemetry:mode_adcs",
+            "beacon.telemetry:angular_vector_x",
+            "beacon.telemetry:angular_vector_y",
+            "beacon.telemetry:angular_vector_z",
+            "beacon.telemetry:tle_epochy",
+            "beacon.telemetry:tle_epochd",
+            "beacon.telemetry:tle_epochf"
         ],
-        "name": "Charging Beacon OBDH",
+        "name": "ADCS",
         "type": "folder",
-        "location": "folder:demo-objects"
+        "location": "folder:2"
     },
     "folder:12":{
         "composition": [
             
         ],
-        "name": "Nominal Beacon OBDH",
+        "name": "ECAT",
         "type": "folder",
-        "location": "folder:demo-objects"
+        "location": "folder:2"
+    },
+    "folder:13":{
+        "composition": [
+            "beacon.telemetry:boot_count",
+            "beacon.telemetry:temp1",
+            "beacon.telemetry:temp2",
+            "beacon.telemetry:ivcc",
+            "beacon.telemetry:icore",
+            "beacon.telemetry:iddr"
+
+        ],
+        "name": "CAM",
+        "type": "folder",
+        "location": "folder:2"
+    },
+    "folder:14":{
+        "composition": [
+            "beacon.telemetry:mode",
+            "beacon.telemetry:boot_count",
+            "beacon.telemetry:uptime",
+            "beacon.telemetry:clock",
+            "beacon.telemetry:tele_size_flash",
+            "beacon.telemetry:temp_ram",
+            "beacon.telemetry:temp_mcu",
+            "beacon.telemetry:i_PWM",
+            "beacon.telemetry:resetcause",
+            "beacon.telemetry:bootcause",
+            "beacon.telemetry:obc_imgcnt"
+        ],
+        "name": "OBDH",
+        "type": "folder",
+        "location": "folder:2"
     }
 }

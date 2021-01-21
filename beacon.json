@@ -522,7 +522,7 @@
         },
         {
             "name": "ECAT Transmitter current 1",
-            "key": "cur_ecat_1",
+            "key": "cur_ecat_t1",
             "values": [
                 {
                     "key": "value",
@@ -543,7 +543,7 @@
         },
         {
             "name": "ECAT Transmitter current 2",
-            "key": "cur_ecat_2",
+            "key": "cur_ecat_t2",
             "values": [
                 {
                     "key": "value",
