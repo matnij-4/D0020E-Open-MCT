@@ -1,27 +1,34 @@
 {
-    "name": "Folders",
-    "key": "fs",
-    "folders": [
-        {
-            "name": "Battery",
-            "key": "batt",
-            "composition": [
-                    "charging.beacon:reboot_in"
-            ],
-
-            "type": "folder",
-            "locations": "demo:demo-objects"
-        },
-        {
-            "name": "Sensor",
-            "key": "sens",
-            "composition": [
-                "charging.beacon:bgnd_rssi"
-            ],
-
-            "type": "folder",
-            "locations": "demo:demo-objects"
-        }
+    "folder:1":{
+        "composition": [
+            "charging.beacon:reboot_in",
+            "charging.beacon:baud",
+            "charging.beacon:temp_brd"
+        ],
+        "name": "Test folder",
+        "modified": "1",
+        "type": "folder",
+        "location": "folder:demo-objects"
+    },
+    "folder:2":{
+        "composition": [
+            "charging.beacon:bgnd_rssi",
+            "charging.beacon:boot_cause"
+            
+        ],
+        "name": "Sub Test folder",
+        "modified": "1",
+        "type": "folder",
+        "location": "folder:demo-objects"
+    },
+    "folder:3":{
+        "composition": [
+            "charging.beacon:tx_guard"
         
-    ]
+        ],
+        "name": "Sub Test folder 2",
+        "modified": "1",
+        "type": "folder",
+        "location": "folder:demo-objects"
+    }
 }

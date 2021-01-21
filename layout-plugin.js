@@ -1,65 +1,105 @@
-const constNameSpace = "demo";
+const constNameSpace = "folder";
 const constKey = "demo-objects";
 
 
 
-//The object provider.
-var objectFolder = {
-    get: function (identifier) {
-        return getDictionary('/layout.json').then( (dictionary) => {
-            if (identifier.key === constKey) {
-                return {
-                    identifier: identifier,
-                    name: dictionary.name,
-                    type: 'folder',
-                    location: 'ROOT',
-                    composition: []
-                };
-            } else {
-                var measurement = dictionary.folders.filter( (m) => {
-                    console.log(m);
-                    return m;
-                });
-                
-            }
-        });
-    }
-};
+var demoModels;
 
 
-//Composition Provider for Layout.
-var compositionProviderFolder= {
-    appliesTo: function (domainObject) {
-        return domainObject.identifier.namespace === constNameSpace &&
-                domainObject.type === 'folder';
-    },
-    load: function (domainObject) {
-        return getDictionary('/layout.json')
-            .then(function (dictionary) {
-                return dictionary.folders.map(function (m) {
-                    return {
-                        namespace: constNameSpace,
-                        key: m.key
-                    };
-                });
-            });
-    }
-};
+function serializeId(id) {
+    return id.namespace + ':' + id.key;
+}
+
+function deserializeId(serializedId) {
+    var tokens = serializedId.split(':');
+    return {
+        namespace: tokens[0],
+        key: tokens[1]
+    }; 
+}
+
+function addIdentifier(object, identifier) {
+    object.identifier = identifier;
+    return object;
+}
 
 
-//The install function for Open MCT.
+
 function LayoutPlugin() {
-    return function install(openmct) {
+    return function install() {
+
+
+        getDictionary("/layout.json").then((dictionary) => {
+            demoModels = dictionary;
+            console.log(demoModels);
+
+             //Add new root for demo objects
         openmct.objects.addRoot({
             namespace: constNameSpace,
             key: constKey
         });
 
-        openmct.objects.addProvider(constNameSpace, objectFolder);
+        //2. Add composition provider for demo objects
+        openmct.composition.addProvider({
+            appliesTo: function (object) {
+                return object.identifier.namespace === constNameSpace && 
+                    object.composition !== undefined &&
+                    (object.identifier.key === constKey || 
+                    demoModels[serializeId(object.identifier)] !== undefined);
+            },
+            load: function (model) {
+                var id = model.identifier;
+                if (id.key === constKey) {
+                    return Promise.resolve(Object.keys(demoModels).filter(function (key) {
+                        return demoModels[key].location === constNameSpace + ":" +constKey;
+                    }).map(function (key) {
+                        var childId = deserializeId(key); 
+                        return {
+                            namespace: childId.namespace,
+                            key: childId.key 
+                        };
+                    }));
+                } else {
+                    return Promise.resolve(
+                        demoModels[serializeId(id)].composition.map(function (key) {
+                           var childId = deserializeId(key);
+                           return {
+                                namespace: childId.namespace,
+                                key: childId.key 
+                           }
+                        })
+                    );
+                }
+            }
+        });
 
-        openmct.composition.addProvider(compositionProviderFolder);
+        //3. Add object provider
+        openmct.objects.addProvider(constNameSpace, {
+            get: function (id) {
+                if (id.key === constKey) {
+                    return Promise.resolve({
+                        identifier: {
+                            key: constKey,
+                            namespace: constNameSpace
+                        },
+                        type: 'folder',
+                        location: 'ROOT',
+                        name: 'Demo Objects',
+                        composition: []
+                   });
+                } else {
+                    return Promise.resolve(addIdentifier(demoModels[serializeId(id)], id));
+                }
+            }
+        });
+        
+            
+        
+        });
 
-    
+       
 
+
+        
     }
 };
