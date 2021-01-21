@@ -1,32 +1,108 @@
 {
     "folder:1":{
         "composition": [
-            "charging.beacon:reboot_in",
-            "charging.beacon:baud",
-            "charging.beacon:temp_brd"
+            
         ],
-        "name": "Test folder",
+        "name": "Charging Beacon TMTC",
         "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     },
     "folder:2":{
         "composition": [
-            "charging.beacon:bgnd_rssi",
-            "charging.beacon:boot_cause"
             
         ],
-        "name": "Sub Test folder",
+        "name": "Nominal Beacon TMTC",
         "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     },
     "folder:3":{
         "composition": [
-            "charging.beacon:tx_guard"
-        
+            
         ],
-        "name": "Sub Test folder 2",
+        "name": "Charging Beacon POWER",
+        "modified": "1",
+        "type": "folder",
+        "location": "folder:demo-objects"
+    },
+    "folder:4":{
+        "composition": [
+            
+        ],
+        "name": "Nominal Beacon POWER",
+        "modified": "1",
+        "type": "folder",
+        "location": "folder:demo-objects"
+    },
+    "folder:5":{
+        "composition": [
+            
+        ],
+        "name": "Charging Beacon ADCS",
+        "modified": "1",
+        "type": "folder",
+        "location": "folder:demo-objects"
+    },
+    "folder:6":{
+        "composition": [
+            
+        ],
+        "name": "Nominal Beacon ADCS",
+        "modified": "1",
+        "type": "folder",
+        "location": "folder:demo-objects"
+    },
+    "folder:7":{
+        "composition": [
+            
+        ],
+        "name": "Charging Beacon ECAT",
+        "modified": "1",
+        "type": "folder",
+        "location": "folder:demo-objects"
+    },
+    "folder:8":{
+        "composition": [
+            
+        ],
+        "name": "Nominal Beacon ECAT",
+        "modified": "1",
+        "type": "folder",
+        "location": "folder:demo-objects"
+    },
+    "folder:9":{
+        "composition": [
+            
+        ],
+        "name": "Charging Beacon CAM",
+        "modified": "1",
+        "type": "folder",
+        "location": "folder:demo-objects"
+    },
+    "folder:10":{
+        "composition": [
+            
+        ],
+        "name": "Nominal Beacon CAM",
+        "modified": "1",
+        "type": "folder",
+        "location": "folder:demo-objects"
+    },
+    "folder:11":{
+        "composition": [
+            
+        ],
+        "name": "Charging Beacon OBDH",
+        "modified": "1",
+        "type": "folder",
+        "location": "folder:demo-objects"
+    },
+    "folder:12":{
+        "composition": [
+            
+        ],
+        "name": "Nominal Beacon OBDH",
         "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
