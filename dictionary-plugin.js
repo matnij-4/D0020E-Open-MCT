@@ -21,7 +21,6 @@ var objectProviderNom = {
                     return m.key === identifier.key;
                 })[0];
                 
-
                 
                 return {
                     identifier: identifier,
@@ -109,23 +108,6 @@ var compositionProviderCharg = {
 };
 
 
-var compositionProviderSub = {
-    appliesTo: function (domainObject) {
-        return domainObject.identifier.namespace === 'sub.systems' &&
-               domainObject.type === 'folder';
-    },
-    load: function (domainObject) {
-        return getDictionarySubsystems()
-            .then(function (dictionary) {
-                return dictionary.folders.map(function (m) {
-                    return {
-                        namespace: 'sub.systems',
-                        key: m.key
-                    };
-                });
-            });
-    }
-};
 
 
 function DictionaryPlugin() {
@@ -141,8 +123,13 @@ function DictionaryPlugin() {
         });
 
 
+
+
+
+
         openmct.objects.addProvider('nominal.beacon', objectProviderNom);
         openmct.objects.addProvider('charging.beacon', objectProviderCharg);
+
 
 
         openmct.composition.addProvider(compositionProviderNom);
