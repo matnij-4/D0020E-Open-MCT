@@ -1,3 +1,6 @@
+const NAMESPACE = "beacon.telemetry";
+const BEACONKEY = "beacon";
+
 //The get dictionar funcion for getting the Json files data.
 function getDictionary(jasonName) {
     return http.get(jasonName)
@@ -6,10 +9,10 @@ function getDictionary(jasonName) {
         });
 }
 
-var objectProviderNom = {
+var objectProvider = {
     get: function (identifier) {
-        return getDictionary('/nominal-beacon.json').then( (dictionary) => {
-            if (identifier.key === 'beaconNom') {
+        return getDictionary('/beacon.json').then( (dictionary) => {
+            if (identifier.key === BEACONKEY) {
                 return {
                     identifier: identifier,
                     name: dictionary.name,
@@ -29,7 +32,7 @@ var objectProviderNom = {
                     telemetry: {
                         values: measurement.values
                     },
-                    location: 'nominal.beacon:beaconNom'
+                    location: NAMESPACE + ":" + BEACONKEY
                 };
                 
             }
@@ -37,6 +40,7 @@ var objectProviderNom = {
     }
 };
 
+<<<<<<< HEAD
 
 var objectProviderCharg = {
     get: function (identifier) {
@@ -90,16 +94,19 @@ var compositionProviderNom= {
 
 
 var compositionProviderCharg = {
+=======
+var compositionProvider= {
+>>>>>>> ec02069b3d02da296c234b0430715a912155a2a6
     appliesTo: function (domainObject) {
-        return domainObject.identifier.namespace === 'charging.beacon' &&
+        return domainObject.identifier.namespace === NAMESPACE &&
                domainObject.type === 'folder';
     },
     load: function (domainObject) {
-        return getDictionary('/charging-beacon.json')
+        return getDictionary('/beacon.json')
             .then(function (dictionary) {
                 return dictionary.measurements.map(function (m) {
                     return {
-                        namespace: 'charging.beacon',
+                        namespace: NAMESPACE,
                         key: m.key
                     };
                 });
@@ -108,34 +115,19 @@ var compositionProviderCharg = {
 };
 
 
-
-
 function DictionaryPlugin() {
     return function install(openmct) {
         openmct.objects.addRoot({
-            namespace: 'nominal.beacon',
-            key: 'beaconNom'
+            namespace: NAMESPACE,
+            key: BEACONKEY
         });
 
-        openmct.objects.addRoot({
-            namespace: 'charging.beacon',
-            key: 'beaconCharg'
-        });
+        openmct.objects.addProvider(NAMESPACE, objectProvider);
 
 
+        openmct.composition.addProvider(compositionProvider);
 
 
-
-
-        openmct.objects.addProvider('nominal.beacon', objectProviderNom);
-        openmct.objects.addProvider('charging.beacon', objectProviderCharg);
-
-
-
-        openmct.composition.addProvider(compositionProviderNom);
-        openmct.composition.addProvider(compositionProviderCharg);
-
-    
         openmct.types.addType('telemetry', {
             name: 'Telemetry',
             description: 'Telemetry point',

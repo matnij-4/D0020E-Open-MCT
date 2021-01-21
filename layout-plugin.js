@@ -31,7 +31,7 @@ function LayoutPlugin() {
 
         getDictionary("/layout.json").then((dictionary) => {
             demoModels = dictionary;
-            console.log(demoModels);
+            
 
              //Add new root for demo objects
         openmct.objects.addRoot({

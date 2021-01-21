@@ -4,7 +4,6 @@
             
         ],
         "name": "Charging Beacon TMTC",
-        "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     },
@@ -13,7 +12,6 @@
             
         ],
         "name": "Nominal Beacon TMTC",
-        "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     },
@@ -22,7 +20,6 @@
             
         ],
         "name": "Charging Beacon POWER",
-        "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     },
@@ -31,7 +28,6 @@
             
         ],
         "name": "Nominal Beacon POWER",
-        "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     },
@@ -40,7 +36,6 @@
             
         ],
         "name": "Charging Beacon ADCS",
-        "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     },
@@ -49,7 +44,6 @@
             
         ],
         "name": "Nominal Beacon ADCS",
-        "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     },
@@ -58,7 +52,6 @@
             
         ],
         "name": "Charging Beacon ECAT",
-        "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     },
@@ -67,7 +60,6 @@
             
         ],
         "name": "Nominal Beacon ECAT",
-        "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     },
@@ -76,7 +68,6 @@
             
         ],
         "name": "Charging Beacon CAM",
-        "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     },
@@ -85,7 +76,6 @@
             
         ],
         "name": "Nominal Beacon CAM",
-        "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     },
@@ -94,7 +84,6 @@
             
         ],
         "name": "Charging Beacon OBDH",
-        "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     },
@@ -103,7 +92,6 @@
             
         ],
         "name": "Nominal Beacon OBDH",
-        "modified": "1",
         "type": "folder",
         "location": "folder:demo-objects"
     }
