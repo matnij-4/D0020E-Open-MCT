@@ -1,19 +1,29 @@
 {
+    "folder:13":{
+        "composition": [
+            "folder:1",
+            "folder:2"
+        ],
+        "name": "Folder 13",
+        "type": "folder",
+        "location": "folder:demo-objects"
+    },
     "folder:1":{
         "composition": [
+            "beacon.telemetry:tx_guard"
             
         ],
         "name": "Charging Beacon TMTC",
         "type": "folder",
-        "location": "folder:demo-objects"
+        "location": "folder:13"
     },
     "folder:2":{
         "composition": [
-            
+            "beacon.telemetry:rx_guard"
         ],
         "name": "Nominal Beacon TMTC",
         "type": "folder",
-        "location": "folder:demo-objects"
+        "location": "folder:13"
     },
     "folder:3":{
         "composition": [
