@@ -71,8 +71,6 @@ var objectProviderCharg = {
     }
 };
 
-
-
 var compositionProviderNom= {
     appliesTo: function (domainObject) {
         return domainObject.identifier.namespace === 'nominal.beacon' &&

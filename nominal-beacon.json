@@ -1,12 +1,6 @@
 {
-<<<<<<< HEAD:dictionary.json
-    "name": "D0020E Spacecraft",
-    "key": "sc",
-    "type": "folder",
-=======
     "name": "Nominal Beacon",
     "key": "nb",
->>>>>>> aeb80110c9aa0ca181473f5b1b71a5e290e2e945:nominal-beacon.json
     "measurements": [
         {
             "name": "Time until reboot",
@@ -1316,3 +1310,4 @@
         
     ]
 }
+
