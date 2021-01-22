@@ -6,7 +6,8 @@
             "folder:5",
             "folder:6",
             "folder:7",
-            "folder:8"
+            "folder:8",
+            "folder:14"
         ],
         "name": "Nominal Beacon",
         "type": "folder",
@@ -218,5 +219,80 @@
         "name": "OBDH",
         "type": "folder",
         "location": "folder:2"
+    },
+    "folder:14": {
+        "composition": [
+            "beacon.telemetry:bgnd_rssi",
+            "beacon.telemetry:reboot_in"
+        ],
+        "name": "Widget",
+        "type": "summary-widget",
+        "modified": "1",
+        "location": "folder:1",
+        "configuration": {
+            "ruleOrder": [
+                "default",
+                "off"
+            ],
+            "ruleConfigById": {
+                "default": {
+                    "name": "default",
+                    "label": "Battery On",
+                    "message": "",
+                    "id": "default",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#8DB600",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:reboot_in",
+                            "key": "value",
+                            "operation": "",
+                            "values": [
+                                1
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "off": {
+                    "name": "off",
+                    "label": "Battery Off",
+                    "message": "Battery level lower",
+                    "id": "off",
+                    "icon": "icon-alert-triangle",
+                    "style": {
+                        "color": "ffffff",
+                        "background-color": "#D3212D",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:reboot_in",
+                            "key": "value",
+                            "operation": "lessThan",
+                            "values": [
+                                2
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                }
+            },
+            "testDataConfig": [
+                {
+                    "object": "",
+                    "key": "",
+                    "value": ""
+                }
+            ]
+        }
     }
 }
