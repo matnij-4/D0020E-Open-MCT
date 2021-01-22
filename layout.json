@@ -1,32 +1,32 @@
 {
-    "folder:1":{
+    "layout:1":{
         "composition": [
-            "folder:3",
-            "folder:4",
-            "folder:5",
-            "folder:6",
-            "folder:7",
-            "folder:8",
-            "folder:14"
+            "layout:3",
+            "layout:4",
+            "layout:5",
+            "layout:6",
+            "layout:7",
+            "layout:8",
+            "layout:14"
         ],
         "name": "Nominal Beacon",
         "type": "folder",
-        "location": "folder:demo-objects"
+        "location": "layout:layout-objects"
     },
-    "folder:2":{
+    "layout:2":{
         "composition": [
-            "folder:9",
-            "folder:10",
-            "folder:11",
-            "folder:12",
-            "folder:13"
+            "layout:9",
+            "layout:10",
+            "layout:11",
+            "layout:12",
+            "layout:13"
         ],
         "name": "Charging Beacon",
         "type": "folder",
-        "location": "folder:demo-objects"
+        "location": "layout:layout-objects"
     },
 
-    "folder:3":{
+    "layout:3":{
         "composition": [
             "beacon.telemetry:reboot_in",
             "beacon.telemetry:baud",
@@ -45,10 +45,10 @@
         ],
         "name": "TMTC",
         "type": "folder",
-        "location": "folder:1"
+        "location": "layout:1"
     },
 
-    "folder:4":{
+    "layout:4":{
         "composition": [
             "beacon.telemetry:batt_volt",
             "beacon.telemetry:batt_temp",
@@ -66,9 +66,9 @@
         ],
         "name": "Power",
         "type": "folder",
-        "location": "folder:1"
+        "location": "layout:1"
     },
-    "folder:5":{
+    "layout:5":{
         "composition": [
             "beacon.telemetry:mode_adcs",
             "beacon.telemetry:angular_vector_x",
@@ -88,19 +88,20 @@
         ],
         "name": "ADCS",
         "type": "folder",
-        "location": "folder:1"
+        "location": "layout:1"
     },
-    "folder:6":{
+    "layout:6":{
         "composition": [
             "beacon.telemetry:ecat_temp",
             "beacon.telemetry:ecat_fwd",
-            "beacon.telemetry:ecat_rev"
+            "beacon.telemetry:ecat_rev",
+            "layout:15"
         ],
         "name": "ECAT",
         "type": "folder",
-        "location": "folder:1"
+        "location": "layout:1"
     },
-    "folder:7":{
+    "layout:7":{
         "composition": [
             "beacon.telemetry:boot_count",
             "beacon.telemetry:image_count",
@@ -111,9 +112,9 @@
         ],
         "name": "CAM",
         "type": "folder",
-        "location": "folder:1"
+        "location": "layout:1"
     },
-    "folder:8":{
+    "layout:8":{
         "composition": [
             "beacon.telemetry:mode",
             "beacon.telemetry:boot_count",
@@ -129,11 +130,11 @@
         ],
         "name": "OBDH",
         "type": "folder",
-        "location": "folder:1"
+        "location": "layout:1"
     }
     ,
 
-    "folder:9":{
+    "layout:9":{
         "composition": [
             "beacon.telemetry:reboot_in",
             "beacon.telemetry:baud",
@@ -153,10 +154,10 @@
         ],
         "name": "TMTC",
         "type": "folder",
-        "location": "folder:2"
+        "location": "layout:2"
     },
 
-    "folder:10":{
+    "layout:10":{
         "composition": [
             "beacon.telemetry:batt_volt",
             "beacon.telemetry:batt_temp",
@@ -172,9 +173,9 @@
         ],
         "name": "Power",
         "type": "folder",
-        "location": "folder:2"
+        "location": "layout:2"
     },
-    "folder:11":{
+    "layout:11":{
         "composition": [
             "beacon.telemetry:mode_adcs",
             "beacon.telemetry:angular_vector_x",
@@ -186,9 +187,9 @@
         ],
         "name": "ADCS",
         "type": "folder",
-        "location": "folder:2"
+        "location": "layout:2"
     },
-    "folder:12":{
+    "layout:12":{
         "composition": [
             "beacon.telemetry:boot_count",
             "beacon.telemetry:temp1",
@@ -200,9 +201,9 @@
         ],
         "name": "CAM",
         "type": "folder",
-        "location": "folder:2"
+        "location": "layout:2"
     },
-    "folder:13":{
+    "layout:13":{
         "composition": [
             "beacon.telemetry:mode",
             "beacon.telemetry:boot_count",
@@ -218,9 +219,9 @@
         ],
         "name": "OBDH",
         "type": "folder",
-        "location": "folder:2"
+        "location": "layout:2"
     },
-    "folder:14": {
+    "layout:14": {
         "composition": [
             "beacon.telemetry:bgnd_rssi",
             "beacon.telemetry:reboot_in"
@@ -228,7 +229,7 @@
         "name": "Widget",
         "type": "summary-widget",
         "modified": "1",
-        "location": "folder:1",
+        "location": "layout:1",
         "configuration": {
             "ruleOrder": [
                 "default",
@@ -294,5 +295,56 @@
                 }
             ]
         }
+    },
+    "layout:15": {
+        "configuration": {
+            "containers": [
+                {
+                    "frames": [
+                        {
+                            "domainObjectIdentifier": {
+                                "namespace": "beacon.telemetry",
+                                "key": "ecat_rev"
+                            },
+                            "size": 50,
+                            "noFrame": false
+                        },
+                        {
+                            "domainObjectIdentifier": {
+                                "namespace": "beacon.telemetry",
+                                "key": "ecat_temp"
+                            },
+                            "size": 50,
+                            "noFrame": false
+                        }
+                    ],
+                    "size": 50
+                },
+                {
+                    "frames": [
+                        {
+                            "domainObjectIdentifier": {
+                                "namespace": "beacon.telemetry",
+                                "key": "ecat_fwd"
+                            },
+                            "size": 100,
+                            "noFrame": false
+                        }
+                    ],
+                    "size": 50
+                }
+            ],
+            "rowsLayout": false
+        },
+        "composition": [
+            
+            "beacon.telemetry:ecat_temp",
+            "beacon.telemetry:ecat_fwd",
+            "beacon.telemetry:ecat_rev"
+            
+        ],
+        "name": "Flexible Layout ECAT",
+        "type": "flexible-layout",
+        "location": "layout:6"
     }
 }

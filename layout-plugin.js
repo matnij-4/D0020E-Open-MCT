@@ -1,5 +1,5 @@
-const constNameSpace = "folder";
-const constKey = "demo-objects";
+const constNameSpace = "layout";
+const constKey = "layout-objects";
 
 
 
