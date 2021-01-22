@@ -95,7 +95,8 @@
             "beacon.telemetry:ecat_temp",
             "beacon.telemetry:ecat_fwd",
             "beacon.telemetry:ecat_rev",
-            "layout:15"
+            "layout:15",
+            "layout:16"
         ],
         "name": "ECAT",
         "type": "folder",
@@ -346,5 +347,81 @@
         "name": "Flexible Layout ECAT",
         "type": "flexible-layout",
         "location": "layout:6"
+    },
+
+    "layout:16": {
+        "composition": [
+            "beacon.telemetry:ecat_temp",
+            "beacon.telemetry:ecat_fwd",
+            "beacon.telemetry:ecat_rev"
+        ],
+        "configuration": {
+            "items": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "ecat_temp"
+                    },
+                    "x": 53,
+                    "y": 0,
+                    "width": 23,
+                    "height": 16,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "ecat_fwd"
+                    },
+                    "x": 26,
+                    "y": 0,
+                    "width": 27,
+                    "height": 16,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "ecat_rev"
+                    },
+                    "x": 0,
+                    "y": 0,
+                    "width": 26,
+                    "height": 16,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+                }
+            ],
+            "layoutGrid": [
+                10,
+                10
+            ],
+            "layoutDimensions": {}
+        },
+        "name": "Display Layout ECAT",
+        "type": "layout",
+        "location": "layout:6"
     }
 }
+
