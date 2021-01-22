@@ -78,7 +78,7 @@ function DictionaryPlugin() {
             cssClass: 'icon-telemetry'
         });
 
-
+        //Hello world :D
 
     }
 };

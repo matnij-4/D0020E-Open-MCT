@@ -18,8 +18,7 @@
             "folder:10",
             "folder:11",
             "folder:12",
-            "folder:13",
-            "folder:14"
+            "folder:13"
         ],
         "name": "Charging Beacon",
         "type": "folder",
@@ -190,14 +189,6 @@
     },
     "folder:12":{
         "composition": [
-            
-        ],
-        "name": "ECAT",
-        "type": "folder",
-        "location": "folder:2"
-    },
-    "folder:13":{
-        "composition": [
             "beacon.telemetry:boot_count",
             "beacon.telemetry:temp1",
             "beacon.telemetry:temp2",
@@ -210,7 +201,7 @@
         "type": "folder",
         "location": "folder:2"
     },
-    "folder:14":{
+    "folder:13":{
         "composition": [
             "beacon.telemetry:mode",
             "beacon.telemetry:boot_count",

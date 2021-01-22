@@ -84,7 +84,7 @@ function LayoutPlugin() {
                         },
                         type: 'folder',
                         location: 'ROOT',
-                        name: 'Demo Objects',
+                        name: 'Beacons',
                         composition: []
                    });
                 } else {
