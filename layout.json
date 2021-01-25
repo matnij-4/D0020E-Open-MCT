@@ -1,31 +1,30 @@
 {
-    "layout:1":{
+    "layout:nominal":{
         "composition": [
-            "layout:3",
-            "layout:4",
-            "layout:5",
-            "layout:6",
-            "layout:7",
-            "layout:8"
+            "layout:nomTMTC",
+            "layout:nomPower",
+            "layout:nomADCS",
+            "layout:nomECAT",
+            "layout:nomCAM",
+            "layout:nomOBDH"
         ],
         "name": "Nominal Beacon",
         "type": "folder",
         "location": "layout:layout-objects"
     },
-    "layout:2":{
+    "layout:charging":{
         "composition": [
-            "layout:9",
-            "layout:10",
-            "layout:11",
-            "layout:12",
-            "layout:13"
+            "layout:chargTMTC",
+            "layout:chargPower",
+            "layout:chargADCS",
+            "layout:chargCAM",
+            "layout:chargOBDH"
         ],
         "name": "Charging Beacon",
         "type": "folder",
         "location": "layout:layout-objects"
     },
-
-    "layout:3":{
+    "layout:nomTMTC":{
         "composition": [
             "beacon.telemetry:reboot_in",
             "beacon.telemetry:baud",
@@ -41,14 +40,13 @@
             "beacon.telemetry:tx_guard",
             "beacon.telemetry:rx_guard",
             "beacon.telemetry:max_tx_time",
-            "layout:14"
+            "layout:widgetTMTCBootCause"
         ],
         "name": "TMTC",
         "type": "folder",
-        "location": "layout:1"
+        "location": "layout:nominal"
     },
-
-    "layout:4":{
+    "layout:nomPower":{
         "composition": [
             "beacon.telemetry:batt_volt",
             "beacon.telemetry:batt_temp",
@@ -66,9 +64,9 @@
         ],
         "name": "Power",
         "type": "folder",
-        "location": "layout:1"
+        "location": "layout:nominal"
     },
-    "layout:5":{
+    "layout:nomADCS":{
         "composition": [
             "beacon.telemetry:mode_adcs",
             "beacon.telemetry:angular_vector_x",
@@ -84,26 +82,25 @@
             "beacon.telemetry:tle_epochy",
             "beacon.telemetry:tle_epochd",
             "beacon.telemetry:tle_epochf",
-            "layout:19"
+            "layout:widgetADCSModeAdcs"
 
         ],
         "name": "ADCS",
         "type": "folder",
-        "location": "layout:1"
+        "location": "layout:nominal"
     },
-    "layout:6":{
+    "layout:nomECAT":{
         "composition": [
             "beacon.telemetry:ecat_temp",
             "beacon.telemetry:ecat_fwd",
             "beacon.telemetry:ecat_rev",
-            "layout:15",
-            "layout:16"
+            "layout:ECATLayout"
         ],
         "name": "ECAT",
         "type": "folder",
-        "location": "layout:1"
+        "location": "layout:nominal"
     },
-    "layout:7":{
+    "layout:nomCAM":{
         "composition": [
             "beacon.telemetry:boot_count",
             "beacon.telemetry:image_count",
@@ -114,9 +111,9 @@
         ],
         "name": "CAM",
         "type": "folder",
-        "location": "layout:1"
+        "location": "layout:nominal"
     },
-    "layout:8":{
+    "layout:nomOBDH":{
         "composition": [
             "beacon.telemetry:mode",
             "beacon.telemetry:boot_count",
@@ -129,17 +126,16 @@
             "beacon.telemetry:resetcause",
             "beacon.telemetry:bootcause",
             "beacon.telemetry:obc_imgcnt",
-            "layout:20",
-            "layout:21",
-            "layout:22"
+            "layout:widgetOBDHMode",
+            "layout:widgetOBDHResetCause",
+            "layout:widgetOBDHBootCause"
         ],
         "name": "OBDH",
         "type": "folder",
-        "location": "layout:1"
-    }
-    ,
+        "location": "layout:nominal"
+    },
 
-    "layout:9":{
+    "layout:chargTMTC":{
         "composition": [
             "beacon.telemetry:reboot_in",
             "beacon.telemetry:baud",
@@ -155,17 +151,17 @@
             "beacon.telemetry:max_tx_time",
             "beacon.telemetry:tx_mode",
             "beacon.telemetry:rx_mode",
-            "layout:14",
-            "layout:17",
-            "layout:18"
+            "layout:widgetTMTCBootCause",
+            "layout:widgetTMTCTXMode",
+            "layout:widgetTMTCRXMode"
             
         ],
         "name": "TMTC",
         "type": "folder",
-        "location": "layout:2"
+        "location": "layout:charging"
     },
 
-    "layout:10":{
+    "layout:chargPower":{
         "composition": [
             "beacon.telemetry:batt_volt",
             "beacon.telemetry:batt_temp",
@@ -181,9 +177,9 @@
         ],
         "name": "Power",
         "type": "folder",
-        "location": "layout:2"
+        "location": "layout:charging"
     },
-    "layout:11":{
+    "layout:chargADCS":{
         "composition": [
             "beacon.telemetry:mode_adcs",
             "beacon.telemetry:angular_vector_x",
@@ -192,13 +188,13 @@
             "beacon.telemetry:tle_epochy",
             "beacon.telemetry:tle_epochd",
             "beacon.telemetry:tle_epochf",
-            "layout:19"
+            "layout:widgetADCSModeAdcs"
         ],
         "name": "ADCS",
         "type": "folder",
-        "location": "layout:2"
+        "location": "layout:charging"
     },
-    "layout:12":{
+    "layout:chargCAM":{
         "composition": [
             "beacon.telemetry:boot_count",
             "beacon.telemetry:temp1",
@@ -210,9 +206,9 @@
         ],
         "name": "CAM",
         "type": "folder",
-        "location": "layout:2"
+        "location": "layout:charging"
     },
-    "layout:13":{
+    "layout:chargOBDH":{
         "composition": [
             "beacon.telemetry:mode",
             "beacon.telemetry:boot_count",
@@ -225,22 +221,22 @@
             "beacon.telemetry:resetcause",
             "beacon.telemetry:bootcause",
             "beacon.telemetry:obc_imgcnt",
-            "layout:20",
-            "layout:21",
-            "layout:22"
+            "layout:widgetOBDHMode",
+            "layout:widgetOBDHResetCause",
+            "layout:widgetOBDHBootCause"
         ],
         "name": "OBDH",
         "type": "folder",
-        "location": "layout:2"
+        "location": "layout:charging"
     },
-    "layout:14": {
+    "layout:widgetTMTCBootCause": {
         "composition": [
             "beacon.telemetry:boot_cause"
         ],
         "name": "Cause of last reboot",
         "type": "summary-widget",
         "modified": "1",
-        "location": "layout:3",
+        "location": "layout:nomTMTC",
         "configuration": {
             "ruleOrder": [
                 "default",
@@ -307,59 +303,7 @@
             ]
         }
     },
-    "layout:15": {
-        "configuration": {
-            "containers": [
-                {
-                    "frames": [
-                        {
-                            "domainObjectIdentifier": {
-                                "namespace": "beacon.telemetry",
-                                "key": "ecat_rev"
-                            },
-                            "size": 50,
-                            "noFrame": false
-                        },
-                        {
-                            "domainObjectIdentifier": {
-                                "namespace": "beacon.telemetry",
-                                "key": "ecat_temp"
-                            },
-                            "size": 50,
-                            "noFrame": false
-                        }
-                    ],
-                    "size": 50
-                },
-                {
-                    "frames": [
-                        {
-                            "domainObjectIdentifier": {
-                                "namespace": "beacon.telemetry",
-                                "key": "ecat_fwd"
-                            },
-                            "size": 100,
-                            "noFrame": false
-                        }
-                    ],
-                    "size": 50
-                }
-            ],
-            "rowsLayout": false
-        },
-        "composition": [
-            
-            "beacon.telemetry:ecat_temp",
-            "beacon.telemetry:ecat_fwd",
-            "beacon.telemetry:ecat_rev"
-            
-        ],
-        "name": "Flexible Layout ECAT",
-        "type": "flexible-layout",
-        "location": "layout:6"
-    },
-
-    "layout:16": {
+    "layout:ECATLayout": {
         "composition": [
             "beacon.telemetry:ecat_temp",
             "beacon.telemetry:ecat_fwd",
@@ -429,18 +373,17 @@
             ],
             "layoutDimensions": {}
         },
-        "name": "Display Layout ECAT",
-        "type": "layout",
-        "location": "layout:6"
+        "name": "Display Layout nomECAT",
+        "type": "layout"
     },
-    "layout:17": {
+    "layout:widgetTMTCTXMode": {
         "composition": [
             "beacon.telemetry:tx_mode"
         ],
         "name": "TX framing mode",
         "type": "summary-widget",
         "modified": "1",
-        "location": "layout:9",
+        "location": "layout:chargTMTC",
         "configuration": {
             "ruleOrder": [
                 "default",
@@ -508,7 +451,7 @@
         }
     },
     
-    "layout:18": {
+    "layout:widgetTMTCRXMode": {
         "composition": [
             "beacon.telemetry:rx_mode"
         ],
@@ -581,7 +524,7 @@
             ]
         }
     },
-    "layout:19": {
+    "layout:widgetADCSModeAdcs": {
         "composition": [
             "beacon.telemetry:mode_adcs"
         ],
@@ -654,7 +597,7 @@
             ]
         }
     },
-    "layout:20": {
+    "layout:widgetOBDHMode": {
         "composition": [
             "beacon.telemetry:mode"
         ],
@@ -727,7 +670,7 @@
             ]
         }
     },
-    "layout:21": {
+    "layout:widgetOBDHResetCause": {
         "composition": [
             "beacon.telemetry:resetcause"
         ],
@@ -800,7 +743,7 @@
             ]
         }
     },
-    "layout:22": {
+    "layout:widgetOBDHBootCause": {
         "composition": [
             "beacon.telemetry:bootcause"
         ],
