@@ -11,7 +11,7 @@ function getDictionary(jasonName) {
 
 var objectProvider = {
     get: function (identifier) {
-        return getDictionary('/beacon.json').then( (dictionary) => {
+        return getDictionary('/config/beacon.json').then( (dictionary) => {
             if (identifier.key === BEACONKEY) {
                 return {
                     identifier: identifier,
@@ -46,7 +46,7 @@ var compositionProvider= {
                domainObject.type === 'folder';
     },
     load: function (domainObject) {
-        return getDictionary('/beacon.json')
+        return getDictionary('/config/beacon.json')
             .then(function (dictionary) {
                 return dictionary.measurements.map(function (m) {
                     return {

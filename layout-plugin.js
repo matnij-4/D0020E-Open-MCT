@@ -29,7 +29,7 @@ function LayoutPlugin() {
     return function install() {
 
 
-        getDictionary("/layout.json").then((dictionary) => {
+        getDictionary("/config/layout.json").then((dictionary) => {
             demoModels = dictionary;
             
 
