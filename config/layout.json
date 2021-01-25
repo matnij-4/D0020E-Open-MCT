@@ -1758,7 +1758,8 @@
                     "color": "",
                     "fontSize": "18",
                     "font": "default",
-                    "type": "telemetry-view"
+                    "type": "telemetry-view",
+                    "id": "9dc91e52-f490-4298-b1c3-fdad68fe4874"
                 },
                 {
                     "identifier": {
@@ -1776,7 +1777,8 @@
                     "color": "",
                     "fontSize": "18",
                     "font": "default",
-                    "type": "telemetry-view"
+                    "type": "telemetry-view",
+                    "id": "9dc91e52-f490-4298-b1c3-fdad68fe4874"
                 },
                 {
                     "identifier": {
@@ -1813,7 +1815,8 @@
                     "color": "",
                     "fontSize": "18",
                     "font": "default",
-                    "type": "telemetry-view"
+                    "type": "telemetry-view",
+                    "id": "cd109f92-b2ee-4048-84bb-873f34b0332c"
                 },
                 {
                     "identifier": {
