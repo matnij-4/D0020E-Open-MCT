@@ -337,7 +337,7 @@
                     "name": "Value",
                     "units": "V",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "range":"1",
                         "min": "0",
                         "max": "10"
@@ -361,8 +361,8 @@
                     "name": "Value",
                     "units": "V",
                     "format": "°C",
-                    "hint":{
-                        "range":"1",
+                    "hints": {
+                        "range": "1",
                         "min": "-200",
                         "max": "200"
                     }
@@ -385,7 +385,7 @@
                     "name": "Value",
                     "units": "mV",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "range":"1",
                         "min": "0",
                         "max": "10000"
@@ -409,7 +409,7 @@
                     "name": "Value",
                     "units": "mV",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "range":"1",
                         "min": "0",
                         "max": "10000"
@@ -433,7 +433,7 @@
                     "name": "Value",
                     "units": "mV",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "range":"1",
                         "min": "0",
                         "max": "10000"
@@ -457,7 +457,7 @@
                     "name": "Value",
                     "units": "mV",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "range":"1",
                         "min": "0",
                         "max": "10000"
@@ -481,7 +481,7 @@
                     "name": "Value",
                     "units": "mV",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "range":"1",
                         "min": "0",
                         "max": "10000"
@@ -505,7 +505,7 @@
                     "name": "Value",
                     "units": "mV",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "range":"1",
                         "min": "0",
                         "max": "10000"
@@ -529,7 +529,7 @@
                     "name": "Value",
                     "units": "mV",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -550,7 +550,7 @@
                     "name": "Value",
                     "units": "mV",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         
                     }
                 },
@@ -572,7 +572,7 @@
                     "name": "Value",
                     "units": "mV",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -593,7 +593,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "range":"1",
                         "min": "0",
                         "max": "3"
@@ -617,7 +617,7 @@
                     "name": "Value",
                     "units": "deg/s",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                         "min": "0",
                         "max": "3600"
                     }
@@ -640,7 +640,7 @@
                     "name": "Value",
                     "units": "deg/s",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                         "min": "0",
                         "max": "3600"
                     }
@@ -663,7 +663,7 @@
                     "name": "Value",
                     "units": "deg/s",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                         "min": "0",
                         "max": "3600"
                     }
@@ -686,7 +686,7 @@
                     "name": "Value",
                     "units": "°C",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                         "range":"1",
                         "min": "-200",
                         "max": "200"
@@ -710,7 +710,7 @@
                     "name": "Value",
                     "units": "°C",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                         "range":"1",
                         "min": "-200",
                         "max": "200"
@@ -734,7 +734,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -755,7 +755,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -776,7 +776,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -797,7 +797,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -818,7 +818,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -839,7 +839,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "min": "1",
                         "max": "366"
                     }
@@ -862,7 +862,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -883,7 +883,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -904,8 +904,8 @@
                     "name": "Value",
                     "units": "°C",
                     "format": "float",
-                    "hint":{
-                        "hint": "1",
+                    "hints":{
+                        "range": "1",
                         "min": "-200",
                         "max": "200"
                     }
@@ -928,7 +928,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -949,7 +949,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -970,7 +970,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                         "min": "0",
                         "max": "4294967295"
                     }
@@ -993,7 +993,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -1014,7 +1014,7 @@
                     "name": "Value",
                     "units": "°C",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                         "range": "1",
                         "min": "-200",
                         "max": "200"
@@ -1038,7 +1038,7 @@
                     "name": "Value",
                     "units": "°C",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                         "range": "1",
                         "min": "-200",
                         "max": "200"
@@ -1062,7 +1062,7 @@
                     "name": "Value",
                     "units": "mA",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "min": 0,
                         "max": 2000
                     }
@@ -1085,7 +1085,7 @@
                     "name": "Value",
                     "units": "mA",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "min": 0,
                         "max": 2000
                     }
@@ -1108,7 +1108,7 @@
                     "name": "Value",
                     "units": "mA",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "min": 0,
                         "max": 2000
                     }
@@ -1131,7 +1131,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "min": 0,
                         "max": 2000
                     }
@@ -1154,7 +1154,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "min": 0,
                         "max": 3
                     }
@@ -1177,7 +1177,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "min": 0,
                         "max": 4294967295
                     }
@@ -1200,7 +1200,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "range": 1,
                         "min": 0,
                         "max": 4294967295
@@ -1243,7 +1243,7 @@
                     "name": "Value",
                     "units": "bytes",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "min": 0,
                         "max": 65535
                     }
@@ -1266,7 +1266,7 @@
                     "name": "Value",
                     "units": "°C",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                         "range": 1,
                         "min": -200,
                         "max": 200
@@ -1290,7 +1290,7 @@
                     "name": "Value",
                     "units": "°C",
                     "format": "float",
-                    "hint":{
+                    "hints":{
                         "range": 1,
                         "min": -200,
                         "max": 200
@@ -1314,7 +1314,7 @@
                     "name": "Value",
                     "units": "mA",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "range": 1,
                         "min": -0,
                         "max": 2000
@@ -1338,7 +1338,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -1359,7 +1359,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                     }
                 },
                 {
@@ -1380,7 +1380,7 @@
                     "name": "Value",
                     "units": "n",
                     "format": "int",
-                    "hint":{
+                    "hints":{
                         "min": 0,
                         "max": 255
                     }
