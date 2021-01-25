@@ -1063,8 +1063,8 @@
                     "units": "mA",
                     "format": "int",
                     "hints":{
-                        "min": 0,
-                        "max": 2000
+                        "min": "0",
+                        "max": "2000"
                     }
                 },
                 {
@@ -1086,8 +1086,8 @@
                     "units": "mA",
                     "format": "int",
                     "hints":{
-                        "min": 0,
-                        "max": 2000
+                        "min": "0",
+                        "max": "2000"
                     }
                 },
                 {
@@ -1109,8 +1109,8 @@
                     "units": "mA",
                     "format": "int",
                     "hints":{
-                        "min": 0,
-                        "max": 2000
+                        "min": "0",
+                        "max": "2000"
                     }
                 },
                 {
@@ -1132,8 +1132,8 @@
                     "units": "n",
                     "format": "int",
                     "hints":{
-                        "min": 0,
-                        "max": 2000
+                        "min": "0",
+                        "max": "2000"
                     }
                 },
                 {
@@ -1155,8 +1155,8 @@
                     "units": "n",
                     "format": "int",
                     "hints":{
-                        "min": 0,
-                        "max": 3
+                        "min": "0",
+                        "max": "3"
                     }
                 },
                 {
@@ -1178,8 +1178,8 @@
                     "units": "n",
                     "format": "int",
                     "hints":{
-                        "min": 0,
-                        "max": 4294967295
+                        "min": "0",
+                        "max": "4294967295"
                     }
                 },
                 {
@@ -1244,8 +1244,8 @@
                     "units": "bytes",
                     "format": "int",
                     "hints":{
-                        "min": 0,
-                        "max": 65535
+                        "min": "0",
+                        "max": "65535"
                     }
                 },
                 {
@@ -1267,9 +1267,9 @@
                     "units": "°C",
                     "format": "float",
                     "hints":{
-                        "range": 1,
-                        "min": -200,
-                        "max": 200
+                        "range": "1",
+                        "min": "-200",
+                        "max": "200"
                     }
                 },
                 {
@@ -1291,9 +1291,9 @@
                     "units": "°C",
                     "format": "float",
                     "hints":{
-                        "range": 1,
-                        "min": -200,
-                        "max": 200
+                        "range": "1",
+                        "min": "-200",
+                        "max": "200"
                     }
                 },
                 {
@@ -1315,9 +1315,9 @@
                     "units": "mA",
                     "format": "int",
                     "hints":{
-                        "range": 1,
-                        "min": -0,
-                        "max": 2000
+                        "range": "1",
+                        "min": "-0",
+                        "max": "2000"
                     }
                 },
                 {
@@ -1381,8 +1381,8 @@
                     "units": "n",
                     "format": "int",
                     "hints":{
-                        "min": 0,
-                        "max": 255
+                        "min": "0",
+                        "max": "255"
                     }
                 },
                 {
