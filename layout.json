@@ -6,8 +6,7 @@
             "layout:5",
             "layout:6",
             "layout:7",
-            "layout:8",
-            "layout:14"
+            "layout:8"
         ],
         "name": "Nominal Beacon",
         "type": "folder",
@@ -41,7 +40,8 @@
             "beacon.telemetry:last_contact",
             "beacon.telemetry:tx_guard",
             "beacon.telemetry:rx_guard",
-            "beacon.telemetry:max_tx_time"
+            "beacon.telemetry:max_tx_time",
+            "layout:14"
         ],
         "name": "TMTC",
         "type": "folder",
@@ -83,7 +83,8 @@
             "beacon.telemetry:error_est",
             "beacon.telemetry:tle_epochy",
             "beacon.telemetry:tle_epochd",
-            "beacon.telemetry:tle_epochf"
+            "beacon.telemetry:tle_epochf",
+            "layout:19"
 
         ],
         "name": "ADCS",
@@ -127,7 +128,10 @@
             "beacon.telemetry:i_PWM",
             "beacon.telemetry:resetcause",
             "beacon.telemetry:bootcause",
-            "beacon.telemetry:obc_imgcnt"
+            "beacon.telemetry:obc_imgcnt",
+            "layout:20",
+            "layout:21",
+            "layout:22"
         ],
         "name": "OBDH",
         "type": "folder",
@@ -150,7 +154,10 @@
             "beacon.telemetry:rx_guard",
             "beacon.telemetry:max_tx_time",
             "beacon.telemetry:tx_mode",
-            "beacon.telemetry:rx_mode"
+            "beacon.telemetry:rx_mode",
+            "layout:14",
+            "layout:17",
+            "layout:18"
             
         ],
         "name": "TMTC",
@@ -184,7 +191,8 @@
             "beacon.telemetry:angular_vector_z",
             "beacon.telemetry:tle_epochy",
             "beacon.telemetry:tle_epochd",
-            "beacon.telemetry:tle_epochf"
+            "beacon.telemetry:tle_epochf",
+            "layout:19"
         ],
         "name": "ADCS",
         "type": "folder",
@@ -216,7 +224,10 @@
             "beacon.telemetry:i_PWM",
             "beacon.telemetry:resetcause",
             "beacon.telemetry:bootcause",
-            "beacon.telemetry:obc_imgcnt"
+            "beacon.telemetry:obc_imgcnt",
+            "layout:20",
+            "layout:21",
+            "layout:22"
         ],
         "name": "OBDH",
         "type": "folder",
@@ -224,13 +235,12 @@
     },
     "layout:14": {
         "composition": [
-            "beacon.telemetry:bgnd_rssi",
-            "beacon.telemetry:reboot_in"
+            "beacon.telemetry:boot_cause"
         ],
-        "name": "Widget",
+        "name": "Cause of last reboot",
         "type": "summary-widget",
         "modified": "1",
-        "location": "layout:1",
+        "location": "layout:3",
         "configuration": {
             "ruleOrder": [
                 "default",
@@ -239,7 +249,7 @@
             "ruleConfigById": {
                 "default": {
                     "name": "default",
-                    "label": "Battery On",
+                    "label": "On",
                     "message": "",
                     "id": "default",
                     "icon": "",
@@ -250,7 +260,7 @@
                     },
                     "conditions": [
                         {
-                            "object": "beacon.telemetry:reboot_in",
+                            "object": "beacon.telemetry:boot_cause",
                             "key": "value",
                             "operation": "",
                             "values": [
@@ -264,8 +274,8 @@
                 },
                 "off": {
                     "name": "off",
-                    "label": "Battery Off",
-                    "message": "Battery level lower",
+                    "label": "Off",
+                    "message": "",
                     "id": "off",
                     "icon": "icon-alert-triangle",
                     "style": {
@@ -275,7 +285,7 @@
                     },
                     "conditions": [
                         {
-                            "object": "beacon.telemetry:reboot_in",
+                            "object": "beacon.telemetry:boot_cause",
                             "key": "value",
                             "operation": "lessThan",
                             "values": [
@@ -422,6 +432,448 @@
         "name": "Display Layout ECAT",
         "type": "layout",
         "location": "layout:6"
+    },
+    "layout:17": {
+        "composition": [
+            "beacon.telemetry:tx_mode"
+        ],
+        "name": "TX framing mode",
+        "type": "summary-widget",
+        "modified": "1",
+        "location": "layout:9",
+        "configuration": {
+            "ruleOrder": [
+                "default",
+                "off"
+            ],
+            "ruleConfigById": {
+                "default": {
+                    "name": "default",
+                    "label": "On",
+                    "message": "",
+                    "id": "default",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#8DB600",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:tx_mode",
+                            "key": "value",
+                            "operation": "",
+                            "values": [
+                                1
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "off": {
+                    "name": "off",
+                    "label": "Off",
+                    "message": "",
+                    "id": "off",
+                    "icon": "icon-alert-triangle",
+                    "style": {
+                        "color": "ffffff",
+                        "background-color": "#D3212D",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:tx_mode",
+                            "key": "value",
+                            "operation": "lessThan",
+                            "values": [
+                                2
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                }
+            },
+            "testDataConfig": [
+                {
+                    "object": "",
+                    "key": "",
+                    "value": ""
+                }
+            ]
+        }
+    },
+    
+    "layout:18": {
+        "composition": [
+            "beacon.telemetry:rx_mode"
+        ],
+        "name": "RX framing mode",
+        "type": "summary-widget",
+        "modified": "1",
+        "configuration": {
+            "ruleOrder": [
+                "default",
+                "off"
+            ],
+            "ruleConfigById": {
+                "default": {
+                    "name": "default",
+                    "label": "On",
+                    "message": "",
+                    "id": "default",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#8DB600",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:rx_mode",
+                            "key": "value",
+                            "operation": "",
+                            "values": [
+                                1
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "off": {
+                    "name": "off",
+                    "label": "Off",
+                    "message": "",
+                    "id": "off",
+                    "icon": "icon-alert-triangle",
+                    "style": {
+                        "color": "ffffff",
+                        "background-color": "#D3212D",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:rx_mode",
+                            "key": "value",
+                            "operation": "lessThan",
+                            "values": [
+                                2
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                }
+            },
+            "testDataConfig": [
+                {
+                    "object": "",
+                    "key": "",
+                    "value": ""
+                }
+            ]
+        }
+    },
+    "layout:19": {
+        "composition": [
+            "beacon.telemetry:mode_adcs"
+        ],
+        "name": "Current ADCS mode",
+        "type": "summary-widget",
+        "modified": "1",
+        "configuration": {
+            "ruleOrder": [
+                "default",
+                "off"
+            ],
+            "ruleConfigById": {
+                "default": {
+                    "name": "default",
+                    "label": "On",
+                    "message": "",
+                    "id": "default",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#8DB600",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:mode_adcs",
+                            "key": "value",
+                            "operation": "",
+                            "values": [
+                                1
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "off": {
+                    "name": "off",
+                    "label": "Off",
+                    "message": "",
+                    "id": "off",
+                    "icon": "icon-alert-triangle",
+                    "style": {
+                        "color": "ffffff",
+                        "background-color": "#D3212D",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:mode_adcs",
+                            "key": "value",
+                            "operation": "lessThan",
+                            "values": [
+                                2
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                }
+            },
+            "testDataConfig": [
+                {
+                    "object": "",
+                    "key": "",
+                    "value": ""
+                }
+            ]
+        }
+    },
+    "layout:20": {
+        "composition": [
+            "beacon.telemetry:mode"
+        ],
+        "name": "Current mode",
+        "type": "summary-widget",
+        "modified": "1",
+        "configuration": {
+            "ruleOrder": [
+                "default",
+                "off"
+            ],
+            "ruleConfigById": {
+                "default": {
+                    "name": "default",
+                    "label": "On",
+                    "message": "",
+                    "id": "default",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#8DB600",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:mode",
+                            "key": "value",
+                            "operation": "",
+                            "values": [
+                                1
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "off": {
+                    "name": "off",
+                    "label": "Off",
+                    "message": "",
+                    "id": "off",
+                    "icon": "icon-alert-triangle",
+                    "style": {
+                        "color": "ffffff",
+                        "background-color": "#D3212D",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:mode",
+                            "key": "value",
+                            "operation": "lessThan",
+                            "values": [
+                                2
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                }
+            },
+            "testDataConfig": [
+                {
+                    "object": "",
+                    "key": "",
+                    "value": ""
+                }
+            ]
+        }
+    },
+    "layout:21": {
+        "composition": [
+            "beacon.telemetry:resetcause"
+        ],
+        "name": "Reset cause",
+        "type": "summary-widget",
+        "modified": "1",
+        "configuration": {
+            "ruleOrder": [
+                "default",
+                "off"
+            ],
+            "ruleConfigById": {
+                "default": {
+                    "name": "default",
+                    "label": "On",
+                    "message": "",
+                    "id": "default",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#8DB600",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:resetcause",
+                            "key": "value",
+                            "operation": "",
+                            "values": [
+                                1
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "off": {
+                    "name": "off",
+                    "label": "Off",
+                    "message": "",
+                    "id": "off",
+                    "icon": "icon-alert-triangle",
+                    "style": {
+                        "color": "ffffff",
+                        "background-color": "#D3212D",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:resetcause",
+                            "key": "value",
+                            "operation": "lessThan",
+                            "values": [
+                                2
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                }
+            },
+            "testDataConfig": [
+                {
+                    "object": "",
+                    "key": "",
+                    "value": ""
+                }
+            ]
+        }
+    },
+    "layout:22": {
+        "composition": [
+            "beacon.telemetry:bootcause"
+        ],
+        "name": "Boot cause",
+        "type": "summary-widget",
+        "modified": "1",
+        "configuration": {
+            "ruleOrder": [
+                "default",
+                "off"
+            ],
+            "ruleConfigById": {
+                "default": {
+                    "name": "default",
+                    "label": "On",
+                    "message": "",
+                    "id": "default",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#8DB600",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:bootcause",
+                            "key": "value",
+                            "operation": "",
+                            "values": [
+                                1
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "off": {
+                    "name": "off",
+                    "label": "Off",
+                    "message": "",
+                    "id": "off",
+                    "icon": "icon-alert-triangle",
+                    "style": {
+                        "color": "ffffff",
+                        "background-color": "#D3212D",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:bootcause",
+                            "key": "value",
+                            "operation": "lessThan",
+                            "values": [
+                                2
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                }
+            },
+            "testDataConfig": [
+                {
+                    "object": "",
+                    "key": "",
+                    "value": ""
+                }
+            ]
+        }
     }
 }
+    
+
 

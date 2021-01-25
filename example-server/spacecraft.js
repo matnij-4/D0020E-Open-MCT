@@ -93,7 +93,13 @@ function Spacecraft() {
 
 
 Spacecraft.prototype.updateState = function () {
-    ////this.state["pwr.b"] = 5 + Math.floor(Math.random() * 2);
+    this.state["boot_cause"] = Math.floor(Math.random()*2 + 1);
+    this.state["tx_mode"] = Math.floor(Math.random()*2 + 1);
+    this.state["rx_mode"] = Math.floor(Math.random()*2 + 1);
+    this.state["mode_adcs"] = Math.floor(Math.random()*2 + 1);
+    this.state["mode"] = Math.floor(Math.random()*2 + 1);
+    this.state["bootcause"] = Math.floor(Math.random()*2 + 1);
+    this.state["resetcause"] = Math.floor(Math.random()*2 + 1);
     
 };
 
