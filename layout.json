@@ -40,7 +40,8 @@
             "beacon.telemetry:tx_guard",
             "beacon.telemetry:rx_guard",
             "beacon.telemetry:max_tx_time",
-            "layout:widgetTMTCBootCause"
+            "layout:widgetTMTCBootCause",
+            "layout:tmtcNom"
         ],
         "name": "TMTC",
         "type": "folder",
@@ -1718,6 +1719,520 @@
         },
         "name": "Voltage output 3V3",
         "location": "layout:PowerLayout"
+    },
+    "layout:tmtcNom": {
+        "composition": [
+            "beacon.telemetry:reboot_in",
+            "beacon.telemetry:baud",
+            "beacon.telemetry:temp_brd",
+            "beacon.telemetry:temp_pa",
+            "beacon.telemetry:boot_count",
+            "beacon.telemetry:active_conf",
+            "beacon.telemetry:bgnd_rssi",
+            "beacon.telemetry:tot_tx_bytes",
+            "beacon.telemetry:tot_rx_bytes",
+            "beacon.telemetry:boot_cause",
+            "beacon.telemetry:last_contact",
+            "beacon.telemetry:tx_guard",
+            "beacon.telemetry:rx_guard",
+            "beacon.telemetry:max_tx_time",
+            "layout:tempBrdNom",
+            "layout:bgrRSSIPlot",
+            "layout:PAtempNom"
+        ],
+        "configuration": {
+            "items": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "reboot_in"
+                    },
+                    "x": 0,
+                    "y": 0,
+                    "width": 39,
+                    "height": 5,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "baud"
+                    },
+                    "x": 0,
+                    "y": 5,
+                    "width": 39,
+                    "height": 5,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "temp_brd"
+                    },
+                    "x": 95,
+                    "y": 39,
+                    "width": 32,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view",
+                    "id": "84b91917-46c8-4178-8aa4-2eb45515c6ec"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "temp_pa"
+                    },
+                    "x": 45,
+                    "y": 1,
+                    "width": 35,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "boot_count"
+                    },
+                    "x": 0,
+                    "y": 10,
+                    "width": 39,
+                    "height": 5,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view",
+                    "id": "25af3d42-de96-451c-a0b5-b6e814f69cc4"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "active_conf"
+                    },
+                    "x": 0,
+                    "y": 15,
+                    "width": 39,
+                    "height": 5,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view",
+                    "id": "5c6a706d-d041-495e-ba75-3063f82d2688"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "bgnd_rssi"
+                    },
+                    "x": 93,
+                    "y": 1,
+                    "width": 34,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view",
+                    "id": "9dc91e52-f490-4298-b1c3-fdad68fe4874"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "tot_tx_bytes"
+                    },
+                    "x": 0,
+                    "y": 20,
+                    "width": 39,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view",
+                    "id": "82c9faac-3388-44b7-baa9-141c18824008"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "tot_rx_bytes"
+                    },
+                    "x": 0,
+                    "y": 26,
+                    "width": 39,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view",
+                    "id": "edf0c508-a6d5-4466-b66b-19dfa8c4f559"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "boot_cause"
+                    },
+                    "x": 0,
+                    "y": 32,
+                    "width": 39,
+                    "height": 5,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view",
+                    "id": "12487f0c-9179-46b5-81f6-71bbb03c897d"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "last_contact"
+                    },
+                    "x": 0,
+                    "y": 53,
+                    "width": 59,
+                    "height": 5,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view",
+                    "id": "90df6731-86bd-419c-ac55-80b84be18950"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "tx_guard"
+                    },
+                    "x": 0,
+                    "y": 37,
+                    "width": 39,
+                    "height": 5,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view",
+                    "id": "6aec04c6-313a-422a-84b4-40c60ed19295"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "rx_guard"
+                    },
+                    "x": 0,
+                    "y": 42,
+                    "width": 39,
+                    "height": 5,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view",
+                    "id": "afababb9-4aca-4c0e-ad1e-0ae77e54ea6e"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "max_tx_time"
+                    },
+                    "x": 0,
+                    "y": 47,
+                    "width": 39,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "18",
+                    "font": "default",
+                    "type": "telemetry-view",
+                    "id": "378b5561-7156-4772-8527-b7bac257b7c4"
+                },
+                {
+                    "width": 16,
+                    "height": 7,
+                    "x": 0,
+                    "y": 62,
+                    "identifier": {
+                        "namespace": "layout",
+                        "key": "14"
+                    },
+                    "hasFrame": false,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view",
+                    "id": "22a55a7d-1328-468c-bac7-b36d3e94988e"
+                },
+                {
+                    "width": 46,
+                    "height": 28,
+                    "x": 88,
+                    "y": 46,
+                    "identifier": {
+                        "key": "tempBrdNom",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view",
+                    "id": "e85abd2b-3f18-44f4-85ca-72afde2053db"
+                },
+                {
+                    "width": 46,
+                    "height": 30,
+                    "x": 88,
+                    "y": 8,
+                    "identifier": {
+                        "key": "bgrRSSIPlot",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view",
+                    "id": "f446e81f-c5a1-4a0d-a9d5-fe488516f361"
+                },
+                {
+                    "width": 42,
+                    "height": 30,
+                    "x": 42,
+                    "y": 8,
+                    "identifier": {
+                        "key": "PAtempNom",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view",
+                    "id": "f1e8a7ba-f6c9-43d5-9fab-6479c7c344c1"
+                }
+            ],
+            "layoutGrid": [
+                10,
+                10
+            ],
+            "layoutDimensions": {},
+            "objectStyles": {
+                "84b91917-46c8-4178-8aa4-2eb45515c6ec": {
+                    "staticStyle": {
+                        "style": {
+                            "color": "__no_value",
+                            "backgroundColor": "__no_value",
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                },
+                "9dc91e52-f490-4298-b1c3-fdad68fe4874": {
+                    "staticStyle": {
+                        "style": {
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                },
+                "cd109f92-b2ee-4048-84bb-873f34b0332c": {
+                    "staticStyle": {
+                        "style": {
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                },
+                "9576faaf-17d0-453b-a80d-3bf25ce9d0fd": {
+                    "staticStyle": {
+                        "style": {
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                },
+                "806fb6ae-1bfe-4221-a105-006871e2c6f7": {
+                    "staticStyle": {
+                        "style": {
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                },
+                "25af3d42-de96-451c-a0b5-b6e814f69cc4": {
+                    "staticStyle": {
+                        "style": {
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                },
+                "5c6a706d-d041-495e-ba75-3063f82d2688": {
+                    "staticStyle": {
+                        "style": {
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                },
+                "82c9faac-3388-44b7-baa9-141c18824008": {
+                    "staticStyle": {
+                        "style": {
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                },
+                "edf0c508-a6d5-4466-b66b-19dfa8c4f559": {
+                    "staticStyle": {
+                        "style": {
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                },
+                "12487f0c-9179-46b5-81f6-71bbb03c897d": {
+                    "staticStyle": {
+                        "style": {
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                },
+                "90df6731-86bd-419c-ac55-80b84be18950": {
+                    "staticStyle": {
+                        "style": {
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                },
+                "378b5561-7156-4772-8527-b7bac257b7c4": {
+                    "staticStyle": {
+                        "style": {
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                },
+                "6aec04c6-313a-422a-84b4-40c60ed19295": {
+                    "staticStyle": {
+                        "style": {
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                },
+                "afababb9-4aca-4c0e-ad1e-0ae77e54ea6e": {
+                    "staticStyle": {
+                        "style": {
+                            "border": "1px solid #ffffff"
+                        }
+                    }
+                }
+            }
+        },
+        "name": "TMTC  Display Layout",
+        "type": "layout"
+    },
+    "layout:tempBrdNom": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+            "beacon.telemetry:temp_brd"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "temp_brd"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Board temperature"
+    },
+    "layout:bgrRSSIPlot": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+            "beacon.telemetry:bgnd_rssi"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "bgnd_rssi"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Moving avg. background RSSI"
+    },
+    "layout:PAtempNom": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+            "beacon.telemetry:temp_pa"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "temp_pa"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "PA temperature"
     }
 }
     
