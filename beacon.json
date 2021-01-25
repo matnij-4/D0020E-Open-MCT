@@ -1201,9 +1201,9 @@
                     "units": "n",
                     "format": "int",
                     "hints":{
-                        "range": 1,
-                        "min": 0,
-                        "max": 4294967295
+                        "range": "1",
+                        "min": "0",
+                        "max": "4294967295"
                     }
                 },
                 {
