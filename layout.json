@@ -58,9 +58,8 @@
             "beacon.telemetry:volt_3v3",
             "beacon.telemetry:cur_ecat_t1",
             "beacon.telemetry:cur_ecat_t2",
-            "beacon.telemetry:cur_ecat_m"
-
-
+            "beacon.telemetry:cur_ecat_m",
+            "layout:PowerLayout"
         ],
         "name": "Power",
         "type": "folder",
@@ -173,7 +172,7 @@
             "beacon.telemetry:cur_ecat_t1",
             "beacon.telemetry:cur_ecat_t2",
             "beacon.telemetry:cur_ecat_m",
-            "layout:display_layout_power"
+            "layout:PowerLayout"
         ],
         "name": "Power",
         "type": "folder",
@@ -1215,8 +1214,511 @@
             "xAxis": {}
         },
         "name": "Temperature 2"
+    },
+    "layout:PowerLayout": {
+        "composition": [
+            "beacon.telemetry:batt_volt",
+            "beacon.telemetry:batt_temp",
+            "beacon.telemetry:volt_solar_1",
+            "beacon.telemetry:volt_solar_2",
+            "beacon.telemetry:volt_solar_3",
+            "beacon.telemetry:volt_solar_4",
+            "beacon.telemetry:volt_solar_5",
+            "beacon.telemetry:volt_3v3",
+            "beacon.telemetry:cur_ecat_t1",
+            "beacon.telemetry:cur_ecat_t2",
+            "beacon.telemetry:cur_ecat_m",
+            "layout:battVoltPlot",
+            "layout:battTempPlot",
+            "layout:voltSolar1Plot",
+            "layout:voltSolar2Plot",
+            "layout:voltSolar3Plot",
+            "layout:voltSolar4Plot",
+            "layout:voltSolar5Plot",
+            "layout:volt3v3Plot"
+        ],
+        "configuration": {
+            "items": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "batt_volt"
+                    },
+                    "x": 0,
+                    "y": 0,
+                    "width": 44,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "batt_temp"
+                    },
+                    "x": 45,
+                    "y": 0,
+                    "width": 41,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "volt_solar_1"
+                    },
+                    "x": 87,
+                    "y": 0,
+                    "width": 44,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "volt_solar_2"
+                    },
+                    "x": 0,
+                    "y": 41,
+                    "width": 44,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "volt_solar_3"
+                    },
+                    "x": 45,
+                    "y": 41,
+                    "width": 41,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "volt_solar_4"
+                    },
+                    "x": 87,
+                    "y": 41,
+                    "width": 44,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "volt_solar_5"
+                    },
+                    "x": 0,
+                    "y": 82,
+                    "width": 44,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "volt_3v3"
+                    },
+                    "x": 45,
+                    "y": 82,
+                    "width": 41,
+                    "height": 6,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "cur_ecat_t1"
+                    },
+                    "x": 87,
+                    "y": 89,
+                    "width": 44,
+                    "height": 10,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "cur_ecat_t2"
+                    },
+                    "x": 87,
+                    "y": 100,
+                    "width": 44,
+                    "height": 11,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "cur_ecat_m"
+                    },
+                    "x": 87,
+                    "y": 112,
+                    "width": 44,
+                    "height": 10,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default-bold",
+                    "type": "telemetry-view"
+                },
+                {
+                    "width": 44,
+                    "height": 33,
+                    "x": 0,
+                    "y": 7,
+                    "identifier": {
+                        "key": "battVoltPlot",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view"
+                },
+                {
+                    "width": 41,
+                    "height": 33,
+                    "x": 45,
+                    "y": 7,
+                    "identifier": {
+                        "key": "battTempPlot",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view"
+                },
+                {
+                    "width": 44,
+                    "height": 33,
+                    "x": 87,
+                    "y": 7,
+                    "identifier": {
+                        "key": "voltSolar1Plot",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view"
+                },
+                {
+                    "width": 44,
+                    "height": 33,
+                    "x": 0,
+                    "y": 48,
+                    "identifier": {
+                        "key": "voltSolar2Plot",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view"
+                },
+                {
+                    "width": 41,
+                    "height": 33,
+                    "x": 45,
+                    "y": 48,
+                    "identifier": {
+                        "key": "voltSolar3Plot",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view"
+                },
+                {
+                    "width": 44,
+                    "height": 33,
+                    "x": 87,
+                    "y": 48,
+                    "identifier": {
+                        "key": "voltSolar4Plot",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view"
+                },
+                {
+                    "width": 44,
+                    "height": 33,
+                    "x": 0,
+                    "y": 89,
+                    "identifier": {
+                        "key": "voltSolar5Plot",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view"
+                },
+                {
+                    "width": 41,
+                    "height": 33,
+                    "x": 45,
+                    "y": 89,
+                    "identifier": {
+                        "key": "volt3v3Plot",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view"
+                }
+            ],
+            "layoutGrid": [
+                10,
+                10
+            ],
+            "layoutDimensions": {}
+        },
+        "name": "Power Display Layout ",
+        "type": "layout"
+    },
+    "layout:battVoltPlot": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+            "beacon.telemetry:batt_volt"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "batt_volt"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Voltage level of battery [V]",
+        "location": "layout:PowerLayout"
+    },
+    "layout:battTempPlot": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+            "beacon.telemetry:batt_temp"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "batt_temp"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Temperature of battery",
+        "location": "layout:PowerLayout"
+    },
+    "layout:voltSolar1Plot": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+            "beacon.telemetry:volt_solar_1"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "volt_solar_1"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Input voltage level of the solar 1[V]",
+        "location": "layout:PowerLayout"
+    },
+    "layout:voltSolar2Plot": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+            "beacon.telemetry:volt_solar_2"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "volt_solar_2"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Input voltage level of the solar 2[V]",
+        "location": "layout:PowerLayout"
+    },
+    "layout:voltSolar3Plot": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+            "beacon.telemetry:volt_solar_3"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "volt_solar_3"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Input voltage level of the solar panel 3[V]",
+        "location": "layout:PowerLayout"
+    },
+    "layout:voltSolar4Plot": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+            "beacon.telemetry:volt_solar_4"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "volt_solar_4"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Input voltage level of the solar panel 4[V]",
+        "location": "layout:PowerLayout"
+    },
+    "layout:voltSolar5Plot": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+            "beacon.telemetry:volt_solar_5"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "volt_solar_5"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Input voltage level of the solar panel 5[V]",
+        "location": "layout:PowerLayout"
+    },
+    "layout:volt3v3Plot": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+            "beacon.telemetry:volt_3v3"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "volt_3v3"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Voltage output 3V3",
+        "location": "layout:PowerLayout"
     }
-
 }
     
 
