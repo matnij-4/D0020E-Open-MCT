@@ -107,7 +107,8 @@
             "beacon.telemetry:temp1",
             "beacon.telemetry:temp2",
             "beacon.telemetry:ivcc",
-            "beacon.telemetry:gain_target"
+            "beacon.telemetry:gain_target",
+            "layout:CamLayoutNom"
         ],
         "name": "CAM",
         "type": "folder",
@@ -134,7 +135,6 @@
         "type": "folder",
         "location": "layout:nominal"
     },
-
     "layout:chargTMTC":{
         "composition": [
             "beacon.telemetry:reboot_in",
@@ -160,7 +160,6 @@
         "type": "folder",
         "location": "layout:charging"
     },
-
     "layout:chargPower":{
         "composition": [
             "beacon.telemetry:batt_volt",
@@ -202,7 +201,8 @@
             "beacon.telemetry:temp2",
             "beacon.telemetry:ivcc",
             "beacon.telemetry:icore",
-            "beacon.telemetry:iddr"
+            "beacon.telemetry:iddr",
+            "layout:camLayoutCharg"
 
         ],
         "name": "CAM",
@@ -451,7 +451,6 @@
             ]
         }
     },
-    
     "layout:widgetTMTCRXMode": {
         "composition": [
             "beacon.telemetry:rx_mode"
@@ -817,519 +816,407 @@
             ]
         }
     },
+    "layout:CamLayoutNom": {
+        "composition": [
+            "beacon.telemetry:boot_count",
+            "beacon.telemetry:image_count",
+            "beacon.telemetry:temp1",
+            "beacon.telemetry:temp2",
+            "layout:temp1PlotNom",
+            "layout:temp2PlotNom",
+            "beacon.telemetry:ivcc",
+            "beacon.telemetry:gain_target"
+        ],
+        "configuration": {
+            "items": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "boot_count"
+                    },
+                    "x": 0,
+                    "y": 0,
+                    "width": 30,
+                    "height": 9,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "image_count"
+                    },
+                    "x": 0,
+                    "y": 9,
+                    "width": 30,
+                    "height": 9,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "temp1"
+                    },
+                    "x": 30,
+                    "y": 0,
+                    "width": 48,
+                    "height": 7,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "temp2"
+                    },
+                    "x": 78,
+                    "y": 0,
+                    "width": 48,
+                    "height": 7,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default",
+                    "type": "telemetry-view"
+                },
+                {
+                    "width": 48,
+                    "height": 28,
+                    "x": 30,
+                    "y": 7,
+                    "identifier": {
+                        "key": "temp1PlotNom",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view"
     
-        "layout:display_layout_power": {
-            "composition": [
-                "beacon.telemetry:batt_volt",
-                "beacon.telemetry:batt_temp",
-                "beacon.telemetry:volt_solar_1",
-                "beacon.telemetry:volt_solar_2",
-                "beacon.telemetry:volt_solar_3",
-                "beacon.telemetry:volt_solar_4",
-                "beacon.telemetry:volt_solar_5",
-                "beacon.telemetry:volt_3v3",
-                "beacon.telemetry:cur_ecat_t1",
-                "beacon.telemetry:cur_ecat_t2",
-                "beacon.telemetry:cur_ecat_m",
-                "layout:batt_volt",
-                "layout:batt_temp",
-                "layout:volt_solar_1",
-                "layout:volt_solar_2",
-                "layout:volt_solar_3",
-                "layout:volt_solar_4",
-                "layout:volt_solar_5",
-                "layout:volt_3v3"
+                },
+                {
+                    "width": 48,
+                    "height": 28,
+                    "x": 78,
+                    "y": 7,
+                    "identifier": {
+                        "key": "temp2PlotNom",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "ivcc"
+                    },
+                    "x": 0,
+                    "y": 18,
+                    "width": 30,
+                    "height": 9,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default",
+                    "type": "telemetry-view"
+                   
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "gain_target"
+                    },
+                    "x": 0,
+                    "y": 27,
+                    "width": 30,
+                    "height": 8,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default",
+                    "type": "telemetry-view"
+                }
             ],
-            "configuration": {
-                "items": [
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "batt_volt"
-                        },
-                        "x": 0,
-                        "y": 0,
-                        "width": 41,
-                        "height": 4,
-                        "displayMode": "all",
-                        "value": "value",
-                        "stroke": "",
-                        "fill": "",
-                        "color": "",
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "telemetry-view"
-                    },
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "batt_temp"
-                        },
-                        "x": 41,
-                        "y": 0,
-                        "width": 38,
-                        "height": 4,
-                        "displayMode": "all",
-                        "value": "value",
-                        "stroke": "",
-                        "fill": "",
-                        "color": "",
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "telemetry-view"
-                    },
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "volt_solar_1"
-                        },
-                        "x": 0,
-                        "y": 41,
-                        "width": 41,
-                        "height": 5,
-                        "displayMode": "all",
-                        "value": "value",
-                        "stroke": "",
-                        "fill": "",
-                        "color": "",
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "telemetry-view"
-                    },
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "volt_solar_2"
-                        },
-                        "x": 41,
-                        "y": 41,
-                        "width": 38,
-                        "height": 5,
-                        "displayMode": "all",
-                        "value": "value",
-                        "stroke": "",
-                        "fill": "",
-                        "color": "",
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "telemetry-view"
-                    },
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "volt_solar_3"
-                        },
-                        "x": 0,
-                        "y": 83,
-                        "width": 41,
-                        "height": 5,
-                        "displayMode": "all",
-                        "value": "value",
-                        "stroke": "",
-                        "fill": "",
-                        "color": "",
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "telemetry-view"
-                    },
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "volt_solar_5"
-                        },
-                        "x": 0,
-                        "y": 125,
-                        "width": 41,
-                        "height": 5,
-                        "displayMode": "all",
-                        "value": "value",
-                        "stroke": "",
-                        "fill": "",
-                        "color": "",
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "telemetry-view"
-                    },
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "volt_solar_4"
-                        },
-                        "x": 41,
-                        "y": 83,
-                        "width": 38,
-                        "height": 5,
-                        "displayMode": "all",
-                        "value": "value",
-                        "stroke": "",
-                        "fill": "",
-                        "color": "",
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "telemetry-view"
-                    },
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "volt_3v3"
-                        },
-                        "x": 41,
-                        "y": 125,
-                        "width": 38,
-                        "height": 5,
-                        "displayMode": "all",
-                        "value": "value",
-                        "stroke": "",
-                        "fill": "",
-                        "color": "",
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "telemetry-view"
-                        
-                    },
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "cur_ecat_t1"
-                        },
-                        "x": 0,
-                        "y": 168,
-                        "width": 26,
-                        "height": 5,
-                        "displayMode": "all",
-                        "value": "value",
-                        "stroke": "",
-                        "fill": "",
-                        "color": "",
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "telemetry-view"
-                    },
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "cur_ecat_t2"
-                        },
-                        "x": 26,
-                        "y": 168,
-                        "width": 25,
-                        "height": 5,
-                        "displayMode": "all",
-                        "value": "value",
-                        "stroke": "",
-                        "fill": "",
-                        "color": "",
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "telemetry-view"
-                    },
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "cur_ecat_m"
-                        },
-                        "x": 51,
-                        "y": 168,
-                        "width": 28,
-                        "height": 5,
-                        "displayMode": "all",
-                        "value": "value",
-                        "stroke": "",
-                        "fill": "",
-                        "color": "",
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "telemetry-view"
-                        
-                    },
-                    {
-                        "width": 41,
-                        "height": 37,
-                        "x": 0,
-                        "y": 4,
-                        "identifier": {
-                            "key": "batt_volt",
-                            "namespace": "layout"
-                        },
-                        "hasFrame": true,
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "subobject-view"
-                        
-                    },
-                    {
-                        "width": 38,
-                        "height": 37,
-                        "x": 41,
-                        "y": 4,
-                        "identifier": {
-                            "key": "batt_temp",
-                            "namespace": "layout"
-                        },
-                        "hasFrame": true,
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "subobject-view"
-                    },
-                    {
-                        "width": 41,
-                        "height": 37,
-                        "x": 0,
-                        "y": 46,
-                        "identifier": {
-                            "key": "volt_solar_1",
-                            "namespace": "layout"
-                        },
-                        "hasFrame": true,
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "subobject-view"
-                    },
-                    {
-                        "width": 38,
-                        "height": 37,
-                        "x": 41,
-                        "y": 46,
-                        "identifier": {
-                            "key": "volt_solar_2",
-                            "namespace": "layout"
-                        },
-                        "hasFrame": true,
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "subobject-view"
-                    },
-                    {
-                        "width": 41,
-                        "height": 37,
-                        "x": 0,
-                        "y": 88,
-                        "identifier": {
-                            "key": "volt_solar_3",
-                            "namespace": "layout"
-                        },
-                        "hasFrame": true,
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "subobject-view"
-                    },
-                    {
-                        "width": 38,
-                        "height": 37,
-                        "x": 41,
-                        "y": 88,
-                        "identifier": {
-                            "key": "volt_solar_4",
-                            "namespace": "layout"
-                        },
-                        "hasFrame": true,
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "subobject-view"
-                    },
-                    {
-                        "width": 41,
-                        "height": 38,
-                        "x": 0,
-                        "y": 130,
-                        "identifier": {
-                            "key": "volt_solar_5",
-                            "namespace": "layout"
-                        },
-                        "hasFrame": true,
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "subobject-view"
-                    },
-                    {
-                        "width": 38,
-                        "height": 38,
-                        "x": 41,
-                        "y": 130,
-                        "identifier": {
-                            "key": "volt_3v3",
-                            "namespace": "layout"
-                        },
-                        "hasFrame": true,
-                        "fontSize": "default",
-                        "font": "default",
-                        "type": "subobject-view"
-                    } 
-                ],
-                "layoutGrid": [
-                    10,
-                    10
-                ],
-                "layoutDimensions": {}
-            },
-            "name": "Display Layout Power",
-            "type": "layout",
-            "location": "layout:chargPower"
+            "layoutGrid": [
+                10,
+                10
+            ],
+            "layoutDimensions": {}
         },
-        "layout:batt_volt": {
-            "type": "telemetry.plot.overlay",
-            "composition": [
-                
-                    "beacon.telemetry:batt_volt"  
-                
-            ],
-            "configuration": {
-                "series": [
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "batt_volt"
-                        }
-                    }
-                ],
-                "yAxis": {},
-                "xAxis": {}
-            },
-            "name": "Voltage level of battery [V]",
-            "location": "layout:display_layout_power"
-        },
-        "layout:batt_temp": {
-            "type": "telemetry.plot.overlay",
-            "composition": [
-                "beacon.telemetry:batt_temp"
-            ],
-            "configuration": {
-                "series": [
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "batt_temp"
-                        }
-                    }
-                ],
-                "yAxis": {},
-                "xAxis": {}
-            },
-            "name": "Temperature of battery",
-            "location": "layout:display_layout_power"   
-        },
-        "layout:volt_solar_1": {
-            "type": "telemetry.plot.overlay",
-            "composition": [
-                "beacon.telemetry:volt_solar_1"
-            ],
-            "configuration": {
-                "series": [
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "volt_solar_1"
-                        }
-                    }
-                ],
-                "yAxis": {},
-                "xAxis": {}
-            },
-            "name": "Input voltage level of the solar 1[V]",
-            "location": "layout:display_layout_power"
-            
-        },
-        "layout:volt_solar_2": {
-            "type": "telemetry.plot.overlay",
-            "composition": [
-                "beacon.telemetry:volt_solar_2"
-            ],
-            "configuration": {
-                "series": [
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "volt_solar_2"
-                        }
-                    }
-                ],
-                "yAxis": {},
-                "xAxis": {}
-            },
-            "name": "Input voltage level of the solar 2[V]",
-            "location": "layout:display_layout_power"
-        },
-        "layout:volt_solar_3": {
-            "type": "telemetry.plot.overlay",
-            "composition": [
-                "beacon.telemetry:volt_solar_3"
-            ],
-            "configuration": {
-                "series": [
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "volt_solar_3"
-                        }
-                    }
-                ],
-                "yAxis": {},
-                "xAxis": {}
-            },
-            "name": "Input voltage level of the solar panel 3[V]",
-            "location": "layout:display_layout_power"
-        },
-        "layout:volt_solar_4": {
-            "type": "telemetry.plot.overlay",
-            "composition": [
-                "beacon.telemetry:volt_solar_4"
-            ],
-            "configuration": {
-                "series": [
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "volt_solar_4"
-                        }
-                    }
-                ],
-                "yAxis": {},
-                "xAxis": {}
-            },
-            "name": "Input voltage level of the solar panel 4[V]",
-            "location": "layout:display_layout_power"
-        },
-        "layout:volt_solar_5": {
-            "type": "telemetry.plot.overlay",
-            "composition": [
-                "beacon.telemetry:volt_solar_5"
-            ],
-            "configuration": {
-                "series": [
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "volt_solar_5"
-                        }
-                    }
-                ],
-                "yAxis": {},
-                "xAxis": {}
-            },
-            "name": "Input voltage level of the solar panel 5[V]",
-            "location": "layout:display_layout_power"
-        },
-        "layout:volt_3v3": {
-            "type": "telemetry.plot.overlay",
-            "composition": [
-                "beacon.telemetry:volt_3v3"
-            ],
-            "configuration": {
-                "series": [
-                    {
-                        "identifier": {
-                            "namespace": "beacon.telemetry",
-                            "key": "volt_3v3"
-                        }
-                    }
-                ],
-                "yAxis": {},
-                "xAxis": {}
-            },
-            "name": "Voltage output 3V3",
-            "location": "layout:display_layout_power"
+        "name": "Cam Display Layout",
+        "type": "layout"
         
+    },
+    "layout:temp1PlotNom": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+            "beacon.telemetry:temp1"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "temp1"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Temperature 1"
+        
+    },
+    "layout:temp2PlotNom": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+           "beacon.telemetry:temp2"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "temp2"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Temperature 2"
+        
+    },
+    "layout:camLayoutCharg": {
+        "composition": [
+          "beacon.telemetry:boot_count",
+          "beacon.telemetry:temp1",
+          "beacon.telemetry:temp2",
+          "layout:temp1PlotCharg",
+          ":temp2PlotCharg",
+          "beacon.telemetry:ivcc",
+          "beacon.telemetry:icore",
+          "beacon.telemetry:iddr"
+        ],
+        "configuration": {
+            "items": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "boot_count"
+                    },
+                    "x": 0,
+                    "y": 0,
+                    "width": 30,
+                    "height": 9,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "temp1"
+                    },
+                    "x": 30,
+                    "y": 0,
+                    "width": 48,
+                    "height": 7,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "temp2"
+                    },
+                    "x": 78,
+                    "y": 0,
+                    "width": 48,
+                    "height": 7,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default",
+                    "type": "telemetry-view"
+                },
+                {
+                    "width": 48,
+                    "height": 28,
+                    "x": 30,
+                    "y": 7,
+                    "identifier": {
+                        "key": "temp1PlotCharg",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view"
+                },
+                {
+                    "width": 48,
+                    "height": 28,
+                    "x": 78,
+                    "y": 7,
+                    "identifier": {
+                        "key": "temp2PlotCharg",
+                        "namespace": "layout"
+                    },
+                    "hasFrame": true,
+                    "fontSize": "default",
+                    "font": "default",
+                    "type": "subobject-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "ivcc"
+                    },
+                    "x": 0,
+                    "y": 9,
+                    "width": 30,
+                    "height": 9,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "icore"
+                    },
+                    "x": 0,
+                    "y": 18,
+                    "width": 30,
+                    "height": 9,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default",
+                    "type": "telemetry-view"
+                },
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "iddr"
+                    },
+                    "x": 0,
+                    "y": 27,
+                    "width": 30,
+                    "height": 8,
+                    "displayMode": "all",
+                    "value": "value",
+                    "stroke": "",
+                    "fill": "",
+                    "color": "",
+                    "fontSize": "20",
+                    "font": "default",
+                    "type": "telemetry-view"
+                }
+            ],
+            "layoutGrid": [
+                10,
+                10
+            ],
+            "layoutDimensions": {}
+        },
+        "name": "Cam Display Layout Charging",
+        "type": "layout"
+        
+    },
+    "layout:temp1PlotCharg": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+            "beacon.telemetry:temp1"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "temp1"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Temperature 1"
+    },
+    "layout:temp2PlotCharg": {
+        "type": "telemetry.plot.overlay",
+        "composition": [
+           "beacon.telemetry:temp2"
+        ],
+        "configuration": {
+            "series": [
+                {
+                    "identifier": {
+                        "namespace": "beacon.telemetry",
+                        "key": "temp2"
+                    }
+                }
+            ],
+            "yAxis": {},
+            "xAxis": {}
+        },
+        "name": "Temperature 2"
     }
+
 }
     
 
