@@ -269,7 +269,7 @@
             ]
         },
         {
-            "name": "Masx TX time before stop-and-listen",
+            "name": "Max TX time before stop-and-listen",
             "key": "max_tx_time",
             "values": [
                 {
@@ -377,7 +377,7 @@
             ]
         },
         {
-            "name": "Input voltage level of the solar 1[V]",
+            "name": "Input voltage level of the solar panel 1[V]",
             "key": "volt_solar_1",
             "values": [
                 {
@@ -401,7 +401,7 @@
             ]
         },
         {
-            "name": "Input voltage level of the solar 2[V]",
+            "name": "Input voltage level of the solar panel 2[V]",
             "key": "volt_solar_2",
             "values": [
                 {
@@ -962,7 +962,7 @@
             ]
         },
         {
-            "name": "Number of sytem boots",
+            "name": "Number of system boots",
             "key": "boot_count_cam",
             "values": [
                 {
