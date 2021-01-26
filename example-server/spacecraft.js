@@ -9,7 +9,7 @@ function Spacecraft() {
         "baud": 1,
         "temp_brd": 1,
         "temp_pa": 1,
-        "boot_count": 1,
+        "boot_count_tmtc": 1,
         "active_conf": 1,
         "bgnd_rssi": 1,
         "tot_tx_bytes": 1,
@@ -49,7 +49,7 @@ function Spacecraft() {
         "ecat_temp": 1,
         "ecat_fwd": 1,
         "ecat_rev": 1,
-        "boot_count": 1,
+        "boot_count_cam": 1,
         "image_count": 1,
         "temp1": 1,
         "temp2": 1,
@@ -58,7 +58,7 @@ function Spacecraft() {
         "iddr": 1,
         "gain_target": 1,
         "mode": 1,
-        "boot_count": 1,
+        "boot_count_obdh": 1,
         "uptime": 1,
         "clock": 1,
         "tele_size_flash": 1,
@@ -93,6 +93,7 @@ function Spacecraft() {
 
 
 Spacecraft.prototype.updateState = function () {
+    //Test values for widgets
     this.state["boot_cause"] = Math.floor(Math.random()*2 + 1);
     this.state["tx_mode"] = Math.floor(Math.random()*2 + 1);
     this.state["rx_mode"] = Math.floor(Math.random()*2 + 1);
@@ -100,7 +101,83 @@ Spacecraft.prototype.updateState = function () {
     this.state["mode"] = Math.floor(Math.random()*2 + 1);
     this.state["bootcause"] = Math.floor(Math.random()*2 + 1);
     this.state["resetcause"] = Math.floor(Math.random()*2 + 1);
-    
+    //Test Values for TMTC
+    this.state["reboot_in"] = Math.floor(Math.random()*10+1);
+    this.state["baud"] = Math.floor(Math.random()*10+1);
+    this.state["temp_brd"] = Math.floor(Math.random()*10+1);
+    this.state["temp_pa"] = Math.floor(Math.random()*10+1);
+    this.state["boot_count_tmtc"] = Math.floor(Math.random()*10+1);
+    this.state["active_conf"] = Math.floor(Math.random()*10+1);
+    this.state["bgnd_rssi"] = Math.floor(Math.random()*10+1);
+    this.state["tot_tx_bytes"] = Math.floor(Math.random()*10+1);
+    this.state["tot_rx_bytes"] = Math.floor(Math.random()*10+1);
+    this.state["boot_cause"] = Math.floor(Math.random()*10+1);
+    this.state["last_contact"] = Math.floor(Math.random()*10+1);
+    this.state["tx_guard"] = Math.floor(Math.random()*10+1);
+    this.state["rx_guard"] = Math.floor(Math.random()*10+1);
+    this.state["max_tx_time"] = Math.floor(Math.random()*10+1);
+    this.state["tx_mode"] = Math.floor(Math.random()*10+1);
+    this.state["rx_mode"] = Math.floor(Math.random()*10+1);
+
+    //Power
+    this.state["batt_volt"] = Math.floor(Math.random()*10+1);
+    this.state["batt_temp"] = Math.floor(Math.random()*10+1);
+    this.state["volt_solar_1"] = Math.floor(Math.random()*10+1);
+    this.state["volt_solar_2"] = Math.floor(Math.random()*10+1);
+    this.state["volt_solar_3"] = Math.floor(Math.random()*10+1);
+    this.state["volt_solar_4"] = Math.floor(Math.random()*10+1);
+    this.state["volt_solar_5"] = Math.floor(Math.random()*10+1);
+    this.state["volt_3v3"] = Math.floor(Math.random()*10+1);
+    this.state["cur_ecat_t1"] = Math.floor(Math.random()*10+1);
+    this.state["cur_ecat_t2"] = Math.floor(Math.random()*10+1);
+    this.state["cur_ecat_m"] = Math.floor(Math.random()*10+1);
+
+    //ADCS
+    this.state["mode_adcs"] = Math.floor(Math.random()*10+1);
+    this.state["angular_vector_x"] = Math.floor(Math.random()*10+1);
+    this.state["angular_vector_y"] = Math.floor(Math.random()*10+1);
+    this.state["angular_vector_z"] = Math.floor(Math.random()*10+1);
+    this.state["temp_mag_1"] = Math.floor(Math.random()*10+1);
+    this.state["temp_mag_2"] = Math.floor(Math.random()*10+1);
+    this.state["attitude_q1"] = Math.floor(Math.random()*10+1);
+    this.state["attitude_q2"] = Math.floor(Math.random()*10+1);
+    this.state["attitude_q3"] = Math.floor(Math.random()*10+1);
+    this.state["attitude_q4"] = Math.floor(Math.random()*10+1);
+    this.state["error_est"] = Math.floor(Math.random()*10+1);
+    this.state["tle_epochy"] = Math.floor(Math.random()*10+1);
+    this.state["tle_epochd"] = Math.floor(Math.random()*10+1);
+    this.state["tle_epochf"] = Math.floor(Math.random()*10+1);
+
+    //ECAT
+    this.state["ecat_temp"] = Math.floor(Math.random()*10+1);
+    this.state["ecat_fwd"] = Math.floor(Math.random()*10+1);
+    this.state["ecat_rev"] = Math.floor(Math.random()*10+1);
+
+
+    //Test values for Cam
+    this.state["boot_count_cam"] = 5;
+    this.state["image_count"] = Math.floor(Math.random()*10+1);
+    this.state["temp1"] = Math.floor(Math.random()*10+1);
+    this.state["temp2"] = Math.floor(Math.random()*10+1);
+    this.state["ivcc"] = Math.floor(Math.random()*10+1);
+    this.state["icore"] = Math.floor(Math.random()*10+1);
+    this.state["iddr"] = Math.floor(Math.random()*10+1);
+    this.state["gain_target"] = Math.floor(Math.random()*10+1);
+
+    //OBDH
+    this.state["mode"] = Math.floor(Math.random()*10+1);
+    this.state["boot_count_obdh"] = Math.floor(Math.random()*10+1);
+    this.state["uptime"] = Math.floor(Math.random()*10+1);
+    this.state["clock"] = Math.floor(Math.random()*10+1);
+    this.state["tele_size_flash"] = Math.floor(Math.random()*10+1);
+    this.state["temp_ram"] = Math.floor(Math.random()*10+1);
+    this.state["temp_mcu"] = Math.floor(Math.random()*10+1);
+    this.state["i_PWM"] = Math.floor(Math.random()*10+1);
+    this.state["gain_target"] = Math.floor(Math.random()*10+1);
+    this.state["resetcause"] = Math.floor(Math.random()*10+1);
+    this.state["bootcause"] = Math.floor(Math.random()*10+1);
+    this.state["obc_imgcnt"] = Math.floor(Math.random()*10+1);
+
 };
 
 /**

@@ -30,7 +30,7 @@
             "beacon.telemetry:baud",
             "beacon.telemetry:temp_brd",
             "beacon.telemetry:temp_pa",
-            "beacon.telemetry:boot_count",
+            "beacon.telemetry:boot_count_tmtc",
             "beacon.telemetry:active_conf",
             "beacon.telemetry:bgnd_rssi",
             "beacon.telemetry:tot_tx_bytes",
@@ -102,7 +102,7 @@
     },
     "layout:nomCAM":{
         "composition": [
-            "beacon.telemetry:boot_count",
+            "beacon.telemetry:boot_count_cam",
             "beacon.telemetry:image_count",
             "beacon.telemetry:temp1",
             "beacon.telemetry:temp2",
@@ -117,7 +117,7 @@
     "layout:nomOBDH":{
         "composition": [
             "beacon.telemetry:mode",
-            "beacon.telemetry:boot_count",
+            "beacon.telemetry:boot_count_obdh",
             "beacon.telemetry:uptime",
             "beacon.telemetry:clock",
             "beacon.telemetry:tele_size_flash",
@@ -141,7 +141,7 @@
             "beacon.telemetry:baud",
             "beacon.telemetry:temp_brd",
             "beacon.telemetry:temp_pa",
-            "beacon.telemetry:boot_count",
+            "beacon.telemetry:boot_count_tmtc",
             "beacon.telemetry:active_conf",
             "beacon.telemetry:bgnd_rssi",
             "beacon.telemetry:boot_cause",
@@ -196,7 +196,7 @@
     },
     "layout:chargCAM":{
         "composition": [
-            "beacon.telemetry:boot_count",
+            "beacon.telemetry:boot_count_cam",
             "beacon.telemetry:temp1",
             "beacon.telemetry:temp2",
             "beacon.telemetry:ivcc",
@@ -212,7 +212,7 @@
     "layout:chargOBDH":{
         "composition": [
             "beacon.telemetry:mode",
-            "beacon.telemetry:boot_count",
+            "beacon.telemetry:boot_count_obdh",
             "beacon.telemetry:uptime",
             "beacon.telemetry:clock",
             "beacon.telemetry:tele_size_flash",
@@ -818,7 +818,7 @@
     },
     "layout:CamLayoutNom": {
         "composition": [
-            "beacon.telemetry:boot_count",
+            "beacon.telemetry:boot_count_cam",
             "beacon.telemetry:image_count",
             "beacon.telemetry:temp1",
             "beacon.telemetry:temp2",
@@ -832,7 +832,7 @@
                 {
                     "identifier": {
                         "namespace": "beacon.telemetry",
-                        "key": "boot_count"
+                        "key": "boot_count_cam"
                     },
                     "x": 0,
                     "y": 0,
@@ -1020,7 +1020,7 @@
     },
     "layout:camLayoutCharg": {
         "composition": [
-          "beacon.telemetry:boot_count",
+          "beacon.telemetry:boot_count_cam",
           "beacon.telemetry:temp1",
           "beacon.telemetry:temp2",
           "layout:temp1PlotCharg",
@@ -1034,7 +1034,7 @@
                 {
                     "identifier": {
                         "namespace": "beacon.telemetry",
-                        "key": "boot_count"
+                        "key": "boot_count_cam"
                     },
                     "x": 0,
                     "y": 0,
@@ -1726,7 +1726,7 @@
             "beacon.telemetry:baud",
             "beacon.telemetry:temp_brd",
             "beacon.telemetry:temp_pa",
-            "beacon.telemetry:boot_count",
+            "beacon.telemetry:boot_count_tmtc",
             "beacon.telemetry:active_conf",
             "beacon.telemetry:bgnd_rssi",
             "beacon.telemetry:tot_tx_bytes",
@@ -1821,7 +1821,7 @@
                 {
                     "identifier": {
                         "namespace": "beacon.telemetry",
-                        "key": "boot_count"
+                        "key": "boot_count_tmtc"
                     },
                     "x": 0,
                     "y": 10,

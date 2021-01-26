@@ -95,7 +95,7 @@
         },
         {
             "name": "Number of reboots",
-            "key": "boot_count",
+            "key": "boot_count_tmtc",
             "values": [
                 {
                     "key": "value",
@@ -963,7 +963,7 @@
         },
         {
             "name": "Number of sytem boots",
-            "key": "boot_count",
+            "key": "boot_count_cam",
             "values": [
                 {
                     "key": "value",
@@ -1170,7 +1170,7 @@
         },
         {
             "name": "Number of reboots",
-            "key": "boot_count",
+            "key": "boot_count_obdh",
             "values": [
                 {
                     "key": "value",
