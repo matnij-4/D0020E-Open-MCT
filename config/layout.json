@@ -915,75 +915,127 @@
         "composition": [
             "beacon.telemetry:mode_adcs"
         ],
-        "name": "Current ADCS mode",
-        "type": "summary-widget",
-        "modified": "1",
-        "configuration": {
-            "ruleOrder": [
-                "default",
-                "off"
-            ],
-            "ruleConfigById": {
-                "default": {
-                    "name": "default",
-                    "label": "On",
-                    "message": "",
-                    "id": "default",
-                    "icon": "",
-                    "style": {
-                        "color": "#ffffff",
-                        "background-color": "#8DB600",
-                        "border-color": "rgba(0,0,0,0)"
+            "name": "Current ADCS mode",
+            "type": "summary-widget",
+            "modified": "1",
+            "configuration": {
+                "ruleOrder": [
+                    "rule1",
+                    "rule2",
+                    "rule3",
+                    "rule4"
+                ],
+                "ruleConfigById": {
+                    "rule1": {
+                        "name": "rule1",
+                        "label": "ADCS_OFF",
+                        "message": "",
+                        "id": "ADCS_OFF",
+                        "icon": "",
+                        "style": {
+                            "color": "#ffffff",
+                            "background-color": "#000000",
+                            "border-color": "rgba(0,0,0,0)"
+                        },
+                        "conditions": [
+                            {
+                                "object": "beacon.telemetry:mode_adcs",
+                                "key": "value",
+                                "operation": "equalTo",
+                                "values": [
+                                    1
+                                ]
+                            }
+                        ],
+                        "jsCondition": "",
+                        "trigger": "any",
+                        "expanded": "true"
                     },
-                    "conditions": [
-                        {
-                            "object": "beacon.telemetry:mode_adcs",
-                            "key": "value",
-                            "operation": "",
-                            "values": [
-                                1
-                            ]
-                        }
-                    ],
-                    "jsCondition": "",
-                    "trigger": "any",
-                    "expanded": "true"
+                    "rule2": {
+                        "name": "rule2",
+                        "label": "ADCS_IDLE",
+                        "message": "",
+                        "id": "ADCS_IDLE",
+                        "icon": "",
+                        "style": {
+                            "color": "ffffff",
+                            "background-color": "#000000",
+                            "border-color": "rgba(0,0,0,0)"
+                        },
+                        "conditions": [
+                            {
+                                "object": "beacon.telemetry:mode_adcs",
+                                "key": "value",
+                                "operation": "equalTo",
+                                "values": [
+                                    2
+                                ]
+                            }
+                        ],
+                        "jsCondition": "",
+                        "trigger": "any",
+                        "expanded": "true"
+                    },
+                    "rule3": {
+                        "name": "rule3",
+                        "label": "ADCS_DETUMBLE",
+                        "message": "",
+                        "id": "rule3",
+                        "icon": "",
+                        "style": {
+                            "color": "#ffffff",
+                            "background-color": "#000000",
+                            "border-color": "rgba(0,0,0,0)"
+                        },
+                        "conditions": [
+                            {
+                                "object": "beacon.telemetry:mode_adcs",
+                                "key": "value",
+                                "operation": "equalTo",
+                                "values": [
+                                    3
+                                ]
+                            }
+                        ],
+                        "jsCondition": "",
+                        "trigger": "any",
+                        "expanded": "true"
+                    },
+                    "rule4": {
+                        "name": "rule4",
+                        "label": "ADCS_NADIR",
+                        "message": "",
+                        "id": "rule4",
+                        "icon": "",
+                        "style": {
+                            "color": "#ffffff",
+                            "background-color": "#000000",
+                            "border-color": "rgba(0,0,0,0)"
+                        },
+                        "conditions": [
+                            {
+                                "object": "beacon.telemetry:mode_adcs",
+                                "key": "value",
+                                "operation": "equalTo",
+                                "values": [
+                                    4
+                                ]
+                            }
+                        ],
+                        "jsCondition": "",
+                        "trigger": "any",
+                        "expanded": "true"
+                    }
                 },
-                "off": {
-                    "name": "off",
-                    "label": "Off",
-                    "message": "",
-                    "id": "off",
-                    "icon": "icon-alert-triangle",
-                    "style": {
-                        "color": "ffffff",
-                        "background-color": "#D3212D",
-                        "border-color": "rgba(0,0,0,0)"
-                    },
-                    "conditions": [
-                        {
-                            "object": "beacon.telemetry:mode_adcs",
-                            "key": "value",
-                            "operation": "lessThan",
-                            "values": [
-                                2
-                            ]
-                        }
-                    ],
-                    "jsCondition": "",
-                    "trigger": "any",
-                    "expanded": "true"
-                }
-            },
-            "testDataConfig": [
-                {
-                    "object": "",
-                    "key": "",
-                    "value": ""
-                }
-            ]
-        }
-    },
+                "testDataConfig": [
+                    {
+                        "object": "",
+                        "key": "",
+                        "value": ""
+                    }
+                ]
+            }
+        },
     "layout:widgetOBDHMode": {
         "composition": [
             "beacon.telemetry:mode"
@@ -993,26 +1045,29 @@
         "modified": "1",
         "configuration": {
             "ruleOrder": [
-                "default",
-                "off"
+                "rule1",
+                "rule2",
+                "rule3",
+                "rule4",
+                "rule5"
             ],
             "ruleConfigById": {
-                "default": {
-                    "name": "default",
-                    "label": "On",
+                "rule1": {
+                    "name": "rule1",
+                    "label": "DEPLOYMENT",
                     "message": "",
-                    "id": "default",
+                    "id": "rule1",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#8DB600",
+                        "background-color": "#000000",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
                         {
                             "object": "beacon.telemetry:mode",
                             "key": "value",
-                            "operation": "",
+                            "operation": "equalTo",
                             "values": [
                                 1
                             ]
@@ -1022,24 +1077,99 @@
                     "trigger": "any",
                     "expanded": "true"
                 },
-                "off": {
-                    "name": "off",
-                    "label": "Off",
+                "rule2": {
+                    "name": "rule2",
+                    "label": "CHARGING",
                     "message": "",
-                    "id": "off",
-                    "icon": "icon-alert-triangle",
+                    "id": "rule2",
+                    "icon": "",
                     "style": {
                         "color": "ffffff",
-                        "background-color": "#D3212D",
+                        "background-color": "#000000",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
                         {
                             "object": "beacon.telemetry:mode",
                             "key": "value",
-                            "operation": "lessThan",
+                            "operation": "equalTo",
                             "values": [
                                 2
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule3": {
+                    "name": "rule3",
+                    "label": "NOMINAL",
+                    "message": "",
+                    "id": "rule3",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:mode",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                3
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule4": {
+                    "name": "rule4",
+                    "label": "IMAGING",
+                    "message": "",
+                    "id": "rule4",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:mode",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                4
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule5": {
+                    "name": "rule5",
+                    "label": "CALIBRATION",
+                    "message": "",
+                    "id": "rule5",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:mode",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                5
                             ]
                         }
                     ],
