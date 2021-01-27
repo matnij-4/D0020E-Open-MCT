@@ -558,28 +558,33 @@
         "name": "RX framing mode",
         "type": "summary-widget",
         "modified": "1",
+        "location": "layout:chargTMTC",
         "configuration": {
             "ruleOrder": [
-                "default",
-                "off"
+                "rule1",
+                "rule2",
+                "rule3",
+                "rule4",
+                "rule5",
+                "rule6"
             ],
             "ruleConfigById": {
-                "default": {
-                    "name": "default",
-                    "label": "On",
+                "rule1": {
+                    "name": "rule1",
+                    "label": "RAW",
                     "message": "",
-                    "id": "default",
+                    "id": "RAW",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#8DB600",
+                        "background-color": "#000000",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
                         {
                             "object": "beacon.telemetry:rx_mode",
                             "key": "value",
-                            "operation": "",
+                            "operation": "equalTo",
                             "values": [
                                 1
                             ]
@@ -589,24 +594,124 @@
                     "trigger": "any",
                     "expanded": "true"
                 },
-                "off": {
-                    "name": "off",
-                    "label": "Off",
+                "rule2": {
+                    "name": "rule2",
+                    "label": "ASM",
                     "message": "",
-                    "id": "off",
-                    "icon": "icon-alert-triangle",
+                    "id": "ASM",
+                    "icon": "",
                     "style": {
                         "color": "ffffff",
-                        "background-color": "#D3212D",
+                        "background-color": "#000000",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
                         {
                             "object": "beacon.telemetry:rx_mode",
                             "key": "value",
-                            "operation": "lessThan",
+                            "operation": "equalTo",
                             "values": [
                                 2
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule3": {
+                    "name": "rule3",
+                    "label": "HDLC",
+                    "message": "",
+                    "id": "rule3",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:rx_mode",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                3
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule4": {
+                    "name": "rule4",
+                    "label": "Viterbi",
+                    "message": "",
+                    "id": "rule4",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:rx_mode",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                4
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule5": {
+                    "name": "rule5",
+                    "label": "ASM + Golay",
+                    "message": "",
+                    "id": "rule5",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:rx_mode",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                5
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule6": {
+                    "name": "rule6",
+                    "label": "AX.25",
+                    "message": "",
+                    "id": "rule6",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:rx_mode",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                6
                             ]
                         }
                     ],
