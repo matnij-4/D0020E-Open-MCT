@@ -237,26 +237,33 @@
         "location": "layout:nomTMTC",
         "configuration": {
             "ruleOrder": [
-                "default",
-                "off"
+                "rule1",
+                "rule2",
+                "rule3",
+                "rule4",
+                "rule5",
+                "rule6",
+                "rule7",
+                "rule8",
+                "rule9"
             ],
             "ruleConfigById": {
-                "default": {
-                    "name": "default",
-                    "label": "On",
+                "rule1": {
+                    "name": "rule1",
+                    "label": "Power-on Reset",
                     "message": "",
-                    "id": "default",
+                    "id": "rule1",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#8DB600",
+                        "background-color": "#000000",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
                         {
                             "object": "beacon.telemetry:boot_cause",
                             "key": "value",
-                            "operation": "",
+                            "operation": "equalTo",
                             "values": [
                                 1
                             ]
@@ -266,24 +273,199 @@
                     "trigger": "any",
                     "expanded": "true"
                 },
-                "off": {
-                    "name": "off",
-                    "label": "Off",
+                "rule2": {
+                    "name": "rule2",
+                    "label": "Brown-out Reset",
                     "message": "",
-                    "id": "off",
-                    "icon": "icon-alert-triangle",
+                    "id": "rule2",
+                    "icon": "",
                     "style": {
                         "color": "ffffff",
-                        "background-color": "#D3212D",
+                        "background-color": "#000000",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
                         {
                             "object": "beacon.telemetry:boot_cause",
                             "key": "value",
-                            "operation": "lessThan",
+                            "operation": "equalTo",
                             "values": [
                                 2
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule3": {
+                    "name": "rule3",
+                    "label": "External Reset Pin",
+                    "message": "",
+                    "id": "rule3",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:boot_cause",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                3
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule4": {
+                    "name": "rule4",
+                    "label": "Watchdog Reset",
+                    "message": "",
+                    "id": "rule4",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:boot_cause",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                4
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule5": {
+                    "name": "rule5",
+                    "label": "JTAG Reset",
+                    "message": "",
+                    "id": "rule5",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:boot_cause",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                5
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule6": {
+                    "name": "rule6",
+                    "label": "CPU Error",
+                    "message": "",
+                    "id": "rule6",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:boot_cause",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                6
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule7": {
+                    "name": "rule7",
+                    "label": "OCD Reset",
+                    "message": "",
+                    "id": "rule7",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:boot_cause",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                7
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule8": {
+                    "name": "rule8",
+                    "label": "AWIRE Reset",
+                    "message": "",
+                    "id": "rule8",
+                    "icon": "",
+                    "style": {
+                        "color": "ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:boot_cause",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                8
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule9": {
+                    "name": "rule9",
+                    "label": "Brown-out 3.3 V reset",
+                    "message": "",
+                    "id": "rule9",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:boot_cause",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                9
                             ]
                         }
                     ],
