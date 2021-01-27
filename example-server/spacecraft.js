@@ -93,12 +93,12 @@ function Spacecraft() {
 
 
 Spacecraft.prototype.updateState = function () {
-    //Test values for widgets
-    this.state["boot_cause"] = Math.floor(Math.random()*2 + 1);
-    this.state["tx_mode"] = Math.floor(Math.random()*2 + 1);
-    this.state["rx_mode"] = Math.floor(Math.random()*2 + 1);
-    this.state["mode_adcs"] = Math.floor(Math.random()*2 + 1);
-    this.state["mode"] = Math.floor(Math.random()*2 + 1);
+    //Test values for widgets (Commented out a few repetetive params since overwriting problems)
+    this.state["boot_cause"] = Math.floor(Math.random()*9 + 1);
+    this.state["tx_mode"] = Math.floor(Math.random()*6 + 1);
+    this.state["rx_mode"] = Math.floor(Math.random()*6 + 1);
+    this.state["mode_adcs"] = Math.floor(Math.random()*4 + 1);
+    this.state["mode"] = Math.floor(Math.random()*5 + 1);
     this.state["bootcause"] = Math.floor(Math.random()*2 + 1);
     this.state["resetcause"] = Math.floor(Math.random()*2 + 1);
     //Test Values for TMTC
@@ -111,13 +111,13 @@ Spacecraft.prototype.updateState = function () {
     this.state["bgnd_rssi"] = Math.floor(Math.random()*10+1);
     this.state["tot_tx_bytes"] = Math.floor(Math.random()*10+1);
     this.state["tot_rx_bytes"] = Math.floor(Math.random()*10+1);
-    this.state["boot_cause"] = Math.floor(Math.random()*10+1);
+    //this.state["boot_cause"] = Math.floor(Math.random()*10+1);
     this.state["last_contact"] = Math.floor(Math.random()*10+1);
     this.state["tx_guard"] = Math.floor(Math.random()*10+1);
     this.state["rx_guard"] = Math.floor(Math.random()*10+1);
     this.state["max_tx_time"] = Math.floor(Math.random()*10+1);
-    this.state["tx_mode"] = Math.floor(Math.random()*10+1);
-    this.state["rx_mode"] = Math.floor(Math.random()*10+1);
+    //this.state["tx_mode"] = Math.floor(Math.random()*10+1);
+    //this.state["rx_mode"] = Math.floor(Math.random()*10+1);
 
     //Power
     this.state["batt_volt"] = Math.floor(Math.random()*10+1);
@@ -133,7 +133,7 @@ Spacecraft.prototype.updateState = function () {
     this.state["cur_ecat_m"] = Math.floor(Math.random()*10+1);
 
     //ADCS
-    this.state["mode_adcs"] = Math.floor(Math.random()*10+1);
+    //this.state["mode_adcs"] = Math.floor(Math.random()*10+1);
     this.state["angular_vector_x"] = Math.floor(Math.random()*10+1);
     this.state["angular_vector_y"] = Math.floor(Math.random()*10+1);
     this.state["angular_vector_z"] = Math.floor(Math.random()*10+1);
@@ -165,7 +165,7 @@ Spacecraft.prototype.updateState = function () {
     this.state["gain_target"] = Math.floor(Math.random()*10+1);
 
     //OBDH
-    this.state["mode"] = Math.floor(Math.random()*10+1);
+    //this.state["mode"] = Math.floor(Math.random()*10+1);
     this.state["boot_count_obdh"] = Math.floor(Math.random()*10+1);
     this.state["uptime"] = Math.floor(Math.random()*10+1);
     this.state["clock"] = Math.floor(Math.random()*10+1);
@@ -174,8 +174,8 @@ Spacecraft.prototype.updateState = function () {
     this.state["temp_mcu"] = Math.floor(Math.random()*10+1);
     this.state["i_PWM"] = Math.floor(Math.random()*10+1);
     this.state["gain_target"] = Math.floor(Math.random()*10+1);
-    this.state["resetcause"] = Math.floor(Math.random()*10+1);
-    this.state["bootcause"] = Math.floor(Math.random()*10+1);
+    //this.state["resetcause"] = Math.floor(Math.random()*10+1);
+    //this.state["bootcause"] = Math.floor(Math.random()*10+1);
     this.state["obc_imgcnt"] = Math.floor(Math.random()*10+1);
 
 };

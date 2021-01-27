@@ -1,5 +1,5 @@
 {
-    "layout:nominal":{
+    "layout:nominal": {
         "composition": [
             "layout:nomTMTC",
             "layout:nomPower",
@@ -12,7 +12,7 @@
         "type": "folder",
         "location": "layout:layout-objects"
     },
-    "layout:charging":{
+    "layout:charging": {
         "composition": [
             "layout:chargTMTC",
             "layout:chargPower",
@@ -24,7 +24,7 @@
         "type": "folder",
         "location": "layout:layout-objects"
     },
-    "layout:nomTMTC":{
+    "layout:nomTMTC": {
         "composition": [
             "beacon.telemetry:reboot_in",
             "beacon.telemetry:baud",
@@ -47,7 +47,7 @@
         "type": "folder",
         "location": "layout:nominal"
     },
-    "layout:nomPower":{
+    "layout:nomPower": {
         "composition": [
             "beacon.telemetry:batt_volt",
             "beacon.telemetry:batt_temp",
@@ -66,7 +66,7 @@
         "type": "folder",
         "location": "layout:nominal"
     },
-    "layout:nomADCS":{
+    "layout:nomADCS": {
         "composition": [
             "beacon.telemetry:mode_adcs",
             "beacon.telemetry:angular_vector_x",
@@ -83,13 +83,12 @@
             "beacon.telemetry:tle_epochd",
             "beacon.telemetry:tle_epochf",
             "layout:widgetADCSModeAdcs"
-
         ],
         "name": "ADCS",
         "type": "folder",
         "location": "layout:nominal"
     },
-    "layout:nomECAT":{
+    "layout:nomECAT": {
         "composition": [
             "beacon.telemetry:ecat_temp",
             "beacon.telemetry:ecat_fwd",
@@ -100,7 +99,7 @@
         "type": "folder",
         "location": "layout:nominal"
     },
-    "layout:nomCAM":{
+    "layout:nomCAM": {
         "composition": [
             "beacon.telemetry:boot_count_cam",
             "beacon.telemetry:image_count",
@@ -114,7 +113,7 @@
         "type": "folder",
         "location": "layout:nominal"
     },
-    "layout:nomOBDH":{
+    "layout:nomOBDH": {
         "composition": [
             "beacon.telemetry:mode",
             "beacon.telemetry:boot_count_obdh",
@@ -135,7 +134,7 @@
         "type": "folder",
         "location": "layout:nominal"
     },
-    "layout:chargTMTC":{
+    "layout:chargTMTC": {
         "composition": [
             "beacon.telemetry:reboot_in",
             "beacon.telemetry:baud",
@@ -154,13 +153,12 @@
             "layout:widgetTMTCBootCause",
             "layout:widgetTMTCTXMode",
             "layout:widgetTMTCRXMode"
-            
         ],
         "name": "TMTC",
         "type": "folder",
         "location": "layout:charging"
     },
-    "layout:chargPower":{
+    "layout:chargPower": {
         "composition": [
             "beacon.telemetry:batt_volt",
             "beacon.telemetry:batt_temp",
@@ -179,7 +177,7 @@
         "type": "folder",
         "location": "layout:charging"
     },
-    "layout:chargADCS":{
+    "layout:chargADCS": {
         "composition": [
             "beacon.telemetry:mode_adcs",
             "beacon.telemetry:angular_vector_x",
@@ -194,7 +192,7 @@
         "type": "folder",
         "location": "layout:charging"
     },
-    "layout:chargCAM":{
+    "layout:chargCAM": {
         "composition": [
             "beacon.telemetry:boot_count_cam",
             "beacon.telemetry:temp1",
@@ -203,13 +201,12 @@
             "beacon.telemetry:icore",
             "beacon.telemetry:iddr",
             "layout:camLayoutCharg"
-
         ],
         "name": "CAM",
         "type": "folder",
         "location": "layout:charging"
     },
-    "layout:chargOBDH":{
+    "layout:chargOBDH": {
         "composition": [
             "beacon.telemetry:mode",
             "beacon.telemetry:boot_count_obdh",
@@ -347,7 +344,6 @@
                     "fontSize": "20",
                     "font": "default-bold",
                     "type": "telemetry-view"
-
                 },
                 {
                     "identifier": {
@@ -387,26 +383,30 @@
         "location": "layout:chargTMTC",
         "configuration": {
             "ruleOrder": [
-                "default",
-                "off"
+                "rule1",
+                "rule2",
+                "rule3",
+                "rule4",
+                "rule5",
+                "rule6"
             ],
             "ruleConfigById": {
-                "default": {
-                    "name": "default",
-                    "label": "On",
+                "rule1": {
+                    "name": "rule1",
+                    "label": "RAW",
                     "message": "",
-                    "id": "default",
+                    "id": "RAW",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#8DB600",
+                        "background-color": "#000000",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
                         {
                             "object": "beacon.telemetry:tx_mode",
                             "key": "value",
-                            "operation": "",
+                            "operation": "equalTo",
                             "values": [
                                 1
                             ]
@@ -416,24 +416,124 @@
                     "trigger": "any",
                     "expanded": "true"
                 },
-                "off": {
-                    "name": "off",
-                    "label": "Off",
+                "rule2": {
+                    "name": "rule2",
+                    "label": "ASM",
                     "message": "",
-                    "id": "off",
-                    "icon": "icon-alert-triangle",
+                    "id": "ASM",
+                    "icon": "",
                     "style": {
                         "color": "ffffff",
-                        "background-color": "#D3212D",
+                        "background-color": "#000000",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
                         {
                             "object": "beacon.telemetry:tx_mode",
                             "key": "value",
-                            "operation": "lessThan",
+                            "operation": "equalTo",
                             "values": [
                                 2
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule3": {
+                    "name": "rule3",
+                    "label": "HDLC",
+                    "message": "",
+                    "id": "rule3",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:tx_mode",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                3
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule4": {
+                    "name": "rule4",
+                    "label": "Viterbi",
+                    "message": "",
+                    "id": "rule4",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:tx_mode",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                4
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule5": {
+                    "name": "rule5",
+                    "label": "ASM + Golay",
+                    "message": "",
+                    "id": "rule5",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:tx_mode",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                5
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule6": {
+                    "name": "rule6",
+                    "label": "AX.25",
+                    "message": "",
+                    "id": "rule6",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#000000",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:tx_mode",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                6
                             ]
                         }
                     ],
@@ -914,7 +1014,6 @@
                     "fontSize": "default",
                     "font": "default",
                     "type": "subobject-view"
-    
                 },
                 {
                     "width": 48,
@@ -947,7 +1046,6 @@
                     "fontSize": "20",
                     "font": "default",
                     "type": "telemetry-view"
-                   
                 },
                 {
                     "identifier": {
@@ -976,7 +1074,6 @@
         },
         "name": "Cam Display Layout",
         "type": "layout"
-        
     },
     "layout:temp1PlotNom": {
         "type": "telemetry.plot.overlay",
@@ -996,12 +1093,11 @@
             "xAxis": {}
         },
         "name": "Temperature 1"
-        
     },
     "layout:temp2PlotNom": {
         "type": "telemetry.plot.overlay",
         "composition": [
-           "beacon.telemetry:temp2"
+            "beacon.telemetry:temp2"
         ],
         "configuration": {
             "series": [
@@ -1016,18 +1112,17 @@
             "xAxis": {}
         },
         "name": "Temperature 2"
-        
     },
     "layout:camLayoutCharg": {
         "composition": [
-          "beacon.telemetry:boot_count_cam",
-          "beacon.telemetry:temp1",
-          "beacon.telemetry:temp2",
-          "layout:temp1PlotCharg",
-          ":temp2PlotCharg",
-          "beacon.telemetry:ivcc",
-          "beacon.telemetry:icore",
-          "beacon.telemetry:iddr"
+            "beacon.telemetry:boot_count_cam",
+            "beacon.telemetry:temp1",
+            "beacon.telemetry:temp2",
+            "layout:temp1PlotCharg",
+            ":temp2PlotCharg",
+            "beacon.telemetry:ivcc",
+            "beacon.telemetry:icore",
+            "beacon.telemetry:iddr"
         ],
         "configuration": {
             "items": [
@@ -1176,7 +1271,6 @@
         },
         "name": "Cam Display Layout Charging",
         "type": "layout"
-        
     },
     "layout:temp1PlotCharg": {
         "type": "telemetry.plot.overlay",
@@ -1200,7 +1294,7 @@
     "layout:temp2PlotCharg": {
         "type": "telemetry.plot.overlay",
         "composition": [
-           "beacon.telemetry:temp2"
+            "beacon.telemetry:temp2"
         ],
         "configuration": {
             "series": [
@@ -2238,6 +2332,3 @@
         "name": "PA temperature"
     }
 }
-    
-
-
