@@ -1,5 +1,5 @@
 import socket
-
+import time
  
 
 localIP     = "127.0.0.1"
@@ -53,3 +53,8 @@ while(True):
     # Sending a reply to client
 
     UDPServerSocket.sendto(bytesToSend, address)
+
+
+    while True:
+        time.sleep(3)
+        UDPServerSocket.sendto(bytesToSend, address)
