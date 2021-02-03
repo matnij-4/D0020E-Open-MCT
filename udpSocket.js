@@ -8,8 +8,10 @@ function UDPSocket(){
     const client = dgram.createSocket("udp4");
     //Sends the buffer to a spesifyed ipaddr and port 
     //Then closes the socket. 
-    client.send(message, 0, message.length, 20001, '127.0.0.1', (err) =>{
-        client.close();
+    client.send(message, 0, message.length, 20001, '127.0.0.1');
+    client.on('message', (msg, rinfo) =>{
+        console.log('Received %d bytes from %s:%d\n',
+              msg.length, rinfo.address, rinfo.port);
     });
 }
 //Need to export to be used in openmct
