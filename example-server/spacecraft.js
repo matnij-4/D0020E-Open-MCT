@@ -99,8 +99,8 @@ Spacecraft.prototype.updateState = function () {
     this.state["rx_mode"] = Math.floor(Math.random()*6 + 1);
     this.state["mode_adcs"] = Math.floor(Math.random()*4 + 1);
     this.state["mode"] = Math.floor(Math.random()*5 + 1);
-    this.state["bootcause"] = Math.floor(Math.random()*2 + 1);
-    this.state["resetcause"] = Math.floor(Math.random()*2 + 1);
+    this.state["bootcause"] = Math.floor(Math.random()*9 + 1);
+    this.state["resetcause"] = Math.floor(Math.random()*7 + 1);
     //Test Values for TMTC
     this.state["reboot_in"] = Math.floor(Math.random()*10+1);
     this.state["baud"] = Math.floor(Math.random()*10+1);
