@@ -2,7 +2,7 @@
  Spacecraft.js simulates a small spacecraft generating telemetry.
 */
 
-var theData = 1;
+var theData = {TM:[{'Board temperature': '5'}]};
 
 function Spacecraft() {
 
@@ -91,7 +91,6 @@ function Spacecraft() {
     setInterval(function () {
         this.updateState();
         this.generateTelemetry();
-        console.log(theData);
     }.bind(this), 1000);
 
     console.log("Development spacecraft launched!");
@@ -111,7 +110,7 @@ Spacecraft.prototype.updateState = function () {
     //Test Values for TMTC
     this.state["reboot_in"] = Math.floor(Math.random()*10+1);
     this.state["baud"] = Math.floor(Math.random()*10+1);
-    this.state["temp_brd"] = Math.floor(Math.random()*10+1);
+    this.state["temp_brd"] = theData["TM"][0]['Board temperature'];
     this.state["temp_pa"] = Math.floor(Math.random()*10+1);
     this.state["boot_count_tmtc"] = Math.floor(Math.random()*10+1);
     this.state["active_conf"] = Math.floor(Math.random()*10+1);
@@ -240,7 +239,7 @@ function getData(){
             console.log("Subscribed");
         }
         else{
-            theData = msg.toString();
+            theData = JSON.parse(msg);
         }
         
     });
