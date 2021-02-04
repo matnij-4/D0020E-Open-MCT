@@ -1,9 +1,14 @@
 //This client communicates with test server created by Anton. 
 const dgram = require('dgram');
 
+
+
+
 function UDPSocket(){
     //Creates a buffer for a string
     const key = "1593574862";
+
+    var theData = 1;
 
     const message = key.toString(16);
     //Creates a udp socket for IPv4
@@ -22,8 +27,15 @@ function UDPSocket(){
             console.log("Subscribed");
         }
         console.log(msg.toString());
+        theData = msg.toString();
     });
 
+    getData = function () {
+        console.log(theData);
+    };
+
 }
+
+
 //Need to export to be used in openmct
 module.exports = UDPSocket;

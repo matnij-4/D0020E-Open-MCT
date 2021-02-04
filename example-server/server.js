@@ -13,8 +13,10 @@ var expressWs = require('express-ws');
 var app = require('express')();
 expressWs(app);
 
+
+//var udpNameSpace = new UDPSocket();
 var spacecraft = new Spacecraft();
-var udp = new UDPSocket();
+//spacecraft.getData();
 var realtimeServer = new RealtimeServer(spacecraft);
 var historyServer = new HistoryServer(spacecraft);
 var staticServer = new StaticServer();

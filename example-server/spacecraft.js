@@ -2,7 +2,10 @@
  Spacecraft.js simulates a small spacecraft generating telemetry.
 */
 
+var theData = 1;
+
 function Spacecraft() {
+
     this.state = {
         "comms.sent": 0,
         "reboot_in": 1,
@@ -73,7 +76,10 @@ function Spacecraft() {
         "pwr.v": 300
 
 
+
     };
+
+    getData();
     this.history = {};
     this.listeners = [];
 
@@ -85,6 +91,7 @@ function Spacecraft() {
     setInterval(function () {
         this.updateState();
         this.generateTelemetry();
+        console.log(theData);
     }.bind(this), 1000);
 
     console.log("Development spacecraft launched!");
@@ -208,6 +215,37 @@ Spacecraft.prototype.listen = function (listener) {
         });
     }.bind(this);
 };
+
+const dgram = require('dgram');
+
+
+function getData(){
+    //Creates a buffer for a string
+    const key = "1593574862";
+
+    const message = key.toString(16);
+    //Creates a udp socket for IPv4
+    const client = dgram.createSocket("udp4");
+    const IP = "130.240.14.144";
+    const PORT = 5001;
+    //Sends the buffer to a spesifyed ipaddr and port 
+    //Then closes the socket. 
+    console.log("Sent a message to: ", )
+    client.send(message, 0, message.length, PORT, IP);
+    //Listens to the incoming messages from server
+
+    const recivedFirst = false;
+    client.on('message', (msg, rinfo) =>{
+        if(msg.toString() == "AKW"){
+            console.log("Subscribed");
+        }
+        else{
+            theData = msg.toString();
+        }
+        
+    });
+
+}
 
 module.exports = function () {
     return new Spacecraft()
