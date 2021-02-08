@@ -108,11 +108,11 @@ Spacecraft.prototype.updateState = function () {
     this.state["bootcause"] = Math.floor(Math.random()*9 + 1);
     this.state["resetcause"] = Math.floor(Math.random()*7 + 1);
     //Test Values for TMTC
-    this.state["reboot_in"] = Math.floor(Math.random()*10+1);
-    this.state["baud"] = Math.floor(Math.random()*10+1);
+    this.state["reboot_in"] = theData["TM"][0]['Time until reboot'];
+    this.state["baud"] = theData["TM"][0]['Baud rate'];
     this.state["temp_brd"] = theData["TM"][0]['Board temperature'];
     this.state["temp_pa"] = Math.floor(Math.random()*10+1);
-    this.state["boot_count_tmtc"] = Math.floor(Math.random()*10+1);
+    this.state["boot_count_tmtc"] = theData["TM"][0]['Number of reboots'];
     this.state["active_conf"] = Math.floor(Math.random()*10+1);
     this.state["bgnd_rssi"] = Math.floor(Math.random()*10+1);
     this.state["tot_tx_bytes"] = Math.floor(Math.random()*10+1);
