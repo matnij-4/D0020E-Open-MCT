@@ -229,7 +229,7 @@ function getData(){
     const PORT = 5001;
     //Sends the buffer to a spesifyed ipaddr and port 
     //Then closes the socket. 
-    console.log("Sent a message to: ", )
+    console.log("Sent a message to: ", );
     client.send(message, 0, message.length, PORT, IP);
     //Listens to the incoming messages from server
 
@@ -239,6 +239,7 @@ function getData(){
             console.log("Subscribed");
         }
         else{
+            console.log("HEJ");
             theData = JSON.parse(msg);
         }
         
