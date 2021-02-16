@@ -2,7 +2,7 @@
  Spacecraft.js simulates a small spacecraft generating telemetry.
 */
 
-var theData = {TM:[{'Board temperature': '5'}]};
+var theData = {TMTC:[{}]};
 
 function Spacecraft() {
 
@@ -79,7 +79,7 @@ function Spacecraft() {
 
     };
 
-    getData();
+    this.getData();
     this.history = {};
     this.listeners = [];
 
@@ -87,11 +87,6 @@ function Spacecraft() {
         this.history[k] = [];
     }, this);
 
-    //How often it updates in 
-    setInterval(function () {
-        this.updateState();
-        this.generateTelemetry();
-    }.bind(this), 1000);
 
     console.log("Development spacecraft launched!");
 
@@ -107,23 +102,22 @@ Spacecraft.prototype.updateState = function () {
     this.state["mode"] = Math.floor(Math.random()*5 + 1);
     this.state["bootcause"] = Math.floor(Math.random()*9 + 1);
     this.state["resetcause"] = Math.floor(Math.random()*7 + 1);
+
     //Test Values for TMTC
-    this.state["reboot_in"] = theData["TM"][0]['Time until reboot'];
-    this.state["baud"] = theData["TM"][0]['Baud rate'];
-    this.state["temp_brd"] = theData["TM"][0]['Board temperature'];
-    this.state["temp_pa"] = Math.floor(Math.random()*10+1);
-    this.state["boot_count_tmtc"] = theData["TM"][0]['Number of reboots'];
-    this.state["active_conf"] = Math.floor(Math.random()*10+1);
-    this.state["bgnd_rssi"] = Math.floor(Math.random()*10+1);
-    this.state["tot_tx_bytes"] = Math.floor(Math.random()*10+1);
-    this.state["tot_rx_bytes"] = Math.floor(Math.random()*10+1);
-    //this.state["boot_cause"] = Math.floor(Math.random()*10+1);
-    this.state["last_contact"] = Math.floor(Math.random()*10+1);
-    this.state["tx_guard"] = Math.floor(Math.random()*10+1);
-    this.state["rx_guard"] = Math.floor(Math.random()*10+1);
-    this.state["max_tx_time"] = Math.floor(Math.random()*10+1);
-    //this.state["tx_mode"] = Math.floor(Math.random()*10+1);
-    //this.state["rx_mode"] = Math.floor(Math.random()*10+1);
+    this.state["reboot_in"] = theData["TMTC"][0]["reboot_in"];
+    this.state["baud"] = theData["TMTC"][0]["baud"];
+    this.state["temp_brd"] = theData["TMTC"][0]["temp_brd"];
+    this.state["temp_pa"] = theData["TMTC"][0]["temp_pa"];
+    this.state["boot_count_tmtc"] = theData["TMTC"][0]["boot_count_tmtc"];
+    this.state["active_conf"] = theData["TMTC"][0]["active_conf"];
+    this.state["bgnd_rssi"] = theData["TMTC"][0]["bgnd_rssi"];
+    this.state["tot_tx_bytes"] = theData["TMTC"][0]["tot_tx_bytes"];
+    this.state["tot_rx_bytes"] = theData["TMTC"][0]["tot_rx_bytes"];
+    this.state["last_contact"] = theData["TMTC"][0]["last_contact"];
+    this.state["tx_guard"] = theData["TMTC"][0]["tx_guard"];
+    this.state["rx_guard"] = theData["TMTC"][0]["rx_guard"];
+    this.state["max_tx_time"] = theData["TMTC"][0]["max_tx_time"];
+
 
     //Power
     this.state["batt_volt"] = Math.floor(Math.random()*10+1);
@@ -171,7 +165,6 @@ Spacecraft.prototype.updateState = function () {
     this.state["gain_target"] = Math.floor(Math.random()*10+1);
 
     //OBDH
-    //this.state["mode"] = Math.floor(Math.random()*10+1);
     this.state["boot_count_obdh"] = Math.floor(Math.random()*10+1);
     this.state["uptime"] = Math.floor(Math.random()*10+1);
     this.state["clock"] = Math.floor(Math.random()*10+1);
@@ -180,8 +173,6 @@ Spacecraft.prototype.updateState = function () {
     this.state["temp_mcu"] = Math.floor(Math.random()*10+1);
     this.state["i_PWM"] = Math.floor(Math.random()*10+1);
     this.state["gain_target"] = Math.floor(Math.random()*10+1);
-    //this.state["resetcause"] = Math.floor(Math.random()*10+1);
-    //this.state["bootcause"] = Math.floor(Math.random()*10+1);
     this.state["obc_imgcnt"] = Math.floor(Math.random()*10+1);
 
 };
@@ -218,7 +209,7 @@ Spacecraft.prototype.listen = function (listener) {
 const dgram = require('dgram');
 
 
-function getData(){
+Spacecraft.prototype.getData = function (){
     //Creates a buffer for a string
     const key = "1593574862";
 
@@ -239,13 +230,15 @@ function getData(){
             console.log("Subscribed");
         }
         else{
-            console.log("HEJ");
             theData = JSON.parse(msg);
+            console.log(theData["TMTC"][0]["reboot_in"]);
+            this.updateState();
+            this.generateTelemetry();
         }
         
     });
 
-}
+};
 
 module.exports = function () {
     return new Spacecraft()
