@@ -94,96 +94,38 @@ function Spacecraft() {
 
 
 Spacecraft.prototype.updateState = function () {
-    //Test values for widgets (Commented out a few repetetive params since overwriting problems)
-    this.state["boot_cause"] = Math.floor(Math.random()*9 + 1);
-    this.state["tx_mode"] = Math.floor(Math.random()*6 + 1);
-    this.state["rx_mode"] = Math.floor(Math.random()*6 + 1);
-    this.state["mode_adcs"] = Math.floor(Math.random()*4 + 1);
-    this.state["mode"] = Math.floor(Math.random()*5 + 1);
-    this.state["bootcause"] = Math.floor(Math.random()*9 + 1);
-    this.state["resetcause"] = Math.floor(Math.random()*7 + 1);
-
-    //Test Values for TMTC
-    this.state["reboot_in"] = theData["TMTC"][0]["reboot_in"];
-    this.state["baud"] = theData["TMTC"][0]["baud"];
-    this.state["temp_brd"] = theData["TMTC"][0]["temp_brd"];
-    this.state["temp_pa"] = theData["TMTC"][0]["temp_pa"];
-    this.state["boot_count_tmtc"] = theData["TMTC"][0]["boot_count_tmtc"];
-    this.state["active_conf"] = theData["TMTC"][0]["active_conf"];
-    this.state["bgnd_rssi"] = theData["TMTC"][0]["bgnd_rssi"];
-    this.state["tot_tx_bytes"] = theData["TMTC"][0]["tot_tx_bytes"];
-    this.state["tot_rx_bytes"] = theData["TMTC"][0]["tot_rx_bytes"];
-
-    var LCdate = theData["TMTC"][0]["last_contact"];
-    LCdate=LCdate.split("-").join(":");
-    LCdate=LCdate.split(":");
-    var datum = new Date(Date.UTC('20'+LCdate[0],LCdate[1]-1,LCdate[2],LCdate[3],LCdate[4],LCdate[5]));
-    datum=datum.getTime();
-    this.state["last_contact"] = datum;
-
-    this.state["last_contact"] = datum;
-    this.state["tx_guard"] = theData["TMTC"][0]["tx_guard"];
-    this.state["rx_guard"] = theData["TMTC"][0]["rx_guard"];
-    this.state["max_tx_time"] = theData["TMTC"][0]["max_tx_time"];
+   
 
 
-    //Power
-    this.state["batt_volt"] = Math.floor(Math.random()*10+1);
-    this.state["batt_temp"] = Math.floor(Math.random()*10+1);
-    this.state["volt_solar_1"] = Math.floor(Math.random()*10+1);
-    this.state["volt_solar_2"] = Math.floor(Math.random()*10+1);
-    this.state["volt_solar_3"] = Math.floor(Math.random()*10+1);
-    this.state["volt_solar_4"] = Math.floor(Math.random()*10+1);
-    this.state["volt_solar_5"] = Math.floor(Math.random()*10+1);
-    this.state["volt_3v3"] = Math.floor(Math.random()*10+1);
-    this.state["cur_ecat_t1"] = Math.floor(Math.random()*10+1);
-    this.state["cur_ecat_t2"] = Math.floor(Math.random()*10+1);
-    this.state["cur_ecat_m"] = Math.floor(Math.random()*10+1);
+    for(var subSystem in theData){
+        this.loopData(theData[subSystem]);
+    }
 
-    //ADCS
-    //this.state["mode_adcs"] = Math.floor(Math.random()*10+1);
-    this.state["angular_vector_x"] = Math.floor(Math.random()*10+1);
-    this.state["angular_vector_y"] = Math.floor(Math.random()*10+1);
-    this.state["angular_vector_z"] = Math.floor(Math.random()*10+1);
-    this.state["temp_mag_1"] = Math.floor(Math.random()*10+1);
-    this.state["temp_mag_2"] = Math.floor(Math.random()*10+1);
-    this.state["attitude_q1"] = Math.floor(Math.random()*10+1);
-    this.state["attitude_q2"] = Math.floor(Math.random()*10+1);
-    this.state["attitude_q3"] = Math.floor(Math.random()*10+1);
-    this.state["attitude_q4"] = Math.floor(Math.random()*10+1);
-    this.state["error_est"] = Math.floor(Math.random()*10+1);
-    this.state["tle_epochy"] = Math.floor(Math.random()*10+1);
-    this.state["tle_epochd"] = Math.floor(Math.random()*10+1);
-    this.state["tle_epochf"] = Math.floor(Math.random()*10+1);
+    // var LCdate = theData["TMTC"][0]["last_contact"];
+    // LCdate=LCdate.split("-").join(":");
+    // LCdate=LCdate.split(":");
+    // var datum = new Date(Date.UTC('20'+LCdate[0],LCdate[1]-1,LCdate[2],LCdate[3],LCdate[4],LCdate[5]));
+    // datum=datum.getTime();
+    // this.state["last_contact"] = datum;
 
-    //ECAT
-    this.state["ecat_temp"] = Math.floor(Math.random()*10+1);
-    this.state["ecat_fwd"] = Math.floor(Math.random()*10+1);
-    this.state["ecat_rev"] = Math.floor(Math.random()*10+1);
+    // this.state["last_contact"] = datum;
+    // this.state["tx_guard"] = theData["TMTC"][0]["tx_guard"];
+    // this.state["rx_guard"] = theData["TMTC"][0]["rx_guard"];
+    // this.state["max_tx_time"] = theData["TMTC"][0]["max_tx_time"];
 
-
-    //Test values for Cam
-    this.state["boot_count_cam"] = 5;
-    this.state["image_count"] = Math.floor(Math.random()*10+1);
-    this.state["temp1"] = Math.floor(Math.random()*10+1);
-    this.state["temp2"] = Math.floor(Math.random()*10+1);
-    this.state["ivcc"] = Math.floor(Math.random()*10+1);
-    this.state["icore"] = Math.floor(Math.random()*10+1);
-    this.state["iddr"] = Math.floor(Math.random()*10+1);
-    this.state["gain_target"] = Math.floor(Math.random()*10+1);
-
-    //OBDH
-    this.state["boot_count_obdh"] = Math.floor(Math.random()*10+1);
-    this.state["uptime"] = Math.floor(Math.random()*10+1);
-    this.state["clock"] = Math.floor(Math.random()*10+1);
-    this.state["tele_size_flash"] = Math.floor(Math.random()*10+1);
-    this.state["temp_ram"] = Math.floor(Math.random()*10+1);
-    this.state["temp_mcu"] = Math.floor(Math.random()*10+1);
-    this.state["i_PWM"] = Math.floor(Math.random()*10+1);
-    this.state["gain_target"] = Math.floor(Math.random()*10+1);
-    this.state["obc_imgcnt"] = Math.floor(Math.random()*10+1);
 
 };
+
+Spacecraft.prototype.loopData = function(data){
+
+
+    for(var keyTo in data[0]){
+
+        if(keyTo in this.state){
+            this.state[keyTo] = data[0][keyTo];
+        }
+    }
+}
 
 /**
  * Takes a measurement of spacecraft state, stores in history, and notifies 
@@ -248,6 +190,9 @@ Spacecraft.prototype.getData = function (){
     });
 
 };
+
+
+
 
 module.exports = function () {
     return new Spacecraft()
