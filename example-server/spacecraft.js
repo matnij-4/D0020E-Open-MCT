@@ -1,10 +1,12 @@
 /*
  Spacecraft.js simulates a small spacecraft generating telemetry.
 */
-
+var ConfigLoader = require('./../configLoader');
+var configloader = new ConfigLoader();
 var theData = {TMTC:[{}]};
 
 function Spacecraft() {
+    console.log(configloader.getData())
 
     this.state = {
         "comms.sent": 0,

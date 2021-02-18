@@ -1,22 +1,18 @@
 /**
  * Basic implementation of a history and realtime server.
  */
-
+var ConfigLoader = require('./../configLoader');
 var Spacecraft = require('./spacecraft');
 var RealtimeServer = require('./realtime-server');
 var HistoryServer = require('./history-server');
 var StaticServer = require('./static-server');
-var UDPSocket = require('./../udpSocket');
-
 
 var expressWs = require('express-ws');
 var app = require('express')();
 expressWs(app);
 
 
-//var udpNameSpace = new UDPSocket();
 var spacecraft = new Spacecraft();
-//spacecraft.getData();
 var realtimeServer = new RealtimeServer(spacecraft);
 var historyServer = new HistoryServer(spacecraft);
 var staticServer = new StaticServer();
