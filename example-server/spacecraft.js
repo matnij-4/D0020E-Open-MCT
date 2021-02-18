@@ -113,7 +113,15 @@ Spacecraft.prototype.updateState = function () {
     this.state["bgnd_rssi"] = theData["TMTC"][0]["bgnd_rssi"];
     this.state["tot_tx_bytes"] = theData["TMTC"][0]["tot_tx_bytes"];
     this.state["tot_rx_bytes"] = theData["TMTC"][0]["tot_rx_bytes"];
-    this.state["last_contact"] = theData["TMTC"][0]["last_contact"];
+
+    var LCdate = theData["TMTC"][0]["last_contact"];
+    LCdate=LCdate.split("-").join(":");
+    LCdate=LCdate.split(":");
+    var datum = new Date(Date.UTC('20'+LCdate[0],LCdate[1]-1,LCdate[2],LCdate[3],LCdate[4],LCdate[5]));
+    datum=datum.getTime();
+    this.state["last_contact"] = datum;
+
+    this.state["last_contact"] = datum;
     this.state["tx_guard"] = theData["TMTC"][0]["tx_guard"];
     this.state["rx_guard"] = theData["TMTC"][0]["rx_guard"];
     this.state["max_tx_time"] = theData["TMTC"][0]["max_tx_time"];
