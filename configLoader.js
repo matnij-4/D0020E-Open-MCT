@@ -11,7 +11,7 @@ function ConfigLoader(){
     if(Object.keys(checklist).length == Object.keys(data).length){
         for(var i = 0; i < Object.keys(checklist).length; i++){
             if(checklist[i] in data){
-                if(data[checklist[i]] == null){
+                if(data[checklist[i]] == null || data[checklist[i]] == ''){
                     console.log("Didn't find value for the key");
                     data = null;
                 }

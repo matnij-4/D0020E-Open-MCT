@@ -6,8 +6,6 @@ var configloader = new ConfigLoader();
 var theData = {TMTC:[{}]};
 
 function Spacecraft() {
-    console.log(configloader.getData())
-
     this.state = {
         "comms.sent": 0,
         "reboot_in": 1,
@@ -220,14 +218,15 @@ const dgram = require('dgram');
 
 
 Spacecraft.prototype.getData = function (){
+    var data = configloader.getData();
     //Creates a buffer for a string
-    const key = "1593574862";
+    const key = data["rtKey"];
 
     const message = key.toString(16);
     //Creates a udp socket for IPv4
     const client = dgram.createSocket("udp4");
-    const IP = "130.240.14.144";
-    const PORT = 5001;
+    const IP = data["rtIp"];
+    const PORT = parseInt(data["rtPort"]);
     //Sends the buffer to a spesifyed ipaddr and port 
     //Then closes the socket. 
     console.log("Sent a message to: ", );
