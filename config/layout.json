@@ -256,7 +256,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -281,7 +281,7 @@
                     "icon": "",
                     "style": {
                         "color": "ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -306,7 +306,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -331,7 +331,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -356,7 +356,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -381,7 +381,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -406,7 +406,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -431,7 +431,7 @@
                     "icon": "",
                     "style": {
                         "color": "ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -456,7 +456,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -581,7 +581,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -606,7 +606,7 @@
                     "icon": "",
                     "style": {
                         "color": "ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#4285f4",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -631,7 +631,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#4285f4",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -656,7 +656,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#4285f4",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -681,7 +681,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#6aa84f",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -706,7 +706,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#4285f4",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -759,7 +759,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -784,7 +784,7 @@
                     "icon": "",
                     "style": {
                         "color": "ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#4285f4",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -809,7 +809,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#4285f4",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -834,7 +834,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#4285f4",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -859,7 +859,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#6aa84f",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -884,7 +884,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#4285f4",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -934,7 +934,7 @@
                         "icon": "",
                         "style": {
                             "color": "#ffffff",
-                            "background-color": "#000000",
+                            "background-color": "#cc4125",
                             "border-color": "rgba(0,0,0,0)"
                         },
                         "conditions": [
@@ -959,7 +959,7 @@
                         "icon": "",
                         "style": {
                             "color": "ffffff",
-                            "background-color": "#000000",
+                            "background-color": "#4285f4",
                             "border-color": "rgba(0,0,0,0)"
                         },
                         "conditions": [
@@ -984,7 +984,7 @@
                         "icon": "",
                         "style": {
                             "color": "#ffffff",
-                            "background-color": "#000000",
+                            "background-color": "#fbbc04",
                             "border-color": "rgba(0,0,0,0)"
                         },
                         "conditions": [
@@ -1009,7 +1009,7 @@
                         "icon": "",
                         "style": {
                             "color": "#ffffff",
-                            "background-color": "#000000",
+                            "background-color": "#6aa84f",
                             "border-color": "rgba(0,0,0,0)"
                         },
                         "conditions": [
@@ -1060,7 +1060,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1085,7 +1085,7 @@
                     "icon": "",
                     "style": {
                         "color": "ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1110,7 +1110,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#4285f4",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1135,7 +1135,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#6aa84f",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1160,7 +1160,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#6aa84f",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1202,7 +1202,9 @@
                 "rule4",
                 "rule5",
                 "rule6",
-                "rule7"
+                "rule7",
+                "ruleNA2",
+                "ruleNA3"
             ],
             "ruleConfigById": {
                 "rule1": {
@@ -1213,7 +1215,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#fbbc04",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1230,15 +1232,15 @@
                     "trigger": "any",
                     "expanded": "true"
                 },
-                "rule2": {
-                    "name": "rule2",
-                    "label": "Stack Overflow",
+                "ruleNA2": {
+                    "name": "ruleNA2",
+                    "label": "N/A",
                     "message": "",
-                    "id": "rule2",
+                    "id": "ruleNA2",
                     "icon": "",
                     "style": {
-                        "color": "ffffff",
-                        "background-color": "#000000",
+                        "color": "#ffffff",
+                        "background-color": "#fbbc04",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1255,15 +1257,15 @@
                     "trigger": "any",
                     "expanded": "true"
                 },
-                "rule3": {
-                    "name": "rule3",
-                    "label": "Software Exception",
+                "ruleNA3": {
+                    "name": "ruleNA3",
+                    "label": "N/A",
                     "message": "",
-                    "id": "rule3",
+                    "id": "ruleNA3",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#fbbc04",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1280,15 +1282,15 @@
                     "trigger": "any",
                     "expanded": "true"
                 },
-                "rule4": {
-                    "name": "rule4",
-                    "label": "Reset initialised by GOSH command",
+                "rule2": {
+                    "name": "rule2",
+                    "label": "Stack Overflow",
                     "message": "",
-                    "id": "rule4",
+                    "id": "rule2",
                     "icon": "",
                     "style": {
-                        "color": "#ffffff",
-                        "background-color": "#000000",
+                        "color": "ffffff",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1305,15 +1307,15 @@
                     "trigger": "any",
                     "expanded": "true"
                 },
-                "rule5": {
-                    "name": "rule5",
-                    "label": "Reset initialised by Request",
+                "rule3": {
+                    "name": "rule3",
+                    "label": "Software Exception",
                     "message": "",
-                    "id": "rule5",
+                    "id": "rule3",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1330,15 +1332,15 @@
                     "trigger": "any",
                     "expanded": "true"
                 },
-                "rule6": {
-                    "name": "rule6",
-                    "label": "Reset due to filesystem",
+                "rule4": {
+                    "name": "rule4",
+                    "label": "GOSH Reset",
                     "message": "",
-                    "id": "rule6",
+                    "id": "rule4",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1355,15 +1357,15 @@
                     "trigger": "any",
                     "expanded": "true"
                 },
-                "rule7": {
-                    "name": "rule7",
-                    "label": "Reset due to insufficient mem",
+                "rule5": {
+                    "name": "rule5",
+                    "label": "CSP Reset",
                     "message": "",
-                    "id": "rule7",
+                    "id": "rule5",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1373,6 +1375,56 @@
                             "operation": "equalTo",
                             "values": [
                                 7
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule6": {
+                    "name": "rule6",
+                    "label": "Filesystem Reset",
+                    "message": "",
+                    "id": "rule6",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#cc4125",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:resetcause",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                8
+                            ]
+                        }
+                    ],
+                    "jsCondition": "",
+                    "trigger": "any",
+                    "expanded": "true"
+                },
+                "rule7": {
+                    "name": "rule7",
+                    "label": "Memory Reset",
+                    "message": "",
+                    "id": "rule7",
+                    "icon": "",
+                    "style": {
+                        "color": "#ffffff",
+                        "background-color": "#cc4125",
+                        "border-color": "rgba(0,0,0,0)"
+                    },
+                    "conditions": [
+                        {
+                            "object": "beacon.telemetry:resetcause",
+                            "key": "value",
+                            "operation": "equalTo",
+                            "values": [
+                                9
                             ]
                         }
                     ],
@@ -1418,7 +1470,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#fbbc04",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1437,13 +1489,13 @@
                 },
                 "rule2": {
                     "name": "rule2",
-                    "label": "Brown out detection",
+                    "label": "Brown out Reset",
                     "message": "",
                     "id": "rule2",
                     "icon": "",
                     "style": {
                         "color": "ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1468,7 +1520,7 @@
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#6aa84f",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1487,13 +1539,13 @@
                 },
                 "rule4": {
                     "name": "rule4",
-                    "label": "Watchdog",
+                    "label": "Watchdog Reset",
                     "message": "",
                     "id": "rule4",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1512,13 +1564,13 @@
                 },
                 "rule5": {
                     "name": "rule5",
-                    "label": "Software triggered boot",
+                    "label": "Software boot",
                     "message": "",
                     "id": "rule5",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#4285f4",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1537,13 +1589,13 @@
                 },
                 "rule6": {
                     "name": "rule6",
-                    "label": "Reset by the external reset pin",
+                    "label": "Ext Pin Reset",
                     "message": "",
                     "id": "rule6",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1562,13 +1614,13 @@
                 },
                 "rule7": {
                     "name": "rule7",
-                    "label": "Woken from sleep/standby mode",
+                    "label": "Woken from stdby",
                     "message": "",
                     "id": "rule7",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#6aa84f",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1587,13 +1639,13 @@
                 },
                 "rule8": {
                     "name": "rule8",
-                    "label": "Reset due to CPU Error",
+                    "label": "CPU Error",
                     "message": "",
                     "id": "rule8",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
@@ -1612,13 +1664,13 @@
                 },
                 "rule9": {
                     "name": "rule9",
-                    "label": "Reset by JTAG",
+                    "label": "JTAG Reset",
                     "message": "",
                     "id": "rule9",
                     "icon": "",
                     "style": {
                         "color": "#ffffff",
-                        "background-color": "#000000",
+                        "background-color": "#cc4125",
                         "border-color": "rgba(0,0,0,0)"
                     },
                     "conditions": [
