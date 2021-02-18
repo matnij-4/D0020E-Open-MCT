@@ -1,13 +1,15 @@
 const checklist = [
     "rtIp",
-    "rtIp",  
+    "rtPort",  
     "rtKey",
     "dbIp",
-    "dbPort"
+    "dbPort",
+    "dbUname",
+    "dbPass"
 ];
 
 function ConfigLoader(){
-    var data = require('./config.json');
+    var data = require('./config/config.json');
     if(Object.keys(checklist).length == Object.keys(data).length){
         for(var i = 0; i < Object.keys(checklist).length; i++){
             if(checklist[i] in data){

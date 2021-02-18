@@ -3,7 +3,9 @@
     "rtPort": "5001",
     "rtKey": "1593574862",
     "dbIp": "192.168.1.11",
-    "dbPort": "absgc1278"
+    "dbPort": "8974",
+    "dbUname":"12354",
+    "dbPass": "1234"
 
 }
     

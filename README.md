@@ -55,4 +55,51 @@ This plugin handels the subfolders for the subsystems. It dividends the telemetr
 ### Historical
 **TO DO**
 
+## Config file
 
+The config file has a checklist in the project that imports a config file with ips, ids and ports.
+
+When importing a config file the program checks:
+
+- If the keys are the same as in a check file. The check is located in the configloader
+
+- If the key has a attached value
+
+If one of the conditions above are fulfilled the importated data is set to *null*
+
+  
+
+### Realtime server
+
+The realtime sever(rt) is where the data is received in realtime and will be the primary server used during operational use.
+
+  
+
+### Database server
+
+The Database server (db) is responsible for storing data. The database server will be used for retriving old data.
+
+  
+
+### Config fields
+
+- rtIp 
+Specifies the ip address for the real-time server. The config file only accepts a IPv4 address.
+
+- rtPort 
+Specifies the port of the real-time server.
+
+- rtKey 
+Authentication key for establishing a connection to real-time server.
+
+- dbIp
+Specifies the IP address for the historical database
+
+- dbPort 
+Specifies the port for the historical database
+
+- dbUname
+Specifies the username for login into the historical server.
+
+- dbPass 
+Specifies the password for the historical database.
