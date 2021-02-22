@@ -157,6 +157,7 @@ Spacecraft.prototype.listen = function (listener) {
 };
 
 const dgram = require('dgram');
+const { send } = require('process');
 
 
 Spacecraft.prototype.getData = function (){
@@ -180,6 +181,9 @@ Spacecraft.prototype.getData = function (){
         if(msg.toString() == "AKW"){
             console.log("Subscribed");
         }
+        else if(msg.toString() =="ping"){
+            console.log("Recived ping");
+        }
         else{
             theData = JSON.parse(msg);
             console.log(theData["TMTC"][0]["reboot_in"]);
@@ -188,6 +192,13 @@ Spacecraft.prototype.getData = function (){
         }
         
     });
+
+    setInterval(function (){
+        var ping = "ping".toString(16);
+        client.send(ping, 0, ping.length, PORT, IP);
+        console.log("Sent ping");
+    }, 550000);
+
 
 };
 

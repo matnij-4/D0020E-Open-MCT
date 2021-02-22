@@ -75,9 +75,9 @@ The realtime sever(rt) is where the data is received in realtime and will be the
 
   
 
-### Database server
+### Historical Database Server
 
-The Database server (db) is responsible for storing data. The database server will be used for retriving old data.
+The Historical Database server (db) is responsible for storing data. The database server will be used when displaying old data is needed. 
 
   
 
