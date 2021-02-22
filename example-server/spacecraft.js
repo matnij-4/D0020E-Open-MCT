@@ -164,6 +164,7 @@ Spacecraft.prototype.getData = function (){
     var data = configloader.getData();
     //Creates a buffer for a string
     const key = data["rtKey"];
+    var flag = false;
 
     const message = key.toString(16);
     //Creates a udp socket for IPv4
@@ -183,6 +184,10 @@ Spacecraft.prototype.getData = function (){
         }
         else if(msg.toString() =="ping"){
             console.log("Recived ping");
+            flag = true;
+        }
+        else if(msg.toString() =="unsubscribe"){
+            console.log("We unsubscribe from the server");
         }
         else{
             theData = JSON.parse(msg);
@@ -198,6 +203,21 @@ Spacecraft.prototype.getData = function (){
         client.send(ping, 0, ping.length, PORT, IP);
         console.log("Sent ping");
     }, 550000);
+
+    setInterval(function (){
+        
+        console.log("Check for timeout");
+
+        if(flag){
+            flag = false;
+        }
+        // else{
+        //     var unsub = "unsubscribe".toString(16);
+        //     client.send(unsub, 0, unsub.length, PORT, IP);
+        //     console.log("Unsuscribed from the server as it timedout");
+        // }
+
+    }, 600000);
 
 
 };
