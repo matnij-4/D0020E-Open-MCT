@@ -211,11 +211,11 @@ Spacecraft.prototype.getData = function (){
         if(flag){
             flag = false;
         }
-        // else{
-        //     var unsub = "unsubscribe".toString(16);
-        //     client.send(unsub, 0, unsub.length, PORT, IP);
-        //     console.log("Unsuscribed from the server as it timedout");
-        // }
+         else{
+             var unsub = "unsubscribe".toString(16);
+             client.send(unsub, 0, unsub.length, PORT, IP);
+             console.log("Unsuscribed from the server as it timedout");
+         }
 
     }, 600000);
 
