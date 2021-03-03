@@ -192,8 +192,8 @@ Spacecraft.prototype.getData = function (){
         else{
             theData = JSON.parse(msg);
             console.log(theData["TMTC"][0]["reboot_in"]);
-            this.updateState();
-            this.generateTelemetry();
+            //this.updateState();
+            //this.generateTelemetry();
         }
         
     });
