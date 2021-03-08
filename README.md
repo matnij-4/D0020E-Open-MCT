@@ -88,7 +88,12 @@ The realtime sever(rt) is where the data is received in realtime and will be the
 
 ### Historical Database Server
 
-The Historical Database server (db) is responsible for storing data. The database server will be used when displaying old data is needed. 
+The Historical Database server (db) is responsible for storing data. The database server will be used when displaying old data is needed. In this project we used MySql server for retreving stored data. There were some issues with using MySql server and NodeJS. We needed to install a certain version of MySql in this project we used MySql server 5.7.33 to make it work with NodeJS. Every table is a key in openmct and every table have two columns: value and date. One for stroring values and the other for storing the timestamp as can be seen below. 
+
+![alt text](https://github.com/matnij-4/D0020E-Open-MCT/blob/main/images/sqlTable.png?raw=true)
+
+Everytime a telemetry collection of data is opened a querry is sent to the database server asking for a datasent in a specific timeinterval. 
+
 
   
 
@@ -114,3 +119,6 @@ Specifies the username for login into the historical server.
 
 - dbPass 
 Specifies the password for the historical database.
+
+- dbDatabase
+Specifies which database you want to use for the database sever
