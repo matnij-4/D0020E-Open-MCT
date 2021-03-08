@@ -5,7 +5,8 @@ const checklist = [
     "dbIp",
     "dbPort",
     "dbUname",
-    "dbPass"
+    "dbPass",
+    "dbDatabase"
 ];
 
 function ConfigLoader(){

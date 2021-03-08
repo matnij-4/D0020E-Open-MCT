@@ -1,8 +1,10 @@
 var mysql = require('mysql');
-
+var ConfigLoader = require('./configLoader');
+var configloader = new ConfigLoader();
 
 
 function HistoryLoader(){
+    var config = configloader.getData();
     // this.getServerData("batt_temp", 0, getFullDate(),function(result){
     //     for(var key in result){
     //         console.log("Value: " + result[key].value+ " date: " + result[key].date);
@@ -27,11 +29,12 @@ function HistoryLoader(){
 // }
 
 function connectServer(){
+    var config = configloader.getData();
     var con = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'AeXJxSg/&',
-        database: 'test',
+        host: config["dbIp"],
+        user: config["dbUname"],
+        password: config["dbPass"],
+        database: config["dbDatabase"],
         multipleStatements: 'true'
     });
     con.connect();

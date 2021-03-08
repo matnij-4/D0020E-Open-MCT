@@ -2,10 +2,11 @@
     "rtIp": "130.240.14.144",
     "rtPort": "5005",
     "rtKey": "1593574862",
-    "dbIp": "192.168.1.11",
+    "dbIp": "localhost",
     "dbPort": "8974",
-    "dbUname":"12354",
-    "dbPass": "1234"
+    "dbUname":"root",
+    "dbPass": "AeXJxSg/&",
+    "dbDatabase": "test"
 
 }
     
