@@ -42,17 +42,20 @@ Open MCT as you can see have no direct comminucation to the outside.
 ### Dictionary
 **TO DO**
 
-The dictionary plugin set up the formant for the data that is going to be collected. It dose not get any of the data only set the format.
+Dictionary plugin is used to populate our object tree which is created by addRoot. We have a get method for our Json file. We define and register an objectProvider and a composition provider. These are used to provide structure to our root object. There is more to read about this in the github tutorial from nasa below. 
 
 ### Realtime
 **TO DO**
 
-It collects the data fromt he JS server and sends it to Open MCT.
+This is a basic realtime telemetry plugin that uses websockets. A provider is created which supports sending subscribe and unsubscribe messages. 
 
 ### Layout
-This plugin handels the subfolders for the subsystems. It dividends the telemetri data into subfolders to make it easier to find the right telemetri. As well it creats premade Status Widgets and adds them to the corresponding subsystem.
+This plugin handels the subfolders for the subsystems. It divides the telemetry data into subfolders to make it easier to find the right telemetri. It also creates premade Status Widgets and adds them to the corresponding subsystem.
 
-### Historical
+### TimeConductor
+
+This plugin is initialized in index.html. It is a default plugin from openMCT (https://github.com/nasa/openmct/blob/master/API.md#the-time-conductor). This plugin is used to allow the user to choose a specific time frame to display data from in graphs.
+
 **TO DO**
 
 ## Config file
