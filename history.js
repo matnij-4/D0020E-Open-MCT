@@ -31,7 +31,7 @@ HistoryLoader.prototype.getServerData = function(key, start, stop, callback) {
     var sql = "SELECT * FROM " + key + " WHERE date > '"+realStart+"' AND date < '"+ realStop+"';";
     
     con.query(sql, function(err, result, fields){
-        if(err) throw err;
+        if(err) console.log(err + "Database Server not connected.");
         return callback(result);
     });
     con.end();
