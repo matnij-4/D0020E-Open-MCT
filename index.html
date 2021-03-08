@@ -20,6 +20,9 @@
         openmct.install(openmct.plugins.Espresso());
         openmct.install(openmct.plugins.SummaryWidget());
 
+        const ONE_YEAR = 365 * 24 * 60 * 60 * 1000;
+        const ONE_MINUTE = 60 * 1000;
+
         openmct.install(openmct.plugins.Conductor({
                       menuOptions: [
                           {
@@ -39,6 +42,8 @@
                           },
                       ]
                   }));
+
+
         
         openmct.install(DictionaryPlugin());
         openmct.install(LayoutPlugin());
