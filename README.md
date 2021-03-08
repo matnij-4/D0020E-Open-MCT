@@ -37,20 +37,18 @@ A simple version of the architecture for the program can bee senn in the picture
 
 Open MCT as you can see have no direct comminucation to the outside. 
 
-## Plugin
+## Plugins
 
 ### Dictionary
-**TO DO**
 
 Dictionary plugin is used to populate our object tree which is created by addRoot. We have a get method for our Json file. We define and register an objectProvider and a composition provider. These are used to provide structure to our root object. There is more to read about this in the github tutorial from nasa below. 
 
 ### Realtime
-**TO DO**
 
 This is a basic realtime telemetry plugin that uses websockets. A provider is created which supports sending subscribe and unsubscribe messages. 
 
 ### Layout
-This plugin handels the subfolders for the subsystems. It divides the telemetry data into subfolders to make it easier to find the right telemetri. It also creates premade Status Widgets and adds them to the corresponding subsystem.
+This plugin handles the subfolders for the subsystems. It divides the telemetry data into subfolders to make it easier to find the right telemetri. It also creates premade Status Widgets and adds them to the corresponding subsystem.
 
 ### TimeConductor
 
