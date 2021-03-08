@@ -3,30 +3,8 @@ var ConfigLoader = require('./configLoader');
 var configloader = new ConfigLoader();
 
 
-function HistoryLoader(){
-    var config = configloader.getData();
-    // this.getServerData("batt_temp", 0, getFullDate(),function(result){
-    //     for(var key in result){
-    //         console.log("Value: " + result[key].value+ " date: " + result[key].date);
-    //     }
-    // });
-    
+function HistoryLoader(){   
 };
-
-
-// function getFullDate(){
-//     var date = new Date();
-//     return date.getFullYear()+ "-"+(date.getMonth()+1)+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
-// }
-
-// HistoryLoader.prototype.insert = function(key, value){
-//     var sql = "INSERT INTO "+ key + " (value, date) VALUES ('"+value+"', '"+getFullDate()+"')";
-//     con.query(sql,function(err, result){
-//         if(err) throw err;
-//         console.log("Line inserted...");
-//         return;
-//     });
-// }
 
 function connectServer(){
     var config = configloader.getData();
@@ -50,10 +28,6 @@ HistoryLoader.prototype.getServerData = function(key, start, stop, callback) {
     var realStop = stopDate.getFullYear() + "-"+(stopDate.getMonth()+1) + "-" +stopDate.getDate()+ " " 
     + stopDate.getHours()+":"+stopDate.getMinutes()+":"+ stopDate.getSeconds();
 
-    console.log("Date: " + stopDate.toLocaleDateString());
-    console.log("Date: " + stopDate.toLocaleTimeString());
-    console.log("Realdate: " + realStart);
-    console.log("Realstop: " + realStop);
     var sql = "SELECT * FROM " + key + " WHERE date > '"+realStart+"' AND date < '"+ realStop+"';";
     
     con.query(sql, function(err, result, fields){

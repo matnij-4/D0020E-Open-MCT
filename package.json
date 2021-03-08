@@ -4,9 +4,7 @@
   "description": "Tutorials for Open MCT",
   "main": "example-server/server.js",
   "scripts": {
-    "start": "concurrently \"node example-server/server.js\" \"node tele-server/teleServer.js\"",
-    "test": "node example-server/server.js",
-    "server": "node startHistory.js"
+    "start": "node example-server/server.js"
   },
   "repository": {
     "type": "git",

@@ -92,14 +92,6 @@ function LayoutPlugin() {
                 }
             }
         });
-        
-            
-        
         });
-
-       
-
-
-        
     }
 };
