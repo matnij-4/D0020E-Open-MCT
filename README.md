@@ -56,15 +56,30 @@ This plugin is initialized in index.html. It is a default plugin from openMCT (h
 
 ## How to add telemetry
 
-If you wish to add your own telemetry data, you will have to add the data variable to the spacecraft state, this state gets updated when new data is received via the realtime-server. 
+### Creating data variables
+
+If you wish to add your own telemetry data, you will have to define the variable in a JSON file specifying the values attributes, in our case all values that we are using in the spacecraft state are defined in beacon.json. 
+
+![alt text](https://github.com/matnij-4/D0020E-Open-MCT/blob/main/images/Jsondesc.png?raw=true)
+
+This JSON file is then loaded and used in dictionary-plugin.json. If you wish to use your own JSON file with your own values, dictionary-plugin will have to be changed accordingly. Another option is just to add the values to the state and specifiy them in beacon.json and leave dictionary-plugin as it is. 
+
+![alt text](https://github.com/matnij-4/D0020E-Open-MCT/blob/main/images/DictionaryObjProv.png?raw=true)
+
+If you are using your own JSON file you will have to change the calls to getDictionary() as well as specify NAMESPACE and BEACONKEY to match your JSON file. 
+
+### Changing the state
+
+You will have to add the data variable to the spacecraft state, this state gets updated when new data is received via the realtime-server. 
 
 ![alt text](https://github.com/matnij-4/D0020E-Open-MCT/blob/main/images/State.png?raw=true)
 
-Json files are received from the server in the following format:
+JSON files are received from the server in the following format:
 
 ![alt text](https://github.com/matnij-4/D0020E-Open-MCT/blob/main/images/FormatJson.png?raw=true)
 
 which is parsed and updated into the state in spacecraft which is then displayed in openMCT. The variable you will want to update has to be sent in this format and it has to be defined in the state in spacecraft.js.
+
 
 ## Config file
 
