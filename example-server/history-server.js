@@ -17,6 +17,7 @@ function HistoryServer(spacecraft) {
 
         historyloader.getServerData(ids, start, end, function(result){
             var obj = JSON.parse("[]");
+            console.log(result);
             for(var key in result){
                 obj.push({
                     timestamp: new Date(result[key].date).getTime(),

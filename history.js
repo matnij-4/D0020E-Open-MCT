@@ -42,14 +42,16 @@ HistoryLoader.prototype.getServerData = function(key, start, stop, callback) {
     var con = connectServer();
     const startDate = new Date(start);
     const stopDate = new Date(stop);
-    const realStart = startDate.getFullYear() + "-"+(startDate.getMonth()+1) + "-" +startDate.getDay()+ " " 
+    var realStart = startDate.getFullYear() + "-"+(startDate.getMonth()+1) + "-" +startDate.getDate()+ " " 
     + startDate.getHours()+":"+startDate.getMinutes()+":"+ startDate.getSeconds();
-    const realStop = stopDate.getFullYear() + "-"+(stopDate.getMonth()+1) + "-" +stopDate.getDay()+ " " 
+    var realStop = stopDate.getFullYear() + "-"+(stopDate.getMonth()+1) + "-" +stopDate.getDate()+ " " 
     + stopDate.getHours()+":"+stopDate.getMinutes()+":"+ stopDate.getSeconds();
 
-
+    console.log("Date: " + stopDate.toLocaleDateString());
+    console.log("Date: " + stopDate.toLocaleTimeString());
+    console.log("Realdate: " + realStart);
+    console.log("Realstop: " + realStop);
     var sql = "SELECT * FROM " + key + " WHERE date > '"+realStart+"' AND date < '"+ realStop+"';";
-    
     
     con.query(sql, function(err, result, fields){
         if(err) throw err;
