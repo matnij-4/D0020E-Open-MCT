@@ -9,7 +9,7 @@ To building and running D0020E-Open-MCT in you local enviorment you will need No
 3. **npm install**
 4. **npm start**
 
-To se up the program for the first time you need to do some more configurations. That is if you want it to look a bit more nice.
+To set up the program for the first time you need to do some more configurations. That is if you want it to look a bit more nice.
 
 1. **Go to my Items folder in the program.**
 ![alt text](https://github.com/matnij-4/D0020E-Open-MCT/blob/main/images/configHelp1.PNG?raw=true)
@@ -25,9 +25,9 @@ To se up the program for the first time you need to do some more configurations.
 
 ## Layout
 
-If you wan to creat you own layout for the systems and telemetry data you can. Just adde it with the creat button and put it in my Items. Those settings are only stored in the browser cache.
+If you want to creat you own layout for the systems and telemetry data you can. Just add it with the create button and put it in my Items. Those settings are only stored in the browser cache.
 
-For longer storage of you setting you can export them as an JSON files and importem at a later date.
+For longer storage of you setting you can export them as an JSON files and import them at a later date.
 
 ## Architecture
 
@@ -37,22 +37,23 @@ A simple version of the architecture for the program can bee senn in the picture
 
 Open MCT as you can see have no direct comminucation to the outside. 
 
-## Plugin
+## Plugins
 
 ### Dictionary
-**TO DO**
 
-The dictionary plugin set up the formant for the data that is going to be collected. It dose not get any of the data only set the format.
+Dictionary plugin is used to populate our object tree which is created by addRoot. We have a get method for our Json file. We define and register an objectProvider and a composition provider. These are used to provide structure to our root object. There is more to read about this in the github tutorial from nasa below. 
 
 ### Realtime
-**TO DO**
 
-It collects the data fromt he JS server and sends it to Open MCT.
+This is a basic realtime telemetry plugin that uses websockets. A provider is created which supports sending subscribe and unsubscribe messages. 
 
 ### Layout
-This plugin handels the subfolders for the subsystems. It dividends the telemetri data into subfolders to make it easier to find the right telemetri. As well it creats premade Status Widgets and adds them to the corresponding subsystem.
+This plugin handles the subfolders for the subsystems. It divides the telemetry data into subfolders to make it easier to find the right telemetri. It also creates premade Status Widgets and adds them to the corresponding subsystem.
 
-### Historical
+### TimeConductor
+
+This plugin is initialized in index.html. It is a default plugin from openMCT (https://github.com/nasa/openmct/blob/master/API.md#the-time-conductor). This plugin is used to allow the user to choose a specific time frame to display data from in graphs.
+
 **TO DO**
 
 ## Config file

@@ -20,6 +20,30 @@
         openmct.install(openmct.plugins.Espresso());
         openmct.install(openmct.plugins.SummaryWidget());
 
+        const ONE_YEAR = 365 * 24 * 60 * 60 * 1000;
+        const ONE_MINUTE = 60 * 1000;
+
+        openmct.install(openmct.plugins.Conductor({
+                      menuOptions: [
+                          {
+                              timeSystem: 'utc',
+                              clock: 'local',
+                              clockOffsets: {
+                                start: -15 * 60 * 1000,
+                                end: 0
+                              }
+                          },
+                          {
+                              timeSystem: 'utc',
+                              bounds: {
+                                  start: Date.parse('2012-08-06'),
+                                  end: Date.now()
+                              }
+                          },
+                      ]
+                  }));
+
+
         
         openmct.install(DictionaryPlugin());
         openmct.install(LayoutPlugin());

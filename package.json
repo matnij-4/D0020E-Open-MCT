@@ -5,7 +5,8 @@
   "main": "example-server/server.js",
   "scripts": {
     "start": "concurrently \"node example-server/server.js\" \"node tele-server/teleServer.js\"",
-    "test": "node example-server/server.js"
+    "test": "node example-server/server.js",
+    "server": "node startHistory.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "concurrently": "^5.3.0",
     "express": "^4.16.4",
     "express-ws": "^4.0.0",
+    "mysql": "^2.18.1",
     "openmct": "https://github.com/nasa/openmct.git",
     "ws": "^6.1.2"
   }
