@@ -54,7 +54,17 @@ This plugin handles the subfolders for the subsystems. It divides the telemetry 
 
 This plugin is initialized in index.html. It is a default plugin from openMCT (https://github.com/nasa/openmct/blob/master/API.md#the-time-conductor). This plugin is used to allow the user to choose a specific time frame to display data from in graphs.
 
-**TO DO**
+### How to add telemetry
+
+If you wish to add your own telemetry data, you will have to add the data variable to the spacecraft state, this state gets updated when new data is received via the realtime-server. 
+
+![alt text](https://github.com/matnij-4/D0020E-Open-MCT/blob/main/images/State.png?raw=true)
+
+Json files are received from the server in the following format:
+
+![alt text](https://github.com/matnij-4/D0020E-Open-MCT/blob/main/images/FormatJson.png?raw=true)
+
+which is parsed and updated into the state in spacecraft which is then displayed in openMCT. The variable you will want to update has to be sent in this format and it has to be defined in the state in spacecraft.js.
 
 ## Config file
 

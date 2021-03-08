@@ -3,9 +3,9 @@
     "rtPort": "5005",
     "rtKey": "1593574862",
     "dbIp": "localhost",
-    "dbPort": "8974",
+    "dbPort": "3306",
     "dbUname":"root",
-    "dbPass": "AeXJxSg/&",
+    "dbPass": "",
     "dbDatabase": "test"
 
 }
