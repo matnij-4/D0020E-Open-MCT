@@ -9,7 +9,7 @@ To building and running D0020E-Open-MCT in you local enviorment you will need No
 3. **npm install**
 4. **npm start**
 
-To se up the program for the first time you need to do some more configurations. That is if you want it to look a bit more nice.
+To set up the program for the first time you need to do some more configurations. That is if you want it to look a bit more nice.
 
 1. **Go to my Items folder in the program.**
 ![alt text](https://github.com/matnij-4/D0020E-Open-MCT/blob/main/images/configHelp1.PNG?raw=true)
@@ -25,9 +25,9 @@ To se up the program for the first time you need to do some more configurations.
 
 ## Layout
 
-If you wan to creat you own layout for the systems and telemetry data you can. Just adde it with the creat button and put it in my Items. Those settings are only stored in the browser cache.
+If you want to creat you own layout for the systems and telemetry data you can. Just add it with the create button and put it in my Items. Those settings are only stored in the browser cache.
 
-For longer storage of you setting you can export them as an JSON files and importem at a later date.
+For longer storage of you setting you can export them as an JSON files and import them at a later date.
 
 ## Architecture
 
