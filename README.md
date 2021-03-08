@@ -2,7 +2,7 @@
 As studen project at Lulea Tekniska Universitet for D0020E. It uses Open MCT from Nasa to build an MCT(Mission Control Software) to connect to a DBU (Digital Baseband Unit).
 
 ## Installation
-To building and running D0020E-Open-MCT in you local enviorment you will need Node.js installed.
+To building and running D0020E-Open-MCT in you local enviorment you will need Node.js installed. The whole prodject was built in Linux.
 
 1. **git clone https://github.com/matnij-4/D0020E-Open-MCT**
 2. **cd D0020E-Open-MCT**
@@ -31,7 +31,7 @@ For longer storage of you setting you can export them as an JSON files and impor
 
 ## Architecture
 
-A simple version of the architecture for the program can bee senn in the picture below.
+A simple version of the architecture for the program can bee seen in the picture below.
 
 ![alt text](https://github.com/matnij-4/D0020E-Open-MCT/blob/main/images/architecture.png?raw=true)
 
