@@ -1,8 +1,8 @@
 # D0020E-Open-MCT
-As studen project at Lulea Tekniska Universitet for D0020E. It uses Open MCT from Nasa to build an MCT(Mission Control Software) to connect to a DBU (Digital Baseband Unit).
+This is a student project at Lulea Tekniska Universitet for the course D0020E. It uses Open MCT from Nasa to build an MCT(Mission Control Software) to connect to a DBU (Digital Baseband Unit).
 
 ## Installation
-To building and running D0020E-Open-MCT in you local enviorment you will need Node.js installed. The whole prodject was built in Linux.
+To build and run D0020E-Open-MCT in your local environment you will need Node.js installed. The whole project was built in Linux.
 
 1. **git clone https://github.com/matnij-4/D0020E-Open-MCT**
 2. **cd D0020E-Open-MCT**
@@ -20,35 +20,35 @@ To set up the program for the first time you need to do some more configurations
 3. **Navigate to the config folder where you install the program**
 ![alt text](https://github.com/matnij-4/D0020E-Open-MCT/blob/main/images/configHelp3.PNG?raw=true)
 
-4. **Now you should have the pre set layout that you can eddit.**
+4. **Now you should have the preset layout that you can eddit.**
 ![alt text](https://github.com/matnij-4/D0020E-Open-MCT/blob/main/images/configHelp4.PNG?raw=true)
 
 ## Layout
 
-If you want to creat you own layout for the systems and telemetry data you can. Just add it with the create button and put it in my Items. Those settings are only stored in the browser cache.
+If you wish to create you own layout for the systems and telemetry data you can. Just add it with the create button and put it in my Items. Those settings are only stored in the browser cache.
 
-For longer storage of you setting you can export them as an JSON files and import them at a later date.
+For longer storage of your settings you can export them as JSON files and import them at a later time.
 
 ## Architecture
 
-A simple version of the architecture for the program can bee seen in the picture below.
+A simple version of the architecture for the program can be seen in the picture below.
 
 ![alt text](https://github.com/matnij-4/D0020E-Open-MCT/blob/main/images/architecture.png?raw=true)
 
-Open MCT as you can see have no direct comminucation to the outside. 
+Open MCT as you can see have no direct communication to the outside. 
 
 ## Plugins
 
 ### Dictionary
 
-Dictionary plugin is used to populate our object tree which is created by addRoot. We have a get method for our Json file. We define and register an objectProvider and a composition provider. These are used to provide structure to our root object. There is more to read about this in the github tutorial from nasa below. 
+Dictionary plugin is used to populate our object tree which is created by addRoot. We have a get method for our JSON file. We define and register an objectProvider and a composition provider. These are used to provide structure to our root object. There is more to read about this in the github tutorial from nasa below. 
 
 ### Realtime
 
 This is a basic realtime telemetry plugin that uses websockets. A provider is created which supports sending subscribe and unsubscribe messages. 
 
 ### Layout
-This plugin handles the subfolders for the subsystems. It divides the telemetry data into subfolders to make it easier to find the right telemetri. It also creates premade Status Widgets and adds them to the corresponding subsystem.
+This plugin handles the subfolders for the subsystems. It divides the telemetry data into subfolders to make it easier to find the right telemetry. It also creates premade Status Widgets and adds them to the corresponding subsystem.
 
 ### TimeConductor
 
